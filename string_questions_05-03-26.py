@@ -170,6 +170,25 @@ print(a)
 '''
 
 # C : 4
+# Find the most frequent character in a string.
+
+s=input("enter a string :")
+c=0
+c1=0
+s1=""
+for i in s:
+    c=s.count(i)
+    if c>=c1 :
+        if c>c1 :
+            s1=i
+            c1=c
+        elif i not in s1:
+            s1=s1+","+i
+        else:
+            pass
+print(c1)
+print(s1)
+
 # C : 5
 # C : 6
 # C : 7
