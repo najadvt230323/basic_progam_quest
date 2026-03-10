@@ -113,7 +113,22 @@ E.Interview-Oriented Questions
 # B : 4
 # B : 5
 # B : 6
+# Find the first occurrence of a substring in a string.
+
+'''
+s=input("enter a string :")
+s1=s.split()
+print(s1[0])
+'''
 # B : 7
+# Find the last occurrence of a substring in a string.
+
+'''
+s=input("enter a string :")
+s1=s.split()
+print(s1[-1])
+'''
+
 # B : 8
 # B : 9
 # B : 10
@@ -160,6 +175,8 @@ print(f"there are {num-(vowels+sp)} number consonants in thes string.\nthere are
 '''
 
 # C : 3
+# Remove duplicate characters from a string.
+
 '''
 s=input("enter a string :")
 a=""
@@ -172,6 +189,7 @@ print(a)
 # C : 4
 # Find the most frequent character in a string.
 
+'''
 s=input("enter a string :")
 c=0
 c1=0
@@ -188,19 +206,184 @@ for i in s:
             pass
 print(c1)
 print(s1)
+'''
 
 # C : 5
-# C : 6
-# C : 7
-# C : 8
-# C : 9
-# C : 10
-# C : 11
-# C : 12
-# C : 13
-# C : 14
-# C : 15
+# anagrams
 
+'''
+s=input("enter a string :")
+s1=input("enter another string :")
+s=s.lower()
+s1=s1.lower()
+agm=0
+if len(s)==len(s1):
+    for i in s:
+        if i in s1:
+            if s.count(i)==s1.count(i):
+                agm+=1
+    if agm==len(s):
+        print("tha string is anagrams")
+
+    else:
+        print("tha string is not anagrams")
+else:
+    print("tha string is anagrams")
+'''
+
+# C : 6
+# Reverse each word in a sentence without reversing the sentence order
+
+'''
+s=input("enter a string :")
+s1=s.split()
+s2=""
+s3=""
+for j in range(0,s.count(" ")+1):
+    s2=""
+    for i in s1[j]:
+        s2=i+s2
+    s3=s3+" "+s2
+pri'''
+
+# C : 7
+# Find the longest word in a sentence.
+
+'''
+s=input("enter a string :")
+s3=s.strip()
+s1=s3.split(" ")
+print(s1)
+s2=len(s1[0])
+s4=s1[0]
+for i in range(0,s3.count(" ")):
+    if s2<len(s1[i+1]):
+        s2=len(s1[i+1])
+        s4=s1[i+1]
+print(s4)
+'''
+
+# C : 8
+#  Compress a string (example: aaabb ® a3b2).
+
+'''
+s=input("enter a string :")
+s1=""
+s2=""
+l=len(s)
+k=1
+for i in range(0,l):
+    if i<l-1 and s[i]==s[i+1]:
+        k+=1    
+        s1=s[i]+str(k)
+    else:
+        s2=s2+s[i]+str(k)
+        k=1
+    # print(s2)
+print(s2)
+'''
+
+# C : 9
+# Remove all spaces from a string.
+
+'''
+s=input("enter a string :")
+s1=""
+for i in s:
+    if not i==" ":
+        s1=s1+i
+print(s1)
+'''
+
+# C : 10
+# Convert the first letter of every word to uppercase without using title().
+
+'''
+s=input("enter a string :")
+s1=s.strip()
+s2=""
+l=len(s1)
+for i in range(0,l):
+    if s1[i-1]==" " or i==0:
+        s3=s1[i].upper()
+        s2=s2+s3
+    else:
+        s2=s2+s1[i]
+print(s2)
+'''
+
+# C : 11
+# Extract digits from a string and store them separately.
+
+'''
+s=input("enter a string :")
+s1=""
+for i in s:
+    if i.isdigit():
+        s1=s1+i
+print(s1)
+'''
+
+# C : 12
+# Count the number of words in a sentence.
+
+'''
+s=input("enter a string :")
+s1=s.split(" ")
+print(s1)
+c=len(s1)
+d=0
+for i in range(c):
+    if s1[i]=="":
+        d+=1
+print(c-d)
+'''
+
+# C : 13
+# Replace multiple spaces with a single space.
+
+'''
+s=input("enter a string :")
+s1=s.split(" ")
+# print(s1)
+c=len(s1)
+s3=[]
+for i in range(c):
+    if not s1[i]=="":
+        s3.append(s1[i])
+# print(s3)
+s4=" ".join(s3)
+print(s4)
+'''
+
+# C : 14
+# Check whether a string contains special characters.
+
+'''
+s=input("enter a string :")
+l=len(s)
+a=0
+for i in range(l):
+    j=s[i]
+    if not j.isalnum():
+        print(j,end=" ")
+        a+=1
+        # break
+print("")
+if a==0:
+    print("string contains no special characters")
+else:
+    print(f"string contains {a} special characters")
+'''
+
+# C : 15
+# Find the ASCII value of each character.
+
+
+s=input("enter a string :")
+l=len(s)
+for i in s:
+    print(f"{i} - {ord(i)}")
 
 
 # D : 1
@@ -223,19 +406,65 @@ print(s1)
 # E : 5
 
 
+# sape 2 string not using anthoer varibal
 
- 
+'''
+a="quest" 
+b="calicut"
+print(a)
+print(b)
+a,b=b,a
+print(a)
+print(b)
+'''
 
+# cound chareter in string
+'''
+s=input("enter a string :")
+from collections import Counter
+print(Counter(s))
+'''
 
+'''
+s=input("enter a string :")
+for i in s:
+        c=s.count(i)
+        print(f"{i} - : {c}")
+'''
 
+'''
+s=input("enter a string :")
+l=len(s)
+for i in range(l):
+    c=0
+    for j in range(l):
+        if s[i]==s[j]:
+            c+=1
+    print(f"{s[i]} - : {c}")
+'''
 
+# furst repeting chr in string
 
+'''
+s=input("enter a string :")
+l=len(s)
+for i in range(l):
+    for j in range(i+1,l):
+        if s[i]==s[j]:
+            print(f"furst repeting chr : {s[i]}")
+            break
+'''       
 
+# furst non repeting chr in string
 
-
-
-
-
+'''
+s=input("enter a string :")
+for i in s:
+    c=s.count(i)
+    if c==1:
+        print(f"furst non repeting chr : {i}")
+        break
+''' 
 
 
 
