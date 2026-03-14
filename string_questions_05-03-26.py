@@ -231,6 +231,16 @@ else:
     print("tha string is anagrams")
 '''
 
+'''
+s1 = "listen"
+s2 = "silent"
+
+if sorted(s1) == sorted(s2):
+    print("Anagram")
+else:
+    print("Not Anagram")
+'''
+
 # C : 6
 # Reverse each word in a sentence without reversing the sentence order
 
@@ -570,6 +580,27 @@ for i in s:
         print(f"furst non repeting chr : {i}")
         break
 ''' 
+
+# Problem:
+# ----------------------
+# Find the length of the longest substring without repeating characters.
+# Example
+# Input: "abcabcbb"
+# Output: 3
+# Explanation: "abc"
+
+'''
+s=input("enter a string : ")
+l=len(s)
+s1=""
+a=0
+for i in range(l):
+    if s1.rfind(s[i])==-1:
+        s1=s1+s[i]
+        a+=1
+print(a)
+print(s1)
+'''
 
 
 
