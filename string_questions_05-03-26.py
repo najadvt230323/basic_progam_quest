@@ -379,19 +379,124 @@ else:
 # C : 15
 # Find the ASCII value of each character.
 
-
+'''
 s=input("enter a string :")
 l=len(s)
 for i in s:
     print(f"{i} - {ord(i)}")
-
+'''
 
 # D : 1
 # D : 2
+# Create a translation table using maketrans() and translate characters.
+
+'''
+s=input("enter a string :")
+s1=s.maketrans("zxcvbnmasdfghjklqwertyuio","poiuytrewqkjhgfdsamnbvcxz")
+s3=s.translate(s1)
+s2=s3.maketrans("poiuytrewqkjhgfdsamnbvcxz","zxcvbnmasdfghjklqwertyuio")
+print(s.translate(s1))
+print(s3.translate(s2))
+'''
+
+'''
+s=input("enter a string :")
+l=len(s)
+for i in range(l):
+    s1=s.maketrans(s[i],chr(ord(s[i])+1000))
+    print(s.translate(s1))
+'''
+# Create a translation characters.
+
+
+'''
+s=input("enter a string :")
+s1=""
+s2=""
+s3=""
+s4=""
+l=len(s)
+for i in range(l):
+    s2=s[i].translate({ord(s[i]):chr(1000+ord(s[i]))})
+    # print(s2)
+    s1=s1+s2
+print(s1)
+
+for j in range(l):
+    s3=s1[j].translate({ord(s1[j]):chr(ord(s1[j])-1000)})
+    # print(s3)
+    s4=s4+s3
+print(s4)
+'''
+
 # D : 3
+# Simulate a simple password validator using string methods.
+
+'''
+p=input("enter a password : ")
+l=len(p)
+a=b=c=d=e=0
+if l>=8  and l<=16:
+    if p.isascii():
+        for i in p:
+            if i.isupper():
+                a+=1
+            if i.lower():
+                b+=1
+            if not i.isalnum():
+                c+=1
+            # if i.isdecimal() and i.isdigit():
+            if i.isdigit():
+                d+=1
+        if a>0 and b>0 and c>0 and d>0:
+            print(f"tha password {p} is okka")
+        else:
+            print(f"tha password {p} is not okka")
+            if a==0:
+                print("enter minimum one uppercase")
+            if b==0:
+                print("enter minimum one lowercase")
+            if c==0:
+                print("enter minimum one special character")
+            if d==0:
+                print("enter minimum one decimal")
+    else:
+          print("Passwords are only allowed ASCII value") 
+else:
+    print("Passwords are only allowed minimum 8 and maximum 16 charters") 
+'''
+
 # D : 4
+
+# Parse key-value pairs from a string like 'name=John;age=25'.
+
 # D : 5
+
+# Implement a simple email validation using string methods.
+
+'''
+p=input("enter a email : ")
+l=len(p)
+a=b=c=d=e=0
+if l>=8  and l<=40:
+    if p.endswith("@gmail.com"):
+        if p.isascii():
+            a+=1
+
+        if a>0:
+            print(f"tha email {p} is okka")
+        else:
+            print(f"email are only allowed ASCII value")
+    else:
+          print("tha email {p} is invalid") 
+else:
+    print("email are only allowed minimum 8 and maximum 40 charters") 
+'''
+
 # D : 6
+
+# Extract hashtags from a text.
+
 # D : 7
 # D : 8
 # D : 9
@@ -399,7 +504,7 @@ for i in s:
 
 
 
-# E : 1 ghjogjhojhogj
+# E : 1 
 # E : 2
 # E : 3
 # E : 4
