@@ -25,3 +25,19 @@ for i in range(len(s)):
     elif large > s[i] > s_large :
         s_large=s[i]
 print (s_large)
+
+
+a=[]
+for i in range(1,11):
+    a+=[i]
+print(a)
+
+a=[]
+for i in range(1,11):
+    a.append(i)
+print(a)
+
+a=[i for i in range(1,11)]
+print(a)
+b=[i for i in a if i%2==0]
+print(b)

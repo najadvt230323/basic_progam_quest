@@ -70,8 +70,8 @@ print(dir(number))
 ['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', 
 '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', 
 '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', 
-'__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 
-'insert', 'pop', 'remove', 'reverse', 'sort']
+'__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 
+'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
 
 '''
 print()
@@ -121,13 +121,6 @@ for i in matrix:
     for j in i:
         print(j,end=" ")
     print()
-
-
-
-
-
-
-
 
 
 
@@ -254,16 +247,120 @@ print(sorted(a))
 print(sorted(a,reverse=True))
 print(sorted(a,key=len))  
 
+# list comperehension
+# ------------------------
 
+print()
+f=["apple", "banana","cherry","kiwi","mango"]
+print(f)
+a=[x for x in f if "a" in x]
+print(a)
 
+print()
+a=[]
+for i in range(1,11):
+    a+=[i]
+print(a)
 
+a=[]
+for i in range(1,11):
+    a.append(i)
+print(a)
 
+a=[i for i in range(1,11)]
+print(a)
+b=[i for i in a if i%2==0]
+print(b)
 
+a=[i**2 for i in range(1,11)]
+print(a)
+a=[i**.5 for i in range(1,11)]
+print(a)
 
+print()
+a=[]
+for i in range(1,11):
+    if i%2==0:
+        a.append(i**2)
+    else:
+        a.append(i**3)
+print(a)
 
+a=[i**2 if i%2==0 else i**3 for i in range(1,11)]
+print(a)
 
+print()
+f=["apple", "banana","cherry","kiwi","mango","elephend"]
+print(f)
+a=[i.upper() for i in f]
+print(a)
+a=[i.upper() for i in f if "a" in i]
+print(a)
+a=[len(i) for i in f]
+print(a)
 
+a=[i.upper() if i[0]=="a" or i[0]=="e" or i[0]=="i" or i[0]=="o" or i[0]=="u" or i[0]=="A" or i[0]=="E" or i[0]=="O" or i[0]=="U" else i.title() for i in f]
+print(a)
 
+a=[i.upper() if i[0] in "AEIOUaeiou" else i.title() for i in f]
+print(a)
 
+a=[1,0,-6,2,5,-6]
+b=[i for i in a if i>=0]
+print(b)
 
+a="vnfjbvufh fuyrhiodwjpw"
+b=[a[i] for i in  range(0,len(a)) if a[i] in "AEIOUaeiou"]
+print(b)
+b=[i for i in a if i in "AEIOUaeiou"]
+print(b)
 
+list1=[1,2,3,4,5,6]
+list2=[4,5,6,7,8,9]
+a=[list1[i] for i in range(0,len(list1)) if list1[i] in list2]
+print(a)
+
+a=[i for i in list1 if i in list2]
+print(a)
+
+list1=['1','2','3','4','5','6']
+a=[int(i) for i in list1]
+print(a)
+
+list1=['1','2','3','4','5','6','richu']
+a=[int(i) for i in list1 if i.isdigit()]
+print(a)
+
+b=["even" if i%2==0 else "odd" for i in range(1,11)]
+print(b)
+b=[0 if i<5 else 1 for i in range(1,11)]
+print(b)
+b=[0 if i<5 else 5 if i==5 else 1  for i in range(1,11)]
+print(b)
+
+# list unpacking
+
+l=[10,20,30]
+x,y,z=l
+print(x)
+print(y)
+print(z)
+
+print()
+l=[10,20,30,40,50]
+x,y,*z=l
+print(x)
+print(y)
+print(z)
+
+print()
+x,*y,z=l
+print(x)
+print(y)
+print(z)
+
+print()
+*x,y,z=l
+print(x)
+print(y)
+print(z)
