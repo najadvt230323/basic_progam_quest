@@ -101,75 +101,120 @@ Bonus Interview Questions
 #     print(r"# '''")
 #     print()
 
-# 1 : 
+# 1 :
+# Create a set containing 5 numbers and print the set.
 
-# '''
+'''
+a={i for i in range(1,6)}
+print(a)
 
-
-# '''
+'''
 
 # 2 :
+# Create a set with mixed data types and print each element.
 
-# '''
+'''
+a={1,2,"najad",(1,2)}
+print(a)
 
-
-# '''
+'''
 
 # 3 :
+# Write a program to create a set from a list.
 
-# '''
+'''
+a=[1,1,2,4,3,3,4,5,5]
+print(set(a))
 
-
-# '''
+'''
 
 # 4 :
+# Write a program to remove duplicate elements from a list using a set.
 
-# '''
+'''
+a=[1,1,2,4,3,3,4,5,5]
+print(list(set(a)))
 
-
-# '''
+'''
 
 # 5 :
+# Create an empty set and add three elements to it.
 
-# '''
+'''
+a=set()
+for i in range(3):
+    b=input("enter a string :")
+    a.add(b)
+print(a)
 
-
-# '''
+'''
 
 # 6 :
+# Write a program to check if an element exists in a set.
 
-# '''
+'''
+a={1,2,3,4,5,6,7,8}
+b=int(input("enter checking element :"))
+c=0
+for i in a:
+    if i==b:
+        print("element exists in a set")
+        c+=1
+if c==0:
+    print("element not exists in a set")
 
-
-# '''
+'''
 
 # 7 :
+# Create a set and print all elements using a for loop.
 
-# '''
+'''
+a={i if i%10==0 else 5 for i in range(1,101)}
+b=0
+for i in a:
+    print(i)
 
-
-# '''
+'''
 
 # 8 :
+# Write a program to find the length of a set without using len().
 
-# '''
+'''
+a={i if i%10==0 else 5 for i in range(1,101)}
+b=0
+for i in a:
+    b+=1
+print(f"length of a set : {b}")
 
-
-# '''
+'''
 
 # 9 :
+# Write a program to convert a tuple into a set.
 
-# '''
+'''
+a={1,1,2,3,(1,2,3)}
+b=(*a,)
+print(b)
 
+'''
+'''
+a={1,1,2,3,(1,2,3)}
+b=[]
+for i in a:
+    b.append(i)
+print(tuple(b))
 
-# '''
+'''
 
 # 10 :
+# Write a program to convert a set into a list. 
 
-# '''
+'''
+a={1,1,2,3,(1,2,3)}
+b=[*a,]
+print(b)
 
-
-# '''
+'''
 
 # 11 :
 # Create a set and add a new element using add().
@@ -246,37 +291,142 @@ print(a)
 # 17 :
 # Write a program to copy a set into another set.
 
-# '''
+'''
 a={10,20,30,40,(10,20,30)}
 b=set()
 b=a.copy()
 print(b)
 
-# '''
+'''
 
 # 18 :
 # Write a program to add elements from a list into a set.
 
-# '''
+'''
+a=[10,20,30,"najad",(1,2)]
+b=set()
+for i in a:
+    b.add(i)
+print(b)
 
+'''
+'''
+a=[10,20,30,"najad",(1,2)]
+b=set()
+for i in a:
+    b=b|{i}
+print(b)
 
-# '''
+'''
+'''
+a=[10,20,30,"najad",(1,2)]
+b={i for i in a}
+print(b)
+
+'''
+'''
+a=[10,20,30,"najad",(1,2)]
+b={*a}
+print(b)
+
+'''
+'''
+a=[10,20,30,"najad",(1,2)]
+b=set(a)
+print(b)
+
+'''
+
 
 # 19 :
 # Write a program to add elements from a tuple into a set.
 
-# '''
+'''
+a={10,20,30,40,(10,20,30)}
+b=set()
+b=a.copy()
+print(b)
 
+'''
 
-# '''
+# 18 :
+# Write a program to add elements from a list into a set.
+
+'''
+a=(10,20,30,"najad",(1,2))
+b=set()
+for i in a:
+    b.add(i)
+print(b)
+
+'''
+'''
+a=(10,20,30,"najad",(1,2))
+b=set()
+for i in a:
+    b=b|{i}
+print(b)
+
+'''
+'''
+a=(10,20,30,"najad",(1,2))
+b={i for i in a}
+print(b)
+
+'''
+'''
+a=(10,20,30,"najad",(1,2))
+b={*a}
+print(b)
+
+'''
+'''
+a=(10,20,30,"najad",(1,2))
+b=set(a)
+print(b)
+
+'''
 
 # 20 :
 # Write a program to update a set with another set.
 
-# '''
+'''
+a={10,20,30,"najad",(1,2)}
+b={100,200}
+for i in a:
+    b.update({i})
+print(b)
 
+'''
+'''
+a={10,20,30,"najad",(1,2)}
+b={100,200}
+for i in a:
+    b=b|{i}
+print(b)
 
-# '''
+'''
+'''
+a={10,20,30,"najad",(1,2)}
+b={100,200}
+b=b|a
+print(b)
+
+'''
+'''
+a={10,20,30,"najad",(1,2)}
+b={100,200}
+b|=a
+print(b)
+
+'''
+'''
+a={10,20,30,"najad",(1,2)}
+b={100,200}
+b={*b,*a}
+print(b)
+
+'''
 
 # 21 :
 # Write a program to find the union of two sets.
@@ -574,39 +724,65 @@ print(a)
 '''
 
 # 46 :
+# Given two sets representing students enrolled in Python and Java, find students
+# enrolled in both courses.
 
-# '''
+'''
+python={"najad","aju","richu","fazil"}
+java={"najad","ashif","nihal","aju"}
+print(f"students enrolled in both courses : {python&java}")
 
-
-# '''
+'''
 
 # 47 :
+# Given two sets representing users who logged in today and yesterday, find new users
+# today.
 
-# '''
+'''
+loging_today={"najad","aju","richu","fazil"}
+loging_yesterday={"najad","ashif","nihal","aju"}
+print(f"new users today : {loging_today-loging_yesterday}")
 
-
-# '''
+'''
 
 # 48 :
+# Given two sets representing available skills and required job skills, find missing skills.
 
-# '''
+'''
+available_skills={"MS Office","Python","Analytical thinking","Accounting",}
+required_job_skills={"Python","Java","Data analysis","Accounting","Digital marketing"}
+print(f"missing skills : {required_job_skills-available_skills}")
 
 
-# '''
+'''
 
 # 49 :
+# Create a set representing product categories in an e-commerce system and p
 
-# '''
+'''
+categories={"Mobile phones","Laptops & computers","Cameras","Men’s clothing","Kids’ wear","Footwear","Furniture"}
+print(f"categories : {categories}")
+b=input("enter remove category : ")
+categories.discard(b)
+print(f"categories : {categories}")
 
-
-# '''
+'''
 
 # 50 :
+# Given two datasets of email IDs, remove duplicates and print all unique email IDs.
 
-# '''
+'''
+a=[]
+b=int(input("enter  how many email IDs :"))
+for i in range(b):
+    c=input(f"enter tha {i+1} email ID :")
+    a.append(c)
+a=set(a)
+print("the email IDs")
+for i in a:
+    print(i)
 
-
-# '''
+'''
 
 
 
