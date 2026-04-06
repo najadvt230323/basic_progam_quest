@@ -363,43 +363,97 @@ print(tuple(c))
 
 '''
 
-
-
 # 38 :
+# Write a program to convert a tuple into a string.
 
+'''
+a=input("enter a string : ")
+print(tuple(a.split()))
+
+'''
 
 # 39 :
+# Write a program to count vowels present in a tuple of characters.
 
+# '''
+
+
+# '''
 
 # 40 :
+# Write a program to find the product of all numbers in a tuple.
 
+# '''
+
+
+# '''
 
 # 41 :
 
+# '''
+
+
+# '''
 
 # 42 :
 
+# '''
+
+
+# '''
 
 # 43 :
 
+# '''
+
+
+# '''
 
 # 44 :
 
+# '''
+
+
+# '''
 
 # 45 :
 
+# '''
+
+
+# '''
 
 # 46 :
 
+# '''
+
+
+# '''
 
 # 47 :
 
+# '''
+
+
+# '''
 
 # 48 :
 
+# '''
+
+
+# '''
 
 # 49 :
 
+# '''
+
+
+# '''
 
 # 50 :
 
+# '''
+
+
+# '''

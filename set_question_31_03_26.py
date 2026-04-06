@@ -164,6 +164,15 @@ if c==0:
     print("element not exists in a set")
 
 '''
+'''
+a={1,2,3,4,5,6,7,8}
+b=int(input("enter checking element :"))
+if b in a:
+    print("element exists in a set")
+else:
+    print("element not exists in a set")
+
+'''
 
 # 7 :
 # Create a set and print all elements using a for loop.
@@ -783,12 +792,5 @@ for i in a:
     print(i)
 
 '''
-
-
-
-
-
-
-
 
 
