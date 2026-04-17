@@ -774,8 +774,11 @@ print(f"elements by their length : {len(a.split())}")
 # Create a list of prime numbers within a given range using list comprehension.
 
 '''
-a=[i for i in range(122)]
-b=[]
+
+a=[i for i in range(122) if i >1 and not any(i % j == 0 for j in range(2,i))]
+b=[i for i in range(122) if i >1 and all(i % j != 0 for j in range(2, int(i**0.5) + 1))]
+print(a)
+print(b)
 
 '''
 

@@ -303,7 +303,7 @@ a=[i.upper() if i[0]=="a" or i[0]=="e" or i[0]=="i" or i[0]=="o" or i[0]=="u" or
 print(a)
 
 a=[i.upper() if i[0] in "AEIOUaeiou" else i.title() for i in f]
-print(a)
+print(a)                                                                                                              
 
 a=[1,0,-6,2,5,-6]
 b=[i for i in a if i>=0]
