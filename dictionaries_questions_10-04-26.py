@@ -100,6 +100,7 @@ identical dictionaries.
 
 
 # 1 : 
+# Create a dictionary representing a 'Laptop' with keys: brand, model, and price.
 
 # '''
 
@@ -107,145 +108,235 @@ identical dictionaries.
 # '''
 
 # 2 : 
+# Access the value of the 'model' key using square brackets.
 
-# '''
+'''
+a={i:i**2 for i in range(1,4)}
+for i in range(1,4):
+    print(a[i])
 
-
-# '''
+'''
 
 # 3 :
+# Access the value of a key that doesn't exist using .get() and explain why it's safer than [].
 
-# '''
+'''
+a={i:i**2 for i in range(1,4)}
+print(a.get(4))
+print(a.get(4),'key that doesn\'t exist')
 
-
-# '''
+'''
 
 # 4 :
+# Create an empty dictionary using both {} and the dict() constructor.
 
-# '''
+'''
+a={}
+b=dict()
+print(type(a))
+print(type(b))
 
-
-# '''
+'''
 
 # 5 :
+# Add a new key-value pair 'processor': 'i7' to an existing dictionary.
 
-# '''
+'''
+a={i:i**2 for i in range(1,4)}
+print(a)
+a['processor']='i7'
+print(a)
 
-
-# '''
+'''
 
 # 6 :
+# Update the 'price' of the laptop to a new value.
 
-# '''
+'''
+a={i:i**2 for i in range(1,11)}
+print(a)
+for i in range(1,11):
+    a.update({i:i**3})
+print(a)
 
-
-# '''
+'''
 
 # 7 :
+# Use the len() function to find how many key-value pairs are in a dictionary.
 
-# '''
+'''
+a={i:i**2 for i in range(1,11)}
+print(a)
+print(len(a))
 
-
-# '''
+'''
 
 # 8 :
+# Create a dictionary where the keys are numbers 1 to 5 and the values are their squares.
 
-# '''
+'''
+a={i:i**2 for i in range(1,6)}
+print(a)
 
-
-# '''
+'''
 
 # 9 :
+# Check if a specific key exists in a dictionary using the 'in' operator.
 
-# '''
+'''
+a={i:i**2 for i in range(1,11)}
+print(a)
+for i in range(1,21):
+    b=i in a
+    print(b)
 
-
-# '''
+'''
 
 # 10 :
+# Delete a key-value pair using the 'del' keyword and handle the case if the key is missing.
 
-# '''
+'''
+a={i:i**2 for i in range(1,11)}
+print(a)
+del(a)
+print(a)
 
-
-# '''
+'''
 
 # 11 :
+# Use the pop() method to remove a key and store its value in a variable.
 
-# '''
+'''
+a={i:i**2 for i in range(1,11)}
+print(a)
+for i in range(1,11):
+    a.pop(i)
+    print(a)
 
-
-# '''
+'''
 
 # 12 :
+# Use popitem() to remove the last inserted item and explain its behavior in Python 3.7+.
 
-# '''
+'''
+a={i:i**2 for i in range(1,11)}
+print(a)
+for i in range(1,11):
+    a.popitem()
+    print(a)
 
-
-# '''
+'''
 
 # 13 :
+# Use the keys() method to print all the keys in a dictionary.
 
-# '''
+'''
+a={i:i**2 for i in range(1,11)}
+print(a)
+for k in a.keys():
+    print(k)
 
-
-# '''
+'''
 
 # 14 :
+# Use the values() method to print all the values in a dictionary.
 
-# '''
+'''
+a={i:i**2 for i in range(1,11)}
+print(a)
+for v in a.values():
+    print(v)
 
-
-# '''
+'''
 
 # 15 :
+# Use the items() method to iterate through a dictionary and print "Key: Value" for each pair.
 
-# '''
+'''
+a={i:i**2 for i in range(1,11)}
+print(a)
+for k,v in a.items():
+    print(f"{k} -- {v}")
 
-
-# '''
+'''
 
 # 16 :
+# Merge two dictionaries: {'a': 1, 'b': 2} and {'c': 3, 'd': 4} using the update() method.
 
-# '''
+'''
+a= {'a': 1, 'b': 2}
+b={'c': 3, 'd': 4}
+a.update(b)
+print(a)
 
-
-# '''
+'''
 
 # 17 :
+# Clear all items from a dictionary using the clear() method.
 
-# '''
+'''
+a= {'a': 1, 'b': 2}
+print(a)
+a.clear()
+print(a)
 
-
-# '''
+'''
 
 # 18 :
+# Use the setdefault() method to add a key 'country' with value 'India' only if it doesn't exist.
 
-# '''
+'''
+a= {'a': 1, 'b': 2}
+print(a.setdefault('country','India'))
+print(a)
 
-
-# '''
+'''
 
 # 19 :
+# Create a shallow copy of a dictionary and show that modifying the copy doesn't change the original.
 
-# '''
+'''
+a= {'a':{1:10}, 'b': {2:20}}
+b=a.copy()
+print(a)
+b.update({'a':{3:30}})
+print(b)
+print(a)
 
-
-# '''
+'''
 
 # 20 :
+# Create a dictionary from two lists: one for keys and one for values using the zip() function.
 
-# '''
-
-
-# '''
+'''
+a=[i for i in range(1,11)]
+b=[i**2 for i in range(1,11)]
+c=zip(a,b)
+print(c)
+print(dict(c))
+'''
 
 # 21 :
 # Create a nested dictionary called 'Employees' containing data for three different people.
 
-# '''
+'''
+n=int(input("enter how many Employees : "))
+a={}
+name=[]
+salary=[]
+age=[]
+for i in range(1,n+1):
+    n=input(f"enter {i} Employees name :")
+    name.append(n)
+    s=int(input(f"enter {i} Employees salary :"))
+    salary.append(s)
+    ag=int(input(f"enter {i} Employees age :"))
+    age.append(ag)
+    print()
+    a.update({i:{"name" : name[i-1],"age" : age[i-1] ,"salary" : salary[i-1]}})
+print(a)
 
-
-# '''
+'''
 
 # 22 :
 # Access a value inside a nested dictionary (e.g., Employees['emp1']['salary']).
@@ -493,10 +584,21 @@ print(d)
 # 30 :
 # Represent a JSON response from a weather API as a nested dictionary and extract the 'temperature'.
 
-# '''
+'''
+weather = {
+    "location": {
+        "city": "Kochi",
+        "country": "India"
+    },
+    "current": {
+        "weather": "Sunny",
+        "temperature": 32,
+        "humidity": 70
+    }
+}
+print(f"{weather['location']["city"]} : {weather["current"]["temperature"]}")
 
-
-# '''
+'''
 
 # 31 : 
 # [Comprehension] Create a dictionary of even numbers between 1-10 as keys and their cubes as values.
@@ -600,10 +702,38 @@ print(dict(e))
 # 37 :
 # Count the frequency of each character in a string "Python Trainer" using a dictionary.
 
-# '''
+'''
+a="Python Trainer"
+b={}
+for i in a:
+    b.update({i:a.count(i)})
+print(b)
+print()
+for k,v in b.items():
+    print(f"{k} : {v}")
+    print()
 
+'''
+'''
+a=input("enter a string : ")
+b={}
+for i in a:
+    b.update({i:a.count(i)})
+print(b)
+print()
+for k,v in b.items():
+    print(f"{k} : {v}")
+    print()
 
-# '''
+'''
+'''
+a=input("enter a string : ")
+b={i:a.count(i) for i in a}
+print(b)
+for k,v in b.items():
+    print(f"{k} : {v}")
+
+'''
 
 # 38 :
 # Combine two dictionaries by adding values for common keys.
@@ -635,10 +765,12 @@ print(tuple(a.items()))
 # 40 :
 # Check if all values in a dictionary are the same.
 
-# '''
+'''
+a ={i:10 for i in range(1,10)}
+b=len(set(a.values())) == 1
+print(b)
 
-
-# '''
+'''
 
 # 41 :
 

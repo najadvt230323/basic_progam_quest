@@ -60,7 +60,7 @@ print(a.get("name"))
 
 # print(a["teacher"])    #error # KeyError: 'teacher'
 print(a.get("teacher"))   #output ---  None
-print(a.get("teacher" ,'key doesn\'t exist'))   #output ---  None
+print(a.get("teacher" ,'key doesn\'t exist'))   #output ---  key doesn\'t exist
 
 print()
 print(a)
@@ -72,6 +72,7 @@ print(a)
 
 p=a.pop("domain")
 print(a)
+# a.pop() #error
 print(p)
 
 print()
@@ -133,6 +134,7 @@ print()
 c={"name" : "richu" , "age" : 22 , "place" : "calicut" }
 a=[1,2,3]
 d=c.fromkeys(a)
+print(c)
 print(d)
 
 # print()
@@ -163,6 +165,7 @@ c=zip(a,b)
 print(c)
 print(dict(c))
 print(list(c))
+print(list(dict(c)))
 
 print()
 a={
