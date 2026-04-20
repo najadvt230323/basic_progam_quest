@@ -203,6 +203,8 @@ print(b)
 
 # extend()
 print()
+print(a)
+print(b)
 a.extend(b)
 print(a)
 a.extend(["najad"])

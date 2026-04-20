@@ -159,7 +159,7 @@ print(a)
 
 # zip
 print()
-a=[1,2,3,4]
+a=[1,2,3,4,5]
 b=[10,20,30,40]
 c=zip(a,b)
 print(c)
@@ -193,11 +193,13 @@ print()
 a["student2"]["phone"]=9400454130
 print(a["student2"]["phone"])
 a["student2"]["phone"]=(9400454130,9020020313)
+print(a)
 print(a["student2"]["phone"])
 print()
 print(a["student2"]["name"])
 a["student2"]["name"]="richu"
 print(a["student2"]["name"])
+print(a)
 print()
 
 # dictionaries comperehension
