@@ -727,10 +727,39 @@ print(f"elements by their length : {len(a.split())}")
 # 38 :
 # Implement a simple stack using a Python list.
 
-# '''
+'''
+a=[]
+n=1
+while n==1:
+    print("1.Pushed a intgre value \n2.Poped a intgre value \n3.disply a  values ")
+    b=int(input("enter your option :"))
+    if b==1:
+        c=int(input("enter hwo many no : "))
+        print("enter tha no :")
+        for i in range(c):
+            d=int(input())
+            a.append(d)
+        a.sort()
+        print(f"the list : {a}")
+        print(f"Top element : {a[-1]}")
+        print(f"botam element : {a[0]}")
+    elif b==2:
+        c=int(input("enter Poped a intgre value : "))
+        if c in a:
+            a.remove(c)
+        else:
+            print("enter Poped a intgre value not in list : ")
+        print(f"Poped list : {a}")
+        print(f"Top element : {a[-1]}")
+        print(f"botam element : {a[0]}")
+    elif b==3:
+        print(f"the list : {a}")
+        if len(a)>0:
+            print(f"Top element : {a[-1]}")
+            print(f"botam element : {a[0]}")
+    n=int(input("do you want repet (1.yas , 2.no) : "))
 
-
-# '''
+'''
 # 39 :
 # Implement a queue using a Python list.
 
@@ -748,12 +777,28 @@ print(f"elements by their length : {len(a.split())}")
 # '''
 
 # 41 :
-# Write a program to find the kth largest element in a list.
+# Write a program to find the k th largest element in a list.
 
-# '''
+'''
+a=[]
+c=int(input("enter hwo many no : "))
+print("enter tha no :")
+for i in range(c):
+    d=int(input())
+    a.append(d)
+print(a)
+a.sort()
+print(f"sortrd list : {a}")
+b=int(input("entar the k th largest : "))
+d=list(set(a))
+d.sort()
+e=len(d)
+if e>=b:
+    print(f"entar the {b} th largest : {a[b]}")
+else:
+    print("Invalid k value")
 
-
-# '''
+'''
 
 # 42 :
 # Write a program to check whether a list is a palindrome.

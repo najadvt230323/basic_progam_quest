@@ -12,25 +12,25 @@
 # print(a)
 # print(b)
 
-# a="fullstack"
-# b=[]
-# c=[]
-# f={}
-# g=[]
-# for i in a:
-#     b.append(i)
-#     d=a.count(i)
-#     c.append(d)
-# e=len(b)
-# for i in range(e):
-#     if not i in g:
-#         f.update({b[i]:c[i]})
-#         g.append(b[i])
-# print(f)
+a="fullstack"
+b=[]
+c=[]
+f={}
+g=[]
+for i in a:
+    b.append(i)
+    d=a.count(i)
+    c.append(d)
+e=len(b)
+for i in range(e):
+    if not i in g:
+        f.update({b[i]:c[i]})
+        g.append(b[i])
+print(f)
 
-# a="fullstack"
-# h={i:a.count(i) for i in a}
-# print(h)
+a="fullstack"
+h={i:a.count(i) for i in a}
+print(h)
 
 
 # a=[10,20,30,40]
@@ -51,5 +51,24 @@
 
 # a=[[1,2,3],[4,5,6],[7,8,9]]
 # print(f"row 2 : {a[1]}, element : {a[2][1]}")
+
+# a=[1,2,3]
+# b=a
+# b.append(4)
+# print(a)
+
+# a=[10,20,10,30,40,20,50,30]
+# b=[]
+# c=[]
+# for i in a:
+#     if not i in b:
+#         b.append(i)
+#     d=a.count(i)
+#     if d>1:
+#         if not i in c:
+#             c.append(i)
+# print(a)
+# print(b)
+# print(c)
 
 
