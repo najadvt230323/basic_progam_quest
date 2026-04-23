@@ -52,10 +52,10 @@ print(h)
 # a=[[1,2,3],[4,5,6],[7,8,9]]
 # print(f"row 2 : {a[1]}, element : {a[2][1]}")
 
-# a=[1,2,3]
-# b=a
-# b.append(4)
-# print(a)
+a=[1,2,3]
+b=a
+b.append(4)
+print(a)
 
 # a=[10,20,10,30,40,20,50,30]
 # b=[]
@@ -71,4 +71,28 @@ print(h)
 # print(b)
 # print(c)
 
+# ways to pass valu to a function
+# -------------------------------------
+# 1.pass by Value
+# -------------------------
+# -> tha function get acopy of tha data .if tha function changes that copy,
+#    tha original variable outside tha function stays tha same
 
+def modify(a:int)-> int:
+    print(a)               #output - 5
+    a=25
+    print(a)               #output - 25
+    return(a)
+b=5
+print(modify(b))           #output - 25
+print(b)                   #output - 5
+
+
+
+
+
+
+# 2 pass by Referenc
+# -----------------------
+# -> tha function gets a referenc (a pointer) to tha original data. iftha function 
+#     modify
