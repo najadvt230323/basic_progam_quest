@@ -231,3 +231,26 @@ print(l1(10,20,30))
 print()
 l1=lambda a:"ood" if a%2==1 else "evan"
 print(l1(10))
+
+# a=input("enter a string : ")
+# l2=lambda a:len(a)
+# print(f"length of string : {l2(a)}")
+
+# print()
+# l3=lambda a,b:a if a>b else "eqal" if a==b else b
+# (print("enter a 2 intger number : "))
+# a=int(input())
+# b=int(input())
+# print(l3(a,b))
+
+# print()
+# l3=lambda a,b,c:a if a>b and a>c else b if b>a and b>c else c
+# (print("enter a 3 intger number : "))
+# a=int(input())
+# b=int(input())
+# c=int(input())
+# print(l3(a,b,c))
+
+print()
+l3=lambda a:"multipel of 5" if a%5==0 and not a%3==0 else "multipel of 3" if not a%5==0 and a%3==0 else "multipel of 3 and 5" if  a%5==0 and a%3==0 else "not multipel of 3 and 5"
+print(l3(15))

@@ -758,7 +758,7 @@ def rev1(n : str):
     if len(n)==1:
         return n[0]
     return n[-1] + rev1(n[:-1])
-a=input("enter a intger string : ")
+a=input("enter a  string : ")
 print(rev1(a))
 
 '''
@@ -767,57 +767,110 @@ def rev(n : str):
     if len(n)==1:
         return n[0]
     return rev(n[1:])+n[0]
-a=input("enter a intger string : ")
+a=input("enter a  string : ")
 print(rev(a))
+
 '''
 
 # G : 5 :
 # Write a recursive function to find the nth Fibonacci number. 
 
-# '''
+'''
+def fibonacci(a : int,fino=0,b=1):
+    if a>0:
+        print(fino, end=" ")
+        c=fino
+        fino=fino+b
+        b=c
+        fibonacci(a-1,fino,b)
+    return
+a=int(input("enter a intger : "))
+fibonacci(a)
 
-
-# '''
+'''
 
 # G : 6 :
 # Write a recursive function to calculate the power of a number. 
 
-# '''
+'''
+def power(a,b=0):
+    if b==1:
+        return(a)
+    else:
 
+        return a*power(a,1)
 
-# '''
+a=int(input("enter a intger : "))
+print(power(a))
+
+'''
 
 # G : 7 :
 # Write a recursive function to count digits in a number.
 
-# '''
+'''
+def count(a,b=0):
+    if a==0:
+        return(b)
+    else:
+        b=b+1
+        return count(int(a/10),b)
 
+a=int(input("enter a intger : "))
+print(count(a))
 
-# '''
+'''
 
 # G : 8 :
 # Write a recursive function to check whether a string is a palindrome.  
 
-# '''
+'''
+def rev1(n : str):
+    if len(n)==1:
+        return n[0]
+    return n[-1] + rev1(n[:-1])
+a=input("enter a  string : ")
+b=rev1(a)
+if a==b:
+    print("string is a palindrome")
+else:
+    print("string is not a palindrome")
 
-
-# '''
+'''
 
 # G : 9 :
 # Write a recursive function to find the sum of digits of a number.
 
-# '''
+'''
+def s(a):
+    if a==0:
+        return 0
+    else:
+        return a%10+s(int(a/10))
 
+a=int(input("enter a intger : "))
+print(s(a))
 
-# '''
+'''
 
 # G : 10 :
 # Write a recursive function to find the product of elements in a list. 
 
-# '''
+'''
+def ele(a:list,b,i=0):
+    if len(a)==i:
+        return f"tha num {b} not in string"
+    elif a[i]==b:
+        return f"tha num {b} in string"
+    else:
+        i+=1
+        return ele(a,b,i)
 
+a=[i for i in range(101) if i%5==0]
+b=int(input("enter a number under 100 :"))
+print(ele(a,b))
 
-# '''
+'''
 
 # H : 1 :
 # Write a function to calculate electricity bill based on units consumed.
