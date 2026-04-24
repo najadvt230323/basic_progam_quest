@@ -122,8 +122,85 @@ def details1(a,b,*args,**kwargs):
     print(args)                   # output -  (3,)
 details1(1,2,3,name="aju",age="28",phon=9249730116,place="calicut") 
 
+
+# ways to pass valu to a function
+# -------------------------------------
+# 1.pass by Value
+# -------------------------
+# -> tha function get acopy of tha data .if tha function changes that copy,
+#    tha original variable outside tha function stays tha same
+
+def modify(a:int)-> int:
+    print(a)               #output - 5
+    a=25
+    print(a)               #output - 25
+    return(a)
+b=5
+print(modify(b))           #output - 25
+print(b)                   #output - 5
+
+
+# 2 pass by Referenc
+# -----------------------
+# -> tha function gets a referenc (a pointer) to tha original data. if tha function 
+#     modify
       
+def modify1(a:list)-> list:
+    print(a)               #output - [10, 20, 30]
+    a.append(40)
+    print(a)               #output - [10, 20, 30, 40]
+    return(a)
+b=[10,20,30]
+print(modify1(b))           #output - [10, 20, 30, 40]
+print(b)                   #output - [10, 20, 30, 40]
+print()
 
+def modify2(a:tuple)-> tuple:
+    print(a)               #output - (10, 20, 30)
+    a=list(a)
+    a.append(40)
+    print(a)               #output - [10, 20, 30, 40]
+    a=tuple(a)
+    print(a)               #output - (10, 20, 30, 40)
+    return(a)
+b=(10,20,30)
+print(modify2(b))           #output - (10, 20, 30, 40)
+print(b)                   #output - (10, 20, 30)
+print()
 
+print()
+def modify3():
+    global b
+    print(b)               #output - (10, 20, 30, 40, 50)
+    b=list(b)
+    b.append(60)
+    print(b)               #output - [10, 20, 30, 40,50, 60]
+    return b
 
+b=(10,20,30,40,50)
+print(modify3())           #output - [10, 20, 30, 40,50, 60]
+print(b)                   #output - [10, 20, 30, 40, 50, 60]
 
+#recvorsive function
+# -----------------------
+
+print()
+def fact(n):
+    if n==1:
+        return 1
+    return n*fact(n-1)
+print(fact(5))
+    
+print()
+def rev(n : str):
+    if len(n)==1:
+        return n[0]
+    return rev(n[1:])+n[0]
+print(rev("najad vt"))
+
+print()
+def rev1(n : str):
+    if len(n)==1:
+        return n[0]
+    return n[-1] + rev1(n[:-1])
+print(rev1("najad vt"))

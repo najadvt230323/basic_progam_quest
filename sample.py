@@ -12,25 +12,25 @@
 # print(a)
 # print(b)
 
-a="fullstack"
-b=[]
-c=[]
-f={}
-g=[]
-for i in a:
-    b.append(i)
-    d=a.count(i)
-    c.append(d)
-e=len(b)
-for i in range(e):
-    if not i in g:
-        f.update({b[i]:c[i]})
-        g.append(b[i])
-print(f)
+# a="fullstack"
+# b=[]
+# c=[]
+# f={}
+# g=[]
+# for i in a:
+#     b.append(i)
+#     d=a.count(i)
+#     c.append(d)
+# e=len(b)
+# for i in range(e):
+#     if not i in g:
+#         f.update({b[i]:c[i]})
+#         g.append(b[i])
+# print(f)
 
-a="fullstack"
-h={i:a.count(i) for i in a}
-print(h)
+# a="fullstack"
+# h={i:a.count(i) for i in a}
+# print(h)
 
 
 # a=[10,20,30,40]
@@ -52,10 +52,10 @@ print(h)
 # a=[[1,2,3],[4,5,6],[7,8,9]]
 # print(f"row 2 : {a[1]}, element : {a[2][1]}")
 
-a=[1,2,3]
-b=a
-b.append(4)
-print(a)
+# a=[1,2,3]
+# b=a
+# b.append(4)
+# print(a)
 
 # a=[10,20,10,30,40,20,50,30]
 # b=[]
@@ -71,28 +71,25 @@ print(a)
 # print(b)
 # print(c)
 
-# ways to pass valu to a function
-# -------------------------------------
-# 1.pass by Value
-# -------------------------
-# -> tha function get acopy of tha data .if tha function changes that copy,
-#    tha original variable outside tha function stays tha same
-
-def modify(a:int)-> int:
-    print(a)               #output - 5
-    a=25
-    print(a)               #output - 25
-    return(a)
-b=5
-print(modify(b))           #output - 25
-print(b)                   #output - 5
 
 
+# a=int(input("enter a intger number : "))
 
-
-
-
-# 2 pass by Referenc
-# -----------------------
-# -> tha function gets a referenc (a pointer) to tha original data. iftha function 
-#     modify
+# if a>0:
+#     b=1
+#     c=int(a/10)
+#     while c>0:
+#         b+=1
+#         c=int(c/10)
+#     d=0
+#     e=a
+#     while  e>0 :
+#         f=e%10
+#         d=d+pow(f,b)
+#         e=int(e/10)
+#     if a==d:
+#         print(f"{a} is an Armstrong number.")
+#     else:
+#         print(f"{a} is not an Armstrong number.")
+# else:
+#     print(f"{a} is negtev value")

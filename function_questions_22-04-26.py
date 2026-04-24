@@ -505,210 +505,360 @@ handling, return values, and clean logic.
 
 # '''
 
-# F : 1 : 
+# F : 1 :
+# Write a function to check whether a number is prime. 
 
-# '''
+'''
+def prime(a:int):
+    b=0
+    if a>0 :
+        if a==2:
+            print(f"{a} is a prime number")
+        elif a==1:
+            print(f"{a} is negtev value")
+        else:
+            for i in range(2,a):
+                if a%i==0:
+                    b+=1
+            if b==0:
+                print(f"{a} is a prime number")
+            else:
+                print(f"{a} is a not prime number")
+    else:
+        print(f"{a} is negtev value")
 
+a=int(input("enter a intger number : "))
+prime(a)
 
-# '''
+'''
 
 # F : 2 : 
+# Write a function to generate the Fibonacci series up to n terms.
+
+'''
+
+def fibon(a:int):
+    fino=0
+    b=1
+    print(f"fibonacci of {a} = ")
+    if a>0:
+        for i in range(0,a):
+            print(fino, end=" ")
+            c=fino
+            fino=fino+b
+            b=c
+a=int(input("enter a intger number : "))
+fibon(a)
+
+'''
+
+# F : 3 :
+# Write a function to check whether a number is an Armstrong number. 
+
+'''
+def arms(a : int):
+    if a>0:
+        b=1
+        c=int(a/10)
+        while c>0:
+            b+=1
+            c=int(c/10)
+        d=0
+        e=a
+        while  e>0 :
+            f=e%10
+            d=d+pow(f,b)
+            e=int(e/10)
+        if a==d:
+            print(f"{a} is an Armstrong number.")
+        else:
+            print(f"{a} is not an Armstrong number.")
+    else:
+        print(f"{a} is negtev value")
+
+a=int(input("enter a intger number : "))
+arms(a)       
+
+'''
+
+# F : 4 :
+# Write a function to return all divisors of a number. 
+
+'''
+def divi(a: int):
+    b=[]
+    for i in range(1,a+1):
+        if a%i==0:
+            b.append(i)
+    return b
+a=int(input("enter a intger number : "))
+print(divi(a))
+
+'''
+
+# F : 5 :
+# Write a function to find the GCD of two numbers.
+
+'''
+def gcd (a,b):
+    for i in range(max(a,b),0,-1):
+        if a%i==0 and b%i==0:
+            print(f"gcd :{i}")
+            break
+print("enter two num :")
+a=int(input(""))
+b=int(input(""))
+gcd(a,b)
+
+'''
+
+# F : 6 :
+# Write a function to find the LCM of two numbers. 
+
+'''
+def lcm (a,b):
+    c=a*b+1
+    for i in range(max(a,b),c):
+        if i%a==0 and i%b==0:
+            print(f"lcm :{i}")
+            break
+
+print("enter two num :")
+a=int(input(""))
+b=int(input(""))
+lcm(a,b)
+
+'''
+
+# F : 7 :
+# Write a function to convert a decimal number to binary.  
+
+'''
+def binary(a : int):
+    b=""
+    if a>0:
+        while a>0:
+            if a%2==0:
+                b+="0"
+                a=int(a/2)
+            else:
+                b+="1"
+                a=int(a/2)
+    return b[::-1]
+a=int(input("enter a intger number : "))
+b=int(binary(a))
+print(b)
+
+'''
+
+# F : 8 :
+# Write a function to count the number of digits in an integer. 
+
+'''
+def digi(a):
+    if a>0:
+        b=0
+        while(a>0):
+            b+=1
+            a=int(a/10)
+    return b
+a=int(input("enter a intger number : "))
+print(f"{digi(a)} number of digits in an {a}")
+
+'''
+
+# F : 9 :
+# Write a function to check whether a number is a perfect number. 
+
+'''
+def perfect(a: int):
+    b=0
+    for i in range(1,a):
+        if a%i==0:
+            b=b+i
+    return b
+a=int(input("enter a intger number : "))
+b=perfect(a)
+if a==b:
+    print(f"{a} is a perfect number.")
+else:
+    print(f"{a} is a not perfect number.")
+
+
+'''
+
+# F : 10 :
+# Write a function to return the multiplication table of a number. 
+
+'''
+
+def multi(a):
+    for i in range(1,11):
+         print(f"{a} * {i} = {a*i}")
+a=int(input("enter a intger number : "))
+multi(a)
+
+'''
+
+# G : 1 :
+# Write a recursive function to find the factorial of a number.
+
+'''
+def fact(n):
+    if n==1:
+        return 1
+    return n*fact(n-1)
+a=int(input("enter a intger number : "))
+print(fact(a))
+
+'''
+
+# G : 2 :
+# Write a recursive function to calculate the sum of first n natural numbers.  
 
 # '''
 
 
 # '''
 
-# F : 3 : 
+# G : 3 :
+# Write a recursive function to print numbers from 1 to n. 
 
 # '''
 
 
 # '''
 
-# F : 4 : 
+# G : 4 :
+# Write a recursive function to reverse a string. 
 
 # '''
 
 
 # '''
 
-# F : 5 : 
+# G : 5 :
+# Write a recursive function to find the nth Fibonacci number. 
 
 # '''
 
 
 # '''
 
-# F : 6 : 
+# G : 6 :
+# Write a recursive function to calculate the power of a number. 
 
 # '''
 
 
 # '''
 
-# F : 7 : 
+# G : 7 :
+# Write a recursive function to count digits in a number.
 
 # '''
 
 
 # '''
 
-# F : 8 : 
+# G : 8 :
+# Write a recursive function to check whether a string is a palindrome.  
 
 # '''
 
 
 # '''
 
-# F : 9 : 
+# G : 9 :
+# Write a recursive function to find the sum of digits of a number.
 
 # '''
 
 
 # '''
 
-# F : 10 : 
+# G : 10 :
+# Write a recursive function to find the product of elements in a list. 
 
 # '''
 
 
 # '''
 
-# G : 1 : 
+# H : 1 :
+# Write a function to calculate electricity bill based on units consumed.
 
 # '''
 
 
 # '''
 
-# G : 2 : 
+# H : 2 :
+# Write a function to calculate employee salary after bonus deduction/tax.  
 
 # '''
 
 
 # '''
 
-# G : 3 : 
+# H : 3 :
+# Write a function to calculate student grade from marks. 
 
 # '''
 
 
 # '''
 
-# G : 4 : 
+# H : 4 :
+# Write a function to check login using username and password. 
 
 # '''
 
 
 # '''
 
-# G : 5 : 
+# H : 5 :
+# Write a function to generate a simple receipt for purchased items.
 
 # '''
 
 
 # '''
 
-# G : 6 : 
+# H : 6 :
+# Write a function to calculate simple interest and compound interest. 
 
 # '''
 
 
 # '''
 
-# G : 7 : 
+# H : 7 :
+# Write a function to validate whether a mobile number is valid.  
 
 # '''
 
 
 # '''
 
-# G : 8 : 
+# H : 8 :
+# Write a function to check password strength.
 
 # '''
 
 
 # '''
 
-# G : 9 : 
+# H : 9 :
+# Write a function to calculate age from birth year.  
 
 # '''
 
 
 # '''
 
-# G : 10 : 
-
-# '''
-
-
-# '''
-
-# H : 1 : 
-
-# '''
-
-
-# '''
-
-# H : 2 : 
-
-# '''
-
-
-# '''
-
-# H : 3 : 
-
-# '''
-
-
-# '''
-
-# H : 4 : 
-
-# '''
-
-
-# '''
-
-# H : 5 : 
-
-# '''
-
-
-# '''
-
-# H : 6 : 
-
-# '''
-
-
-# '''
-
-# H : 7 : 
-
-# '''
-
-
-# '''
-
-# H : 8 : 
-
-# '''
-
-
-# '''
-
-# H : 9 : 
-
-# '''
-
-
-# '''
-
-# H : 10 : 
+# H : 10 :
+# Write a function to simulate an ATM withdrawal check (balance vs withdrawal amount). 
 
 # '''
 
