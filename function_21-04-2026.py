@@ -204,3 +204,30 @@ def rev1(n : str):
         return n[0]
     return n[-1] + rev1(n[:-1])
 print(rev1("najad vt"))
+
+# lambda function
+# --------------------
+
+print()
+l=lambda a:a**2
+print(l)
+print(type(l))
+print(l(10))
+
+print()
+l1=lambda a,b,c:a+b+c
+print(l1(10,20,30))
+
+print()
+l1=lambda a=0,b=0,c=0:a+b+c
+print(l1(10,20,30))
+print(l1(10,20))
+print(l1(10))
+
+print()
+l1=lambda a,b,c:[a**2,b**2,c**2]
+print(l1(10,20,30))
+
+print()
+l1=lambda a:"ood" if a%2==1 else "evan"
+print(l1(10))

@@ -716,26 +716,60 @@ print(fact(a))
 # G : 2 :
 # Write a recursive function to calculate the sum of first n natural numbers.  
 
-# '''
+'''
+def s(n):
+    if n==1:
+        return 1
+    return n+s(n-1)
+a=int(input("enter a intger number : "))
+print(s(a))
 
-
-# '''
+'''
 
 # G : 3 :
 # Write a recursive function to print numbers from 1 to n. 
 
-# '''
+'''
+def s(n,a=0):
+    if n+1==a:
+        return(n)
+    print(a)
+    s(n,a+1)
+a=int(input("enter a intger number : "))
+s(a)
 
+'''
+'''
+def s(n):
+    if n==0:
+        return(1)
+    print(n)
+    s(n-1)
+a=int(input("enter a intger number : "))
+print(s(a))
 
-# '''
+'''
 
 # G : 4 :
 # Write a recursive function to reverse a string. 
 
-# '''
+'''
+def rev1(n : str):
+    if len(n)==1:
+        return n[0]
+    return n[-1] + rev1(n[:-1])
+a=input("enter a intger string : ")
+print(rev1(a))
 
-
-# '''
+'''
+'''
+def rev(n : str):
+    if len(n)==1:
+        return n[0]
+    return rev(n[1:])+n[0]
+a=input("enter a intger string : ")
+print(rev(a))
+'''
 
 # G : 5 :
 # Write a recursive function to find the nth Fibonacci number. 
