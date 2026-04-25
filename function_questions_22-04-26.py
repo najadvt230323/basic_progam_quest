@@ -1068,91 +1068,104 @@ while a=="y" or a=="Y":
     a=input("do you want to agin withdraw or deposit mony (y/n) : ")
 '''
 
-# I : 1 : 
+# I : 1 :
+# Write a menu-driven program using functions for basic calculator operations. 
 
 # '''
 
 
 # '''
 
-# I : 2 : 
+# I : 2 :
+# Write a program with separate functions to input, process, and display student details. 
 
 # '''
 
 
 # '''
 
-# I : 3 : 
+# I : 3 :
+# Write a function to take a list of numbers and return both the largest and smallest. 
 
 # '''
 
 
 # '''
 
-# I : 4 : 
+# I : 4 :
+# Write a function to accept a sentence and return the number of vowels, consonants, and spaces.
 
 # '''
 
 
 # '''
 
-# I : 5 : 
+# I : 5 :
+# Write a function to accept marks of 5 subjects and return total, average, and grade.  
 
 # '''
 
 
 # '''
 
-# I : 6 : 
+# I : 6 :
+# Write a function to accept a number and print whether it is prime, palindrome, and Armstrong.
 
 # '''
 
 
 # '''
 
-# I : 7 : 
+# I : 7 :
+# Write a function to manage a simple contact list (add, search, display). 
 
 # '''
 
 
 # '''
 
-# I : 8 : 
+# I : 8 :
+# Write a function-based program to count how many even and odd numbers are in a list.  
 
 # '''
 
 
 # '''
 
-# I : 9 : 
+# I : 9 :
+# Write a function to simulate a shopping cart total with discount calculation. 
 
 # '''
 
 
 # '''
 
-# I : 10 : 
+# I : 10 :
+# Write a function to accept a matrix (list of lists) and print row-wise sums. 
 
 # '''
 
 
 # '''
 
-# J : 1 : 
+# J : 1 :
+# Create a library of utility functions for numbers, strings, and lists in one Python file. 
 
 # '''
 
 
 # '''
 
-# J : 2 : 
+# J : 2 :
+# Build a student result system using functions only. 
 
 # '''
 
 
 # '''
 
-# J : 3 : 
+# J : 3 :
+# Create a bank menu program using functions for deposit, withdraw, and balance check. 
 
 # '''
 
@@ -1160,6 +1173,7 @@ while a=="y" or a=="Y":
 # '''
 
 # J : 4 : 
+# Create a quiz game where each task is handled by a separate function.
 
 # '''
 
@@ -1167,6 +1181,7 @@ while a=="y" or a=="Y":
 # '''
 
 # J : 5 : 
+# Build a small text-based calculator app using reusable functions.
 
 # '''
 
