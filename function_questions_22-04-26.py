@@ -875,26 +875,71 @@ print(ele(a,b))
 # H : 1 :
 # Write a function to calculate electricity bill based on units consumed.
 
-# '''
+'''
+def electricity(a : int):
+    if a>0:
+        if a<=150:
+            return a*5
+        elif a<=200:
+            return (a-150)*7+150*5
+        elif a<=250:
+            return (a-200)*9 + 50*7 + 150*5
+        else:
+            return (a-250)*12 + 50*9 + 50*7 + 150*5
+    else:
+        return "enter a valid unit"
 
 
-# '''
+print("calculate electricity bill based on units")
+print("------------------------------------------")
+a=int(input("Enter the unit of electricity you used this month. : "))
+print(f"your electricity bill based on units : {electricity(a)}")
+
+'''
 
 # H : 2 :
 # Write a function to calculate employee salary after bonus deduction/tax.  
 
-# '''
+'''
+def salary(a : int,b):
+    return a+(a*(b/100))
 
+print("calculate employee salary after bonus")
+print("------------------------------------------")
+name=input("enter the name : ")
+age=int(input("enter the age : "))
+sal=int(input("enter themcurrent salary : "))
+exp=int(input("enter experience in this company : "))
 
-# '''
+print("name : ",name)
+print("age : ",age)
+print("salary : ",sal)
+print("experience in this company : ",exp)
+if exp<=3:
+    print("salary after bonus : ",salary(sal,10))
+elif exp<=5:
+    print("salary after bonus : ",salary(sal,20))
+elif exp<=8:
+    print("salary after bonus : ",salary(sal,30))
+elif exp<=10:
+    print("salary after bonus : ",salary(sal,40))
+else:
+    print("salary after bonus : ",salary(sal,50))
+
+'''
 
 # H : 3 :
 # Write a function to calculate student grade from marks. 
 
-# '''
+'''
+print("calculate student grade from marks.")
+print("------------------------------------------")
+name=input("enter the name : ")
+marks=int(input("enter the marks : "))
+grade = lambda a :"A" if a>=90 else "B" if a>=80 else "C" if a>=70 else "D" if a>=60 else "E" if a>=50 else "FAIL"
+print(f"name : {name} \nmarks : {marks} \ngrade : {grade(marks)}")
 
-
-# '''
+'''
 
 # H : 4 :
 # Write a function to check login using username and password. 
@@ -907,18 +952,42 @@ print(ele(a,b))
 # H : 5 :
 # Write a function to generate a simple receipt for purchased items.
 
-# '''
+'''
+print("generate a simple receipt for purchased items.")
+print("-------------------------------------------------")
+print("1.Notebook (price : 50) \n2.Pen (price : 5) \n3.Eraser (price : 10)")
+book=int(input("How many notebooks do you need? : "))
+Pen=int(input("How many Pen do you need? : "))
+Eraser=int(input("How many Eraser do you need? : "))
 
+a=lambda a,b,c:a*50 + b*5 + c*10 
+print("receipt for purchased items.")
+print(f"Notebook * {book} = {book*50}")
+print(f"Pen * {Pen} = {Pen*5}")
+print(f"Eraser * {Eraser} = {Eraser*10}")
+print(f"toteal amound = {a(book,Pen,Eraser)}")
 
-# '''
+'''
 
 # H : 6 :
 # Write a function to calculate simple interest and compound interest. 
 
-# '''
+'''
+def interest(a,b,c,d):
+    e=a+((a*b*c)/100)
+    f=a*((1+((c/100)/d))**(d*b))
+    return e,f
 
+print("calculate simple interest and compound interest.")
+print("-------------------------------------------------")
+amond=int(input("enter the amnd : "))
+year=int(input("enter the how many years : "))
+inter=int(input("enter the interest rate : "))
+comp=int(input("enter number of times interest is compounded per year : "))
+a=interest(amond,year,inter,comp)
+print(f"simple interest : {a[0]} \ncompound interest : {a[1]}")
 
-# '''
+'''
 
 # H : 7 :
 # Write a function to validate whether a mobile number is valid.  
@@ -939,6 +1008,28 @@ print(ele(a,b))
 # H : 9 :
 # Write a function to calculate age from birth year.  
 
+'''
+import datetime
+# print(datetime.datetime.now())
+# print(datetime.datetime.now().date())
+# print(datetime.datetime.now().date().year)
+# print(datetime.datetime.now().date().month)
+# print(datetime.datetime.now().date().day)
+# print(datetime.datetime.now().date().today())
+# print(datetime.datetime.now().date().timetuple())
+
+# print(datetime.datetime.now().time())
+# print(datetime.datetime.now().time().hour)
+# print(datetime.datetime.now().time().minute)
+# print(datetime.datetime.now().time().second)
+# print(datetime.datetime.now().time().microsecond)
+
+c=datetime.datetime.now().date().year
+a=int(input("enter your brith year :"))
+b=lambda a,c: c-a
+print(f"your are : {b(a,c)}")
+
+# '''
 # '''
 
 
@@ -947,10 +1038,35 @@ print(ele(a,b))
 # H : 10 :
 # Write a function to simulate an ATM withdrawal check (balance vs withdrawal amount). 
 
-# '''
+'''
+def bang(a,b):
+    if b==1:
+        d=int(input("how much monydo you need to withdraw? : "))
+        if d<=a:
+            a-=d
+            print("your withdrawal is successfully complrte.")
+            return a
+        else:
+            print("you don't have this amount in your account.")
+            return a
+    elif b==2:
+        d=int(input("how much monydo you need to deposit? : "))
+        return a + d
+    else:
+        print("wrong choice")
+        return a
 
+name=input("enter your name :")
+bal=int(input("enter the bang balans : "))
 
-# '''
+a="y"
+while a=="y" or a=="Y":
+    b=int(input("1.withdraw mony or 2.deposit mony (1/2) : "))
+    bal=bang(bal,b)
+    print("name : ",name)
+    print("balanc : ",bal)
+    a=input("do you want to agin withdraw or deposit mony (y/n) : ")
+'''
 
 # I : 1 : 
 
