@@ -785,7 +785,7 @@ def fibonacci(a : int,fino=0,b=1):
         fibonacci(a-1,fino,b)
     return
 a=int(input("enter a intger : "))
-fibonacci(a)
+fibonacci(a) 
 
 '''
 
