@@ -317,5 +317,54 @@ print(c)
 print(d)
 
 print()
-print(bool({}))
-print(bool({0}))
+print(bool({}))                 # out put - False
+print(bool({0}))                # out put - True
+
+a=[0,(),{},[]]
+print(any(a))                   # out put -False
+b=[0,(),{},[a]]
+print(any(b))                   # out put -True
+print(all(b))                   # out put -False
+b=[1,(1),{2},[a]]
+print(all(b))                   # out put -True
+
+a=["najad","rch","aju",'ssss','dda']
+b=list(filter(lambda x : (i in "aeiouAEIOU" for i in x),a))    # out put - ['najad', 'rch', 'aju', 'ssss', 'dda']
+c=list(filter(lambda x : any(i in "aeiouAEIOU" for i in x),a)) # out put - ['najad', 'aju', 'dda']
+d=list(filter(lambda x : all(i in "aeiouAEIOU" for i in x),a)) # out put - []
+e=list(map(lambda x : any(i in "aeiouAEIOU" for i in x),a))    # out put -  [True, False, True, False, True]
+f=list(map(lambda x : all(i in "aeiouAEIOU" for i in x),a))    # out put -  [False, False, False, False, False]
+print()
+print(b)
+print(c)
+print(d)
+print(e)
+print(f)
+
+print()
+a=["naju@gmail.com","richu@yahoo.com","aju@gmail.com"]
+b=list(filter(lambda x : any(x.endswith(i) for i in ["gmail.com"] ),a)) # out put - []
+# c=list(filter(lambda x : any(i in ["aeiouAEIOU"] for i in x),a))         # out put - []
+print(b) 
+
+
+a=[i for i in range(1,22)]
+print(a)                  # out put - [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+b=list(map(lambda x : x**3,filter(lambda y : y%3==0,a)))               # out put - [27, 216, 729, 1728, 3375, 5832, 9261]
+c=list(filter(lambda x:x,map(lambda y :y**3 if y%3==0 else False,a)))  # out put - [27, 216, 729, 1728, 3375, 5832, 9261]
+print(b)
+print(c)
+
+print()
+a=["aju","najad","richu","abi","fazi","anu","kathal"]
+b=list(map(lambda x: x.upper() , filter(lambda y : len(y)>4,a)))
+c=list(filter(lambda x:x,map(lambda y :y.upper() if len(y)>4 else y,a)))
+print(b)                                                # out put - ['NAJAD', 'RICHU', 'KATHAL']
+print(c)                                                # out put - ['aju', 'NAJAD', 'RICHU', 'abi', 'fazi', 'anu', 'KATHAL']
+
+
+
+
+
+
+
