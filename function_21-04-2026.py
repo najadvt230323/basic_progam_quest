@@ -140,7 +140,7 @@ print(modify(b))           #output - 25
 print(b)                   #output - 5
 
 
-# 2 pass by Referenc
+# 2. pass by Referenc
 # -----------------------
 # -> tha function gets a referenc (a pointer) to tha original data. if tha function 
 #     modify
@@ -181,7 +181,7 @@ b=(10,20,30,40,50)
 print(modify3())           #output - [10, 20, 30, 40,50, 60]
 print(b)                   #output - [10, 20, 30, 40, 50, 60]
 
-#recvorsive function
+# 3.recvorsive function
 # -----------------------
 
 print()
@@ -205,7 +205,7 @@ def rev1(n : str):
     return n[-1] + rev1(n[:-1])
 print(rev1("najad vt"))
 
-# lambda function
+# 4.lambda function
 # --------------------
 
 print()
@@ -254,3 +254,68 @@ print(l1(10))
 print()
 l3=lambda a:"multipel of 5" if a%5==0 and not a%3==0 else "multipel of 3" if not a%5==0 and a%3==0 else "multipel of 3 and 5" if  a%5==0 and a%3==0 else "not multipel of 3 and 5"
 print(l3(15))
+print()
+
+
+# 5.higher order function
+# ------------------------- 
+# ---1. map function---
+def squ(n : int):
+    return n**2
+
+a=(1,2,3,4,5,6,7,8,9,10)
+b=map(squ,a)
+print(b)
+print(list(b))
+
+print()
+c=map(lambda x:x**3,a)       #[1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]
+print(list(c))
+
+print()    
+a=[8,92,9,5,6,7,10,15,25,44]
+b=list(map(lambda x:x%5==0,a))            #[False, False, False, True, False, False, True, True, True, False]
+c=list(map(lambda x:x if x%5==0 else 0,a))#[0, 0, 0, 5, 0, 0, 10, 15, 25, 0]
+print(b)
+print(c)
+
+# ---2 filter---
+
+print()
+d=list(filter(lambda x:x%5==0,a))
+e=list(filter(lambda x:x**2,a))     # not working
+print(d)                            # [5, 10, 15, 25]
+print(e)                            # [8, 92, 9, 5, 6, 7, 10, 15, 25, 44]
+
+
+def fil(a:str):
+    for i in a:
+        if i in "aeiouAEIOU":
+            return a
+
+a=["najad","rch","aju",'ssss','dda']
+b=list(filter(lambda x : x in "aeiouAEIOU",a)) # out put - []
+c=list(filter(fil,a))                          # ['najad', 'aju', 'dda']
+d=list(map(fil,a))                             # ['najad', None, 'aju', None, 'dda']
+print(b)
+print(c)
+print(d)
+
+
+def fil(a:str):
+    for i in a:
+        if i in "aeiouAEIOU":
+            return True
+    return False
+
+a=["najad","rch","aju",'ssss','dda']
+b=list(filter(lambda x : x in "aeiouAEIOU",a)) # out put - []
+c=list(filter(fil,a))                          # ['najad', 'aju', 'dda']
+d=list(map(fil,a))                             # [True, False, True, False, True]
+print(b)
+print(c)
+print(d)
+
+print()
+print(bool({}))
+print(bool({0}))
