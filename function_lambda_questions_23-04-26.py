@@ -331,14 +331,16 @@ print(x("hello"))
 
 # '''
 
-# 16 : 
+# 16 :
+# Write a lambda function to check whether a number is divisible by 5. 
 
 # '''
 
 
 # '''
 
-# 17 : 
+# 17 :
+# Write a lambda function to check whether a number is divisible by both 3 and 5. 
 
 # '''
 
@@ -346,20 +348,23 @@ print(x("hello"))
 # '''
 
 # 18 : 
+# Write a lambda function to find the last digit of a number.
 
 # '''
 
 
 # '''
 
-# 19 : 
+# 19 :
+# Write a lambda function to remove the last digit of a number. 
 
 # '''
 
 
 # '''
 
-# 20 : 
+# 20 :
+# Write a lambda function to check whether a number is a multiple of 10. 
 
 # '''
 
@@ -367,179 +372,296 @@ print(x("hello"))
 # '''
 
 # 21 : 
+# Write a lambda function to calculate simple interest.
 
 # '''
 
 
 # '''
 
-# 22 : 
+# 22 :
+# Write a lambda function to calculate the area of a rectangle. 
 
-# '''
+'''
+print("the area of a square.")
+print("enter tha 2 sides of a rectangle.")
+a=int(input("enter 1st side : "))
+b=int(input("enter 2nd side : "))
+c=lambda a,b:a*b
+print(f"area of a rectangle : {c(a,b)}")
 
+'''
 
-# '''
+# 23 :
+# Write a lambda function to calculate the area of a square. 
 
-# 23 : 
+'''
+print("the area of a square.")
+a=int(input("enter side : "))
+c=lambda a:a*a
+print(f"area of a rectangle : {c(a)}")
 
-# '''
+'''
 
+# 24 :
+# Write a lambda function to calculate the perimeter of a rectangle.
 
-# '''
+'''
+print("the perimeter of a rectangle.")
+print("enter tha 2 sides of a rectangle.")
+a=int(input("enter 1st side : "))
+b=int(input("enter 2nd side : "))
+c=lambda a,b:2*(a+b)
+print(f"perimeter of a rectangle : {c(a,b)}")
 
-# 24 : 
+'''
 
-# '''
+# 25 :
+# Write a lambda function to calculate the area of a triangle.  
 
+'''
+print("the area of a triangle.")
+print("enter tha 3 sides of a triangle.")
+a=int(input("enter 1st side : "))
+b=int(input("enter 2nd side : "))
+c=int(input("enter 3rd side : "))
+d=(a+b+c)/2
+e=lambda a,b,c,d:(d*(d-a)*(d-b)*(d-c))**.5
+print(f"area of a triangle : {e(a,b,c,d)}")
 
-# '''
+'''
 
-# 25 : 
+# 26 :
+# Write a lambda function to convert Celsius to Fahrenheit. 
 
-# '''
-
-
-# '''
-
-# 26 : 
-
-# '''
-
-
-# '''
+'''
+a=int(input("enter tha Celsius :"))
+b= lambda x:(x*9/5)+32
+print(f"Fahrenheit : {b(a)}")
+'''
+'''
+a=int(input("enter tha Fahrenheit :"))
+b= lambda x:(x- 32)*5/9
+print(f"Celsius : {b(a)}")
+'''
 
 # 27 : 
+# Write a lambda function to convert Fahrenheit to Celsius.
 
-# '''
+'''
+a=int(input("enter tha Fahrenheit :"))
+b= lambda x:(x- 32)*5/9
+print(f"Celsius : {b(a)}")
+'''
+'''
+a=int(input("enter tha Celsius :"))
+b= lambda x:(x*9/5)+32
+print(f"Fahrenheit : {b(a)}")
+'''
 
+# 28 :
+# Write a lambda function to convert a string to uppercase.
 
-# '''
+'''
+a=input("enter a stering :")
+b=lambda x: x.upper()
+print(b(a))
 
-# 28 : 
+'''
 
-# '''
+# 29 :
+# Write a lambda function to convert a string to lowercase. 
 
+'''
+a=input("enter a stering :")
+b=lambda x: x.lower()
+print(b(a))
 
-# '''
+'''
 
-# 29 : 
+# 30 :
+# Write a lambda function to find the length of a string 
 
-# '''
+'''
+a=input("enter a stering :")
+b=lambda x: len(x)
+print(b(a))
 
+'''
 
-# '''
+# 31 :
+# Write a lambda function to get the first character of a string. 
 
-# 30 : 
+'''
+a=input("enter a stering :")
+b=lambda x: x[0]
+print(b(a))
 
-# '''
+'''
+'''
+a=['najad',"richu","aju","fazil"]
+print(list(map(lambda x: x[0],a)))
 
+'''
 
-# '''
+# 32 :
+# Write a lambda function to get the last character of a string. 
 
-# 31 : 
+'''
+a=input("enter a stering :")
+b=lambda x: x[-1]
+print(b(a))
 
-# '''
+'''
+'''
+a=['najad',"richu","aju","fazil"]
+print(list(map(lambda x: x[-1],a)))
 
+'''
 
-# '''
+# 33 :Write a lambda function to reverse a string.
 
-# 32 : 
+'''
+a=input("enter a stering :")
+b=lambda x: x[::-1]
+print(b(a))
 
-# '''
+'''
+'''
+a=['najad',"richu","aju","fazil"]
+print(list(map(lambda x: x[::-1],a)))
 
+'''
 
-# '''
+# 34 :Write a lambda function to check whether a string is a palindrome.  
 
-# 33 : 
+'''
+a=input("enter a stering :")
+b=lambda x: x[::-1]
+if a==b(a):
+    print("stering is a palindrome")
+else:
+    print("stering is not a palindrome")
 
-# '''
+'''
 
+# 35 :Write a lambda function to count vowels in a string. 
 
-# '''
+'''
+a=input("enter a stering :")
+b=lambda x: sum(1 for i in a if i in "aeiou")
+print(b(a))
 
-# 34 : 
+'''
 
-# '''
+# 36 :
+# Write a lambda function to check whether a string starts with 'A'. 
 
+'''
+a=input("enter a stering :")
+b=lambda x: "yes,string starts with 'A'" if x[0]=="a" or x[0]=="A" else "no,string not starts with 'A'"
+print(b(a))
 
-# '''
+'''
 
-# 35 : 
+# 37 :
+# Write a lambda function to calculate the average of three numbers. 
 
-# '''
+'''
+print("calculate the average of three numbers.")
+a=int(input("enter 1st inger : "))
+b=int(input("enter 2nd inger : "))
+c=int(input("enter 3rd inger : "))
+d=lambda x,y,z: (x+y+z)/3
+print(d(a,b,c))
 
+'''
 
-# '''
+# 38 :
+# Write a lambda function to swap two numbers. 
 
-# 36 : 
+'''
+print("swap two numbers.")
+a=int(input("enter 1st inger : "))
+b=int(input("enter 2nd inger : "))
+print(a,b)
+c=lambda x,y :(y,x)
+a,b=c(a,b)
+print(a,b)
 
-# '''
+'''
 
+# 39 :Write a lambda function to return the absolute value of a number. 
 
-# '''
+'''
+print("absolute value of a number")
+a=int(input("enter number : "))
+b= lambda a :a*-1 if a<0 else a
+print(f"absolute value of a number : {b(a)}")
 
-# 37 : 
+'''
 
-# '''
+# 40 :
+# Write a lambda function to check whether a character is a vowel. 
 
+'''
+a=input("enter a stering :")
+b=lambda x: True if x[0] in "aeiouAEIOU" else False
+print(b(a))
 
-# '''
+'''
 
-# 38 : 
+# 41 :
+# Write a lambda function to check whether a character is an alphabet. 
 
-# '''
+'''
+a=input("enter a stering :")
+b=lambda x: True if x.isalpha() else False
+print(b(a))
 
+'''
 
-# '''
+# 42 :
+# Write a lambda function to check whether a character is a digit. 
 
-# 39 : 
+'''
+a=input("enter a stering :")
+b=lambda x: True if x.isdigit() else False
+print(b(a))
 
-# '''
+'''
 
+# 43 :
+# Write a lambda function to join two strings. 
 
-# '''
+'''
+a=input("enter a stering :")
+b=input("enter anther stering :")
+c=lambda x,y: x+y
+print(c(a,b))
 
-# 40 : 
+'''
 
-# '''
+# 44 :
+# Write a lambda function to repeat a string n times. 
 
+'''
+a=input("enter a stering :")
+b=int(input("hwo many times repeat stering :"))
+c=lambda x,y: x*y
+print(c(a,b))
 
-# '''
+'''
 
-# 41 : 
+# 45 :
+# Write a lambda function to calculate the discounted price. 
 
-# '''
+'''
+a=int(input("enter tha price :"))
+b=lambda x:x-(x*.1) if x<=100 else  x-(x*.2) if x<=200 else  x-(x*.3) if x<=300 else  x-(x*.4) if x<=400 else x-(x*.5)
+print(b(a))
 
-
-# '''
-
-# 42 : 
-
-# '''
-
-
-# '''
-
-# 43 : 
-
-# '''
-
-
-# '''
-
-# 44 : 
-
-# '''
-
-
-# '''
-
-# 45 : 
-
-# '''
-
-
-# '''
+'''
 
 # 46 : 
 

@@ -363,6 +363,87 @@ print(b)                                                # out put - ['NAJAD', 'R
 print(c)                                                # out put - ['aju', 'NAJAD', 'RICHU', 'abi', 'fazi', 'anu', 'KATHAL']
 
 
+# ---3 REDUCE function---
+
+print()
+from functools import reduce
+a=[1,2,3,4,5,6,7,8,9,10]
+b=reduce(lambda x,y :x+y,a)
+c=reduce(lambda x,y :x*y,a)
+print(b)
+print(c)
+
+from functools import reduce
+a=["hello"," ","world"]
+b=reduce(lambda x,y :x+y,a)
+print(b)
+
+a=[1,2,3,4,5,6,7,8,9,10,9,8,5,5,9,5,7]
+b=reduce(lambda x,y :x if x>y else y,a)
+c=reduce(lambda x,y :x if x<y else y,a)
+
+print(b)
+print(c)
+
+
+a=["hello"," ","world","najad vt"]
+b=reduce(lambda x,y :x if len(x)>len(y) else y,a)                    # out put - najad vt
+print(b)
+
+print()
+a=[1,2,3,4,5,6,7,8,9,10,9,8,5,5,9,5,7]
+b=reduce(lambda x,y: x + [y] if y not in x else x, a , [])           # out put - [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# c=reduce(lambda x,y: x.append(y) if y not in x else x, a , [])     #TypeError: argument of type 'NoneType' is not a container or iterable
+print(b)
+
+
+# ---4 decorators---
+
+def abc (fun):
+    def a ():
+        print("function execution started")
+        fun()
+        print("function execution stopprd")
+    return a
+
+@abc
+def greet():
+    print("hello welcome programmers.......")
+
+greet()
+# ---------------------------------------
+print()
+def to_upper(fun):
+    def modify(*args,**kwargs):
+        r=fun(*args).upper()
+        return r
+    return modify
+
+@to_upper
+def s1(*args,**kwargs):
+    return args[0]
+
+print(s1("my name is najad"))                # out put - MY NAME IS NAJAD
+
+
+# ---------------------------------------------------
+
+print()
+def to_upper1(fun):
+    def modify(*args,**kwargs):
+        print(args[0].upper())
+        fun(args[0])
+    return modify
+
+@to_upper1
+def s2(*args,**kwargs):
+    print(args[0])
+    # return args[0]
+
+s2("my name is rihu")
+
+
+
 
 
 
