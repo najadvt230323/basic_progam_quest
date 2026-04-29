@@ -330,10 +330,15 @@ print(x("hello"))
 # 14 :
 # Write a lambda function to find the maximum of three numbers. 
 
-# '''
+'''
+print("enter a 3 intger  : ")
+a=int(input("enter 1st intger : "))
+b=int(input("enter 2nd intger : "))
+c=int(input("enter 3rd intger : "))
+d=lambda x,y,z : x if x>y and x>z else y if y>x and y>z else z if z>y and z>x else f"2 num are maximum : {x}" if x==y and x>z  else f"2 num are maximum : {x}" if x==z and x>y else f"2 num are maximum : {y}" if y==z and y>x else f"3 num are same : {y}"
+print(f"the maximum of three numbers : {d(a,b,c)}")
 
-
-# '''
+'''
 
 # 15 :
 # Write a lambda function to find the minimum of three numbers. 
