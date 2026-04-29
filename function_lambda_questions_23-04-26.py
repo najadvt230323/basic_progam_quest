@@ -314,18 +314,26 @@ print(x("hello"))
 # 12 :
 # Write a lambda function to find the greater of two numbers.  
 
-# '''
+'''
+print("enter a 2 intger  : ")
+a=int(input("enter 1st intger : "))
+b=int(input("enter 2nd intger : "))
+c=lambda x,y: x if x<y else y if y<x else f"num are same : {y}"
+print(f"the  greater oftwo numbers : {c(a,b)}")
 
-
-# '''
+'''
 
 # 13 :
 # Write a lambda function to find the smaller of two numbers. 
 
-# '''
+'''
+print("enter a 2 intger  : ")
+a=int(input("enter 1st intger : "))
+b=int(input("enter 2nd intger : "))
+c=lambda x,y: x if x<y else y if y<x else f"num are same : {y}"
+print(f"the minimum of two numbers : {c(a,b)}")
 
-
-# '''
+'''
 
 # 14 :
 # Write a lambda function to find the maximum of three numbers. 
