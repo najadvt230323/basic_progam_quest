@@ -606,14 +606,14 @@ This question bank is designed for:
 
 '''
 
-for i  in range(1,67):
-    print(f"# {i} : ")
-    print()
-    print(r"# '''")
-    print()
-    print()
-    print(r"# '''")
-    print()
+# for i  in range(1,211):
+#     print(f"# {i} : ")
+#     print()
+#     print(r"# '''")
+#     print()
+#     print()
+#     print(r"# '''")
+#     print()
 
 
 # 1 : 
@@ -847,89 +847,134 @@ for i  in range(1,67):
 
 # '''
 
-# 34 : 
+# 34 :
+# Write a function `sum_all(*numbers)` that returns the sum of all given numbers.
+
+'''
+def s(*n : int):   
+    a=sum(n) 
+    return(a)
+print(s(1,2,3,4,5,6,7,8,9,10))
+
+'''
+
+# 35 :
+# Write a function `find_maximum(*numbers)`. 
+
+'''
+def s(*n : int):   
+    a=max(n) 
+    return(a)
+print(s(1,2,3,4,5,6,7,8,9,10))
+
+'''
+
+# 36 :
+# Write a function `display_subjects(*subjects)` that prints all subject names.  
+
+'''
+def display_subjects(*subjects):
+    print(subjects)
+    for i in subjects:
+        print(i)
+display_subjects("maths","eng","malayalam")
+
+'''
+
+# 37 :
+# Write a function `average_marks(*marks)` that returns the average.
+
+'''
+def average_marks(*marks):
+    avg=sum (marks)/len(marks)
+    return(avg)
+print(average_marks(10,20,30,40,50))
+
+'''
+
+# 38 :
+# Write a function `shopping_total(*prices)` that returns total amount.
+
+'''
+def s(*n : int):   
+    a=sum(n) 
+    return(a)
+print(s(299,399,459,629,129))
+
+'''
+
+# 39 :
+# Write a function `student_profile(**details)` that prints all key-value pairs.
+
+'''
+def student_profile(**details):
+    print(details)
+    for k,v in details.items():
+        print(f"{k} : {v}")
+student_profile(name="najad",age = 25,cose="python")
+
+'''
+
+# 40 :Write a function `employee_record(**data)` to print employee details.  
+
+'''
+def employee_record(**data):
+    print(data)
+    for k,v in data.items():
+        print(f"{k} : {v}")    
+employee_record(name="najad",age = 25,cose="python")
+
+'''
+
+# 41 :Write a function `product_details(**info)` for an ecommerce product.
 
 # '''
 
 
 # '''
 
-# 35 : 
+# 42 :Write a function `user_settings(**settings)` to simulate app preferences.
 
 # '''
 
 
 # '''
 
-# 36 : 
+# 43 :
+# Write a function `create_resume(**details)` to print formatted resume data. 
 
 # '''
 
 
 # '''
 
-# 37 : 
+# 44 :
+# Write a function `report_card(name, *marks, **details)`. 
 
 # '''
-
-
-# '''
-
-# 38 : 
-
-# '''
-
-
-# '''
-
-# 39 : 
-
-# '''
-
-
-# '''
-
-# 40 : 
-
-# '''
-
-
-# '''
-
-# 41 : 
-
-# '''
-
-
-# '''
-
-# 42 : 
-
-# '''
-
-
-# '''
-
-# 43 : 
-
-# '''
-
-
-# '''
-
-# 44 : 
-
-# '''
-
+def report_card(name, *marks, **details):
+    print(name)
+    print(marks)
+    print(details)
+    for k,v in details.items():
+        print(f"{k} : {v}")
+report_card("najad",25,50,90,85,45,age=25,cose="python")
 
 # '''
 
 # 45 : 
+#  a function `invoice(customer_name, *items, **meta)`. 
 
-# '''
+'''
+def invoice(name, *items, **meta):
+    print(name)
+    print(items)
+    print(meta)
+    for k,v in details.items():
+        print(f"{k} : {v}")
+report_card("najad",25,50,90,85,45,age=25,cose="python")
 
-
-# '''
+'''
 
 # 46 : 
 
@@ -1288,14 +1333,16 @@ for i  in range(1,67):
 
 # '''
 
-# 97 : 
+# 97 :
+# Pass an integer to a function and try changing it inside. Check whether original changes.
 
 # '''
 
 
 # '''
 
-# 98 : 
+# 98 :
+# Pass a string to a function and try changing it inside.  
 
 # '''
 
@@ -1303,34 +1350,59 @@ for i  in range(1,67):
 # '''
 
 # 99 : 
+# Pass a list to a function and append values.Check whether original list changes.
 
 # '''
 
 
 # '''
 
-# 100 : 
+# 100 :
+# Pass a dictionary to a function and update a key. 
 
 # '''
 
 
 # '''
 
-# 101 : 
+# 101 :Write a function that receives a list and modifies it. 
+
+'''
+def li(l :list):
+    l+=[8,9,10]
+    return(l)
+a=[1,2,3,4,5,6,7]
+print(li(a))
+print(a)
+
+'''
+
+# 102 :Write another function that receives a copy of the list and modifies it. 
+
+'''
+def li(l :list):
+    l+=[8,9,10]
+    return(l)
+a=[1,2,3,4,5,6,7]
+b=a.copy()
+print(li(b))
+print(b)
+print(a)
 
 # '''
+'''
+def li(l :list):
+    l+=[8,9,10]
+    return(l)
+a=[1,2,3,4,5,6,7]
+b=a
+print(li(b))
+print(b)
+print(a)
 
+'''
 
-# '''
-
-# 102 : 
-
-# '''
-
-
-# '''
-
-# 103 : 
+# 103 :Compare the outputs of Question 101 and 102. 
 
 # '''
 
@@ -1338,6 +1410,7 @@ for i  in range(1,67):
 # '''
 
 # 104 : 
+# Write a function that accepts a dictionary of student marks and adds a new subject.
 
 # '''
 
