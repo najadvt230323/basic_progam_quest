@@ -226,42 +226,45 @@ print(x("hello"))
 #     print()
 
 
-# 1 : 
+# 1 :
+# Write a lambda function to add two numbers. 
 
 # '''
 
 
 # '''
 
-# 2 : 
+# 2 :Write a lambda function to subtract two numbers.
 
 # '''
 
 
 # '''
 
-# 3 : 
+# 3 :Write a lambda function to multiply two numbers.  
 
 # '''
 
 
 # '''
 
-# 4 : 
+# 4 :
+# Write a lambda function to divide two numbers. 
 
 # '''
 
 
 # '''
 
-# 5 : 
+# 5 :Write a lambda function to find the square of a number.
 
 # '''
 
 
 # '''
 
-# 6 : 
+# 6 :
+# Write a lambda function to find the cube of a number. 
 
 # '''
 
@@ -269,27 +272,31 @@ print(x("hello"))
 # '''
 
 # 7 : 
+# Write a lambda function to find the remainder of two numbers.
 
 # '''
 
 
 # '''
 
-# 8 : 
+# 8 :
+# Write a lambda function to calculate power (a^b). 
 
 # '''
 
 
 # '''
 
-# 9 : 
+# 9 :
+# Write a lambda function to check whether a number is even or odd.  
 
 # '''
 
 
 # '''
 
-# 10 : 
+# 10 :
+# Write a lambda function to check whether a number is positive or negative.
 
 # '''
 
@@ -297,87 +304,116 @@ print(x("hello"))
 # '''
 
 # 11 : 
+# Write a lambda function to check whether a number is positive, negative, or zero.
 
 # '''
 
 
 # '''
 
-# 12 : 
+# 12 :
+# Write a lambda function to find the greater of two numbers.  
 
 # '''
 
 
 # '''
 
-# 13 : 
+# 13 :
+# Write a lambda function to find the smaller of two numbers. 
 
 # '''
 
 
 # '''
 
-# 14 : 
+# 14 :
+# Write a lambda function to find the maximum of three numbers. 
 
 # '''
 
 
 # '''
 
-# 15 : 
+# 15 :
+# Write a lambda function to find the minimum of three numbers. 
 
-# '''
+'''
+print("enter a 3 intger  : ")
+a=int(input("enter 1st intger : "))
+b=int(input("enter 2nd intger : "))
+c=int(input("enter 3rd intger : "))
+d=lambda x,y,z : x if x<y and x<z else y if y<x and y<z else z if z<y and z<x else "2 num are minmum {x}" if x==y and x<z  else "2 num are minmum {x}" if x==z and x<y else "2 num are minmum {y}" if y==z and y<x else "3 num are same {y}"
+print(f"the minimum of three numbers : {d(a,b,c)}")
 
-
-# '''
+'''
 
 # 16 :
 # Write a lambda function to check whether a number is divisible by 5. 
 
-# '''
+'''
+print("a number is divisible by 5")
+print("-------------------------------")
+a=int(input("enter a intger  : "))
+b=lambda x: "number is divisible by 5" if x%10==5 else "number is NOT divisible by 5"
+print(b(a))
 
-
-# '''
+'''
 
 # 17 :
 # Write a lambda function to check whether a number is divisible by both 3 and 5. 
 
-# '''
-
-
-# '''
+'''
+a=int(input("enter a number : "))
+b=lambda a:"multipel of 5" if a%5==0 and not a%3==0 else "multipel of 3" if not a%5==0 and a%3==0 else "multipel of 3 and 5" if  a%5==0 and a%3==0 else "not multipel of 3 and 5"
+print(b(a))
+'''
 
 # 18 : 
 # Write a lambda function to find the last digit of a number.
 
-# '''
+'''
+a=int(input("enter a number : "))
+b=lambda x: x%10
+print(f"the last digit of a number : {b(a)}")
 
-
-# '''
+'''
 
 # 19 :
 # Write a lambda function to remove the last digit of a number. 
 
-# '''
+'''
+a=int(input("enter a number : "))
+b=lambda x: int(x/10)
+print(f"remove the last digit of a number : {b(a)}")
 
-
-# '''
+'''
 
 # 20 :
 # Write a lambda function to check whether a number is a multiple of 10. 
 
-# '''
+'''
+print("a number is a multiple of 10")
+print("-------------------------------------------------")
+a=int(input("enter a intger  : "))
+b=lambda x: "number is a multiple of 10" if x%10==0 else "number is not a multiple of 10"
+print(b(a))
 
-
-# '''
+'''
 
 # 21 : 
 # Write a lambda function to calculate simple interest.
 
-# '''
+'''
+print("calculate simple interest and compound interest.")
+print("-------------------------------------------------")
+amond=int(input("enter the amnd : "))
+year=int(input("enter the how many years : "))
+inter=int(input("enter the interest rate : "))
+sim_in=lambda a,b,c:((a*b*c)/100)
+print(f"simple interest : {sim_in(amond,year,inter)} \ntotel : {amond+sim_in(amond,year,inter)}")
 
-
-# '''
+'''
 
 # 22 :
 # Write a lambda function to calculate the area of a rectangle. 
