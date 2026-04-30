@@ -1,0 +1,115 @@
+🔹 Full List of File Modes in Python
+-----------------------------------------
+🟢 Basic Text Modes
+-----------------------------------
+1. "r" → Read (default)
+--------------------------
+Opens file for reading
+❌ Error if file does not exist
+with open("file.txt", "r") as f:
+    print(f.read())
+
+2. "w" → Write
+-----------------------
+Creates a new file OR overwrites existing file ⚠️
+with open("file.txt", "w") as f:
+    f.write("New content")
+
+3. "a" → Append
+------------------
+Adds content to the end of the file
+Creates file if it doesn’t exist
+with open("file.txt", "a") as f:
+    f.write("\nAdded line")
+
+4. "x" → Create
+---------------------
+Creates a new file
+❌ Fails if file already exists
+with open("file.txt", "x") as f:
+    f.write("Created safely")
+🔵 Read + Write Modes
+
+5. "r+" → Read & Write
+----------------------------
+File must exist
+Pointer starts at beginning
+with open("file.txt", "r+") as f:
+    print(f.read())
+    f.write("\nExtra text")
+
+6. "w+" → Write & Read
+------------------------
+Overwrites file
+Allows reading after writing
+with open("file.txt", "w+") as f:
+    f.write("Hello")
+    f.seek(0)
+    print(f.read())
+
+7. "a+" → Append & Read
+--------------------------
+Adds to file and allows reading
+Pointer starts at end
+with open("file.txt", "a+") as f:
+    f.write("New line\n")
+    f.seek(0)
+    print(f.read())
+
+8. "x+" → Create & Read/Write
+-------------------------------
+Creates new file
+❌ Error if file exists
+with open("file.txt", "x+") as f:
+    f.write("New file")
+
+🟣 Binary Modes (for images, videos, etc.)
+
+Add "b" to any mode:
+
+9. "rb" → Read binary
+---------------------------
+with open("image.jpg", "rb") as f:
+    data = f.read()
+10. "wb" → Write binary
+with open("image.jpg", "wb") as f:
+    f.write(data)
+
+11. "ab" → Append binary
+-----------------------------
+
+12. "rb+", "wb+", "ab+" → Binary read/write versions
+------------------------------------------------------
+🟡 Text Mode (Explicit)
+
+13. "t" → Text mode (default)
+-------------------------------
+Usually not needed because Python uses text mode by default
+open("file.txt", "rt")
+open("file.txt", "wt")
+
+🔹 Summary Table
+
+Mode	    Meaning	            File Must Exist?       Overwrites?
+---------------------------------------------------------------------
+r	         Read	                 ✅ Yes	           ❌ No
+w           Write	                 ❌ No	           ✅ Yes
+a        	Append	                 ❌ No	           ❌ No
+x	        Create	        ❌ No (fails if exists)	   ❌ No
+r+     	 Read + Write	             ✅ Yes             ❌ No
+w+	     Write + Read	             ❌ No	           ✅ Yes
+a+	    Append + Read	             ❌ No	           ❌ No
+x+	 Create + Read/Write	❌ No (fails if exists)	   ❌ No
+
+🔹 Pro Tips
+-----------------
+Use "r" when you only need to read
+Use "w" carefully ⚠️ (it deletes old content)
+Use "a" for logs or adding data
+Use "b" when working with non-text files
+
+If you want next:
+
+Real-world examples (like logging system, CSV handling)
+Practice exercises
+Or debugging your file code

@@ -1,0 +1,2 @@
+HELLWO NAJAD
+print(a,b,c,d)
