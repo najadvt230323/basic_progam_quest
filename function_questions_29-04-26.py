@@ -951,7 +951,7 @@ employee_record(name="najad",age = 25,cose="python")
 # 44 :
 # Write a function `report_card(name, *marks, **details)`. 
 
-# '''
+'''
 def report_card(name, *marks, **details):
     print(name)
     print(marks)
@@ -960,7 +960,7 @@ def report_card(name, *marks, **details):
         print(f"{k} : {v}")
 report_card("najad",25,50,90,85,45,age=25,cose="python")
 
-# '''
+'''
 
 # 45 : 
 #  a function `invoice(customer_name, *items, **meta)`. 
@@ -1550,210 +1550,282 @@ print(a)
 
 # '''
 
-# 124 : 
+# 124 :
+# Write a function `apply_operation(func, value)` and pass different functions to it.
 
 # '''
 
 
 # '''
 
-# 125 : 
+# 125 :
+# Create a function `calculator(operation, a, b)` where operation is another function.
 
 # '''
 
 
 # '''
 
-# 126 : 
+# 126 :
+# Write a function that returns another function for tax calculation. 
 
 # '''
 
 
 # '''
 
-# 127 : 
+# 127 :
+# Write a function that returns another function for salary bonus calculation. 
 
 # '''
 
 
 # '''
 
-# 128 : 
+# 128 :
+# Write a function `process_data(func, data)`.  
 
 # '''
 
 
 # '''
 
-# 129 : 
+# 129 :
+# Use `map()` to convert a list of temperatures from Celsius to Fahrenheit. 
+
+'''
+a=[i for i in range(101)]
+b=list(map(lambda x:(x*9/5)+32,a))
+print(b)
+
+'''
+
+# 130 :
+# Use `map()` to calculate squares of a list of numbers.
+
+'''
+a=[i for i in range(101)]
+b=list(map(lambda x:x**2,a))
+print(b)
+
+'''
+
+# 131 :
+# Use `map()` to calculate cube of numbers.  
+
+'''
+a=[i for i in range(101)]
+b=list(map(lambda x:x**3,a))
+print(b)
+
+'''
+
+# 132 :
+# Use `map()` to convert names to uppercase. 
+
+'''
+a=["i for i in range(101)","najad"]
+b=list(map(lambda x:x.upper(),a))
+print(b)
+
+'''
+
+# 133 :
+# Use `map()` to add 5% bonus to salaries.
+
+'''
+a=[10000,20000,25000,3000]
+b=list(map(lambda x:x+x*.05,a))
+print(b)
+
+'''
+
+# 134 :
+# Use `map()` to add GST to a list of product prices. 
+
+'''
+a=[10000,20000,25000,3000]
+b=list(map(lambda x:x+x*.18,a))
+print(b)
+
+'''
+
+# 135 :
+# Use `map()` to calculate lengths of words in a list.  
+
+'''
+a=["i for i in range(101)","najad"]
+b=list(map(lambda x:len(x),a))
+print(b)
+
+'''
+
+# 136 :
+# Use `map()` to format email usernames into full email IDs. 
+
+'''
+a=["naju@gmail.com","richu@yahoo.com","aju@gmail.com"]
+b=list(map(lambda x :x.split("@")[0],a))
+print(b)
+
+'''
+
+# 137 :
+# Use `map()` to convert a list of strings into integers.
+
+'''
+a=["5","10","20"]
+b=list(map(lambda x :int(x),a))
+print(b)
+
+'''
+
+# 138 :
+# Use `filter()` to get only even numbers from a list. 
+
+'''
+a=[i for i in range(1,101)]
+b=list(filter(lambda x :x if x%2==0 else False,a))
+print(b)
+
+'''
+
+# 139 :
+# Use `filter()` to get only odd numbers.  
+
+'''
+a=[i for i in range(1,101)]
+b=list(filter(lambda x :x if x%2==1 else False,a))
+print(b)
+
+'''
+
+# 140 :
+# Use `filter()` to get numbers greater than 50.
+
+'''
+a=[i for i in range(1,101)]
+b=list(filter(lambda x :x if x>50 else False,a))
+print(b)
+
+'''
+
+# 141 :
+# Use `filter()` to get students who passed (mark >= 40). 
+
+'''
+a=[i for i in range(1,101)]
+b=list(filter(lambda x :x if x>=40 else False,a))
+print(b)
+
+'''
+
+# 142 :
+# Use `filter()` to get products above 1000 rupees.
+
+'''
+a=[i for i in range(800,1501)]
+b=list(filter(lambda x :x if x>1000 else False,a))
+print(b)
+
+'''
+
+# 143 :
+# Use `filter()` to get valid usernames with length >= 5.   
+
+'''
+a=["naju@gmail.com","richu@yahoo.com","aju@gmail.com","aju"]
+b=list(filter(lambda x :x if len(x)>5 else False,a))
+print(b)
+
+'''
+
+# 144 :
+# Use `filter()` to get emails containing "@gmail.com". 
+
+'''
+a=["naju@gmail.com","richu@yahoo.com","aju@gmail.com","aju"]
+b=list(filter(lambda x : any(x.endswith(i) for i in ["@gmail.com"]),a))
+print(b)
+
+'''
+
+# 145 :
+# Use `filter()` to get strings that start with a vowel 
+
+'''
+a=["naju@gmail.com","richu@yahoo.com","aju@gmail.com","aju"]
+b=list(filter(lambda x : x if x[0] in "aeiouAEIOU"else False,a))
+print(b)
+
+'''
+
+# 146 :
+# Use `filter()` to get positive numbers only. 
+
+'''
+a=[i for i in range(-10,11)]
+print(a)
+b=list(filter(lambda x :x if x>=0 else False,a))
+print(b)
+
+'''
+
+# 147 :
+# Use `reduce()` to find sum of a list.
+
+'''
+from functools import reduce
+a=[i for i in range(101)]
+b=reduce(lambda x,y : x+y,a)
+print(b)
+
+'''
+
+# 148 :
+#  `reduce()` to find product of a list.  
+
+'''
+from functools import reduce
+a=[i for i in range(101)]
+b=reduce(lambda x,y : x+y,a)
+print(b)
+'''
+
+# 149 :
+# Use `reduce()` to find maximum value in a list.
 
 # '''
 
 
 # '''
 
-# 130 : 
+# 150 :
+# Use `reduce()` to concatenate a list of words into a sentence. 
 
 # '''
 
 
 # '''
 
-# 131 : 
+# 151 :
+# Use `reduce()` to find total cart amount. 
 
 # '''
 
 
 # '''
 
-# 132 : 
+# 152 :
+# Use `reduce()` to count total characters from a list of strings.  
 
 # '''
 
 
 # '''
 
-# 133 : 
-
-# '''
-
-
-# '''
-
-# 134 : 
-
-# '''
-
-
-# '''
-
-# 135 : 
-
-# '''
-
-
-# '''
-
-# 136 : 
-
-# '''
-
-
-# '''
-
-# 137 : 
-
-# '''
-
-
-# '''
-
-# 138 : 
-
-# '''
-
-
-# '''
-
-# 139 : 
-
-# '''
-
-
-# '''
-
-# 140 : 
-
-# '''
-
-
-# '''
-
-# 141 : 
-
-# '''
-
-
-# '''
-
-# 142 : 
-
-# '''
-
-
-# '''
-
-# 143 : 
-
-# '''
-
-
-# '''
-
-# 144 : 
-
-# '''
-
-
-# '''
-
-# 145 : 
-
-# '''
-
-
-# '''
-
-# 146 : 
-
-# '''
-
-
-# '''
-
-# 147 : 
-
-# '''
-
-
-# '''
-
-# 148 : 
-
-# '''
-
-
-# '''
-
-# 149 : 
-
-# '''
-
-
-# '''
-
-# 150 : 
-
-# '''
-
-
-# '''
-
-# 151 : 
-
-# '''
-
-
-# '''
-
-# 152 : 
-
-# '''
-
-
-# '''
-
-# 153 : 
+# 153 :
+# Use `reduce()` to merge a list of dictionaries. 
 
 # '''
 
