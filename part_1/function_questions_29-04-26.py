@@ -1795,107 +1795,138 @@ print(b)
 # 149 :
 # Use `reduce()` to find maximum value in a list.
 
-# '''
+'''
+from functools import reduce
+a=[i for i in range(101)]
+b=reduce(lambda x,y :x if x>y else y,a)
+print(b)
 
-
-# '''
+'''
 
 # 150 :
 # Use `reduce()` to concatenate a list of words into a sentence. 
 
-# '''
+'''
+from functools import reduce
+a=["my","name","is","najad"]
+b=reduce(lambda x,y :x + " " + y,a)
+print(b)
 
-
-# '''
+'''
 
 # 151 :
 # Use `reduce()` to find total cart amount. 
 
-# '''
+'''
+from functools import reduce
+a=[459,25,38,45]
+b=reduce(lambda x,y :x + y,a)
+print(b)
 
-
-# '''
+'''
 
 # 152 :
 # Use `reduce()` to count total characters from a list of strings.  
 
-# '''
+'''
+from functools import reduce
+a=['sree','raj']
+b=reduce(lambda x,y :  x + len(y) , a,0)
+print(b)
 
 
-# '''
+'''
 
 # 153 :
 # Use `reduce()` to merge a list of dictionaries. 
 
-# '''
+'''
+from functools import reduce
+dicts = [
+    {"a": 1},
+    {"b": 2},
+    {"c": 3}
+]
 
+merged = reduce(lambda x, y: {**x, **y}, dicts)
 
-# '''
+print(merged)
+'''
 
-# 154 : 
-
-# '''
-
-
-# '''
-
-# 155 : 
-
-# '''
-
-
-# '''
-
-# 156 : 
+# 154 :
+#  Create a decorator that prints: "Function started" before execution.
 
 # '''
 
 
 # '''
 
-# 157 : 
+# 155 :
+# Create a decorator that prints: "Function ended" after execution. 
 
 # '''
 
 
 # '''
 
-# 158 : 
+# 156 :
+# Create a decorator `timer_decorator` to show function execution message. 
 
 # '''
 
 
 # '''
 
-# 159 : 
+# 157 :
+# Create a decorator `login_required` to simulate login access. 
 
 # '''
 
 
 # '''
 
-# 160 : 
+# 158 :
+# Create a decorator `admin_only` to simulate admin access.
 
 # '''
 
 
 # '''
 
-# 161 : 
+# 159 :
+# Create a decorator `uppercase_output` to convert returned text to uppercase.  
 
 # '''
 
 
 # '''
 
-# 162 : 
+# 160 :
+# Create a decorator `greet_decorator` to wrap greeting functions. 
 
 # '''
 
 
 # '''
 
-# 163 : 
+# 161 :
+# Create a decorator that logs function name before execution.
+
+# '''
+
+
+# '''
+
+# 162 :
+# Create a decorator that checks if division by zero is attempted.  
+
+# '''
+
+
+# '''
+
+# 163 :
+# Create a decorator that validates if all arguments are positive numbers. 
 
 # '''
 
