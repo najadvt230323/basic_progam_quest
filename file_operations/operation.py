@@ -7,15 +7,15 @@
 # files.write("\nprint(a,b,c,d)")
 # files.close()
 
-with open("sample.txt") as f:
-    print(f.read())
+# with open("sample.txt") as f:
+#     print(f.read())
 
-with open("test.py","r+") as f1:
-    print(f1.read())
-    f1.write("\nprint(a,b,c,d)")
+# with open("test.py","r+") as f1:
+#     print(f1.read())
+#     f1.write("\nprint(a,b,c,d)")
 
-with open("test.py","r+") as f1:
-    f1.write("\nprint(a,b,c,d)")
+# with open("test.py","r+") as f1:
+#     f1.write("\nprint(a,b,c,d)")
 
 # "r" → read (default)
 # "w" → write (overwrites file)

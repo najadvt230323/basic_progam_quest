@@ -250,83 +250,105 @@ with open("sample.txt","r") as f:
 # 15 :
 # Write a program to create a file using write (w) mode. 
 
-# '''
+'''
 with open("text4.txt","w")as f:
     f.write("hi najad")
 
-# '''
+'''
 
 # 16 :
 # Write a program to write a single line into a file.
 
-# '''
+'''
+with open("text4.txt","w")as f:
+    f.write("hi najad")
 
-
-# '''
+'''
 
 # 17 :
 # Write a program to write multiple lines into a file.  
 
-# '''
-
-
-# '''
+'''
+with open("text4.txt","w")as f:
+    f.write("hi najad")
+    f.write("\nhi najad")
+'''
 
 # 18 :
 # Write a program to overwrite existing file content. 
 
-# '''
+'''
+with open("text4.txt","w")as f:
+    f.write("hi najad")
+    f.write("\nhi najad")
 
-
-# '''
+'''
 
 # 19 :
 # Write a program to write user input into a file.
 
-# '''
+'''
+with open("text4.txt","w")as f:
+    f.write("hi najad")
+    f.write("\nhi najad")
 
-
-# '''
+'''
 
 # 20 :
 # Write a program to create a file and write numbers from 1 to 10. 
 
-# '''
+'''
+with open("text4.txt","w")as f:
+    for i in range(1,11):
+        f.write(f"{i} \n")
 
-
-# '''
+'''
 
 # 21 :
 # Write a program to write a list of names into a file. 
 
-# '''
+'''
+a=["najad","richu","aju","shabin"]
+with open("text4.txt","w")as f:
+    for i in a:
+        f.write(f"{i} \n")
 
-
-# '''
+'''
 
 # 22 :
 # Write a program to write formatted text into a file.  
 
-# '''
+'''
+name = "najad"
+age = 25
+score = 92.5
+with open("text4.txt", "w") as f:
+    f.write("Student Information\n")
+    f.write("====================\n")
+    f.write(f"Name : {name}\n")
+    f.write(f"Age  : {age}\n")
+    f.write(f"Score: {score:.2f}\n")
 
-
-# '''
+'''
 
 # 23 :
 # Write a program to write content and close the file manually.
 
-# '''
+'''
+with open("text1.py","r") as f:
+    print(f.read())
+# print(f.read())                 #ValueError: I/O operation on closed file.
 
-
-# '''
+'''
 
 # 24 :
 # Write a program using with statement to write into a file. 
 
-# '''
+'''
+with open("text4.txt", "w") as f:
+    f.write("hi najad")
 
-
-# '''
+'''
 
 # 25 : 
 # Write a program to demonstrate that w mode overwrites existing data. 
@@ -364,10 +386,13 @@ with open("text4.txt","w")as f:
 # 29 :
 # Write a program to write even numbers into a file.   
 
-# '''
+'''
+with open("text4.txt","w")as f:
+    for i in range(1,21):
+        if i%2==0:
+            f.write(f"{i} \n")
 
-
-# '''
+'''
 
 # 30 : 
 
