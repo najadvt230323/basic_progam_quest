@@ -108,17 +108,22 @@
 #     print(f.readline())
 #     print(f.readline())
 
-with open("text5.txt","a+")as f:
-    print(f.tell())
-    print(f.readlines())
-    f.seek(0)
-    print(f.readlines())
-    f.seek(0)
-    a=f.readlines()
-print(a)
+# with open("text5.txt","a+")as f:
+#     print(f.tell())
+#     print(f.readlines())
+#     f.seek(0)
+#     print(f.readlines())
+#     f.seek(0)
+#     a=f.readlines()
+# print(a)
 
-with open("text6.txt","w+")as f:
-    f.writelines(a)
+
+# with open("text6.txt","w+")as f:
+#     for i in range(len(a)):
+#         f.write(a[i])
+
+# with open("text6.txt","w+")as f:
+#     f.writelines(a)
 
 
 '''
@@ -159,3 +164,4 @@ with open("iron-man.jpg","w+b")as f:
     f.write(b)
 
 '''
+
