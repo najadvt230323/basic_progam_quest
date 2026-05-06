@@ -25,3 +25,20 @@ from folder1.module1 import a as b,greet as c
 
 print(b)
 print(c("richu"))
+
+
+print()
+import math
+print(math.pi)
+print(math.sqrt(36))
+print(math.pow(10,2))
+print(math.factorial(5))
+print(math.ceil(3.25))
+print(math.floor(3.25))
+print(math.fabs(-5.5))
+print(math.trunc(3.25))
+print(math.trunc(-5.9))
+
+
+
+
