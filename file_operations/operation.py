@@ -165,3 +165,9 @@ with open("iron-man.jpg","w+b")as f:
 
 '''
 
+with open("iron-man1.jpg","a+b") as f:
+    f.seek(0)
+    a=f.read()
+
+with open("1.jpg","w+b") as f:
+    f.write(a)
