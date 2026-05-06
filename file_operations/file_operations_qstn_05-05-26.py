@@ -167,7 +167,10 @@ with open("sample_data_50.csv","a") as f :
 '''
 
 # 🔹 Section 2: Working with CSV Data
+# --------------------------------------------
+
 # Read the CSV file using the csv module.
+
 # Print all rows as lists.
 # Print all rows as dictionaries using DictReader.
 # Extract and print all names from the file.
