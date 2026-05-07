@@ -172,6 +172,17 @@ with open("sample_data_50.csv","a") as f :
 # Read the CSV file using the csv module.
 
 # Print all rows as lists.
+
+'''
+with open("sample_data_50.csv","r") as f :
+    a=f.readlines()
+    b=len(a)
+    print(f.tell())
+    f.seek(0)
+    for i in range(b):
+        print(f.readline())
+'''
+
 # Print all rows as dictionaries using DictReader.
 # Extract and print all names from the file.
 # Extract and print all cities.
