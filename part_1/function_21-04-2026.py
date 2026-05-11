@@ -269,8 +269,8 @@ print(b)
 print(list(b))
 
 print()
-c=map(lambda x:x**3,a)       #[1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]
-print(list(c))
+c=map(lambda x:x**3,a)      
+print(list(c))                            #[1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]
 
 print()    
 a=[8,92,9,5,6,7,10,15,25,44]
