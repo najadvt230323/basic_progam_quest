@@ -25,24 +25,24 @@
 #
 # 1. Concatenation:
 #
-   str1 = 'Hello'
-   str2 = 'World'
-   combined = str1 + ' ' + str2  # 'Hello World'
+str1 = 'Hello'
+str2 = 'World'
+combined = str1 + ' ' + str2  # 'Hello World'
 #
 #
 # 2. Repetition:
 #
-   repeated = 'Hello ' * 3  # 'HelloHelloHello'
+repeated = 'Hello ' * 3  # 'HelloHelloHello'
 
 # 3. Indexing:
 #
-   text = 'Python'
-   first_char = text[0]  # 'P'
+text = 'Python'
+first_char = text[0]  # 'P'
 #
 # 4. Slicing:
 
-   text = 'Python'
-   slice = text[1:4]  # 'yth'
+text = 'Python'
+slice = text[1:4]  # 'yth'
 #
 # 5. Length:
 #
@@ -53,30 +53,30 @@
 #
 # 1. `lower()` - Converts to lowercase:
 
-   text = 'Hello'
-   print(text.lower())  # 'hello'
+text = 'Hello'
+print(text.lower())  # 'hello'
 #
 # 2. `upper()` - Converts to uppercase:
 #
-   text = 'Hello'
-   print(text.upper())  # 'HELLO'
+text = 'Hello'
+print(text.upper())  # 'HELLO'
 #
 #
 # 3. `strip()` - Removes whitespace from both ends:
 #
-   text = '  Hello  '
-   print(text.strip())  # 'Hello'
+text = '  Hello  '
+print(text.strip())  # 'Hello'
 #
 # 4. `replace()` - Replaces a substring with another:
 #
-   text = 'Hello World'
-   print(text.replace('World', 'Python'))  # 'Hello Python'
+text = 'Hello World'
+print(text.replace('World', 'Python'))  # 'Hello Python'
 #
 #
 # 5. `split()` - Splits a string into a list:
 #
-   text = 'Hello World'
-   print(text.split())  # ['Hello', 'World']
+text = 'Hello World'
+print(text.split())  # ['Hello', 'World']
 #
 #
 # 6. `join()` - Joins elements of a list into a string:
