@@ -1,0 +1,59 @@
+🔹 Section A: Basic File Opening (r mode)
+Write a Python program to open a file in read (r) mode and display its content.
+Write a program to read the first 10 characters from a file.
+Write a program to print all lines using a loop.
+Write a program to count total characters in a file.
+Write a program to count total lines in a file.
+Write a program to display only the first line of a file.
+Write a program to display the last line of a file.
+Write a program to read a file and print it in uppercase.
+Write a program to read a file and count number of words.
+Write a program to check what happens if file does not exist in r mode.
+Write a program to read a file using with statement.
+Write a program to check if file is closed after reading.
+Write a program to print alternate lines from a file.
+Write a program to read file content and reverse it.
+🔹 Section B: Writing Files (w mode)
+Write a program to create a file using write (w) mode.
+Write a program to write a single line into a file.
+Write a program to write multiple lines into a file.
+Write a program to overwrite existing file content.
+Write a program to write user input into a file.
+Write a program to create a file and write numbers from 1 to 10.
+Write a program to write a list of names into a file.
+Write a program to write formatted text into a file.
+Write a program to write content and close the file manually.
+Write a program using with statement to write into a file.
+Write a program to demonstrate that w mode overwrites existing data.
+Write a program to write a paragraph into a file.
+Write a program to write data and check file size.
+Write a program to write lowercase letters into a file.
+Write a program to write even numbers into a file.
+🔹 Section C: Read + Write Mode (r+)
+Write a program to open a file in r+ mode and display content.
+Write a program to read a file and then write additional data using r+.
+Write a program to overwrite the beginning of a file using r+.
+Write a program to modify the first line of a file using r+.
+Write a program to read and append data using r+.
+Write a program to move file pointer and write data.
+Write a program to demonstrate pointer position in r+ mode.
+Write a program to update specific content in a file using r+.
+Write a program to replace a word in a file using r+.
+Write a program to read and rewrite file content using r+.
+🔹 Section D: Mixed Practice Questions
+Write a program to copy content from one file to another using r and w.
+Write a program to merge two files into a third file.
+Write a program to read file and write only vowels into another file.
+Write a program to read file and write only consonants into another file.
+Write a program to read numbers from file and write their squares into another file.
+Write a program to read file and remove blank lines.
+Write a program to read file and write reversed lines into another file.
+Write a program to read file and count frequency of a word.
+Write a program to read file and write unique words into another file.
+Write a program to read file and write lines starting with a vowel into another file.
+🔹 Section E: Small Practical Tasks
+Create a file student.txt, write student names, then read and display them.
+Create a file marks.txt, write marks, then read and calculate total.
+Create a file and update its first line using r+.
+Read a file and duplicate its content into another file.
+Write a program to demonstrate all three modes (r, w, r+) in one program.
