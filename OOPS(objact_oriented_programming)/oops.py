@@ -18,3 +18,44 @@ print(id(shabin))
 print()
 richu.exam()
 richu.study("najad")
+# --------------------------------------------------
+class Student1 :
+    school="quest"
+
+richu=Student1()
+najad=Student1()
+
+print(Student1.school)
+print(Student1().school)
+print(richu.school)
+print(najad.school)
+
+print()
+Student1.school="quest inovashion"
+print(Student1.school)
+print(richu.school)
+print(najad.school)
+
+print()
+richu.school="kunnamagalam hss"
+print(Student1.school)
+print(richu.school)
+print(najad.school)
+
+print()
+del richu.school
+print(Student1.school)
+print(richu.school)
+print(najad.school)
+
+
+print()
+del richu.school
+print(Student1.school)
+print(richu.school)
+print(najad.school)
+
+
+
+
+
