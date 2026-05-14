@@ -1,8 +1,9 @@
 class Student:
     def exam(self):
         print("exam conducted on 11-05-26")
-    def study(self):
-        pass
+    def study(self,name):
+        self.n=name
+        print(f"hi {self.n}")
 
 print(type(Student))
 
@@ -16,3 +17,4 @@ print(id(shabin))
 
 print()
 richu.exam()
+richu.study("najad")
