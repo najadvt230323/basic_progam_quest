@@ -50,10 +50,11 @@ print(najad.school)
 
 
 print()
-del richu.school
-print(Student1.school)
-print(richu.school)
-print(najad.school)
+richu.school="kunnamagalam hss"
+del Student1.school
+# print(Student1.school)           # AttributeError: type object 'Student1' has no attribute 'school'
+print(richu.school)                # kunnamagalam hss
+# print(najad.school)                # AttributeError: 'Student1' object has no attribute 'school'
 
 
 
