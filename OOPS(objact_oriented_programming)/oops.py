@@ -123,6 +123,13 @@ class Employee:
         self.branch = "kochi"
         self.emp_id = 101
         self.emp_salary=150000
+    # def __del__(self):                                #not use for python
+    #     print("constructor deleted ..............")
+    #     print(self.emp_name)
+    #     print(self.emp_id)
+    #     print(self.branch)
+    #     print(self.emp_salary)
+    #     print(self.emp_email)
 
 
 richu=Employee(10,"richu",15000,"richu.com")
@@ -139,8 +146,90 @@ print(najad.company)
 print(najad.branch)
 najad.details()
 
-# ----------------------------------------------------------------------------
+print()
+print(richu.company)
+print(richu.branch)
+richu.details()
+
+# getattr()
+# ------------------
+
+print()
+print(najad.emp_name)
+print(getattr(najad,"emp_name"))
+# print(getattr(najad,"phone_no"))               #AttributeError: 'Employee' object has no attribute 'phone_no'
+print(getattr(najad,"phone_no","phone number no entered"))    #output : phone number no entered
+# print(najad.phone_no)                          #AttributeError: 'Employee' object has no attribute 'phone_no'
+
+print()
+najad.phone=9562020207
+print(najad.phone)                #output : 9562020207
+
+# setattr()
+# -----------
+print()
+setattr(najad,"phone",9249730116)
+print(najad.phone)
+# print(richu.phone)                       #AttributeError: 'Employee' object has no attribute 'phone'
+setattr(richu,"phone",9400454130)          #output : 9249730116
+print(richu.phone)                         #output : 9400454130
+
+# hasattr()
+# ------------
+
+print()
+print(hasattr(najad,"phone"))             #output : True
+print(hasattr(najad,"emp_name"))          #output : True
+print(hasattr(najad,"lan_line"))          #output : False
+
+
+# delattr()
+# -------------
+
+print()
+print(najad.phone)                 #output : 9249730116
+delattr(najad,"phone")
+# print(najad.phone)               #AttributeError: 'Employee' object has no attribute 'phone'
+
+# ---------------------------------------------------------------------------------------
       
+class Bang :
+    name="canara bang"
+    def __init__(self,a,b,c=0,ifse=1001):
+        self.name=a
+        self.acc_no=b
+        self.ifse=ifse
+        self.balns=c
+    def dispaly(self):
+        print(self.name)
+        print(self.ifse)
+        print(self.acc_no)
+        print(self.balns)
+    def deposiet(self,a):
+        self.balns+=a
+        print(f"{a} rs deposite.\nbalns :{self.balns}")
+    def withdrowal(self,a):
+        if self.balns>=a:
+            self.balns-=a
+            print(f"{a} rs deposite.\nbalns :{self.balns}")
+        else :
+            print("insafistiond balance")
+    
+najad=Bang("najad",123)
+najad.dispaly()
+najad.deposiet(100000)
+najad.dispaly()
+najad.withdrowal(50000)
+najad.dispaly()
+najad.withdrowal(60000)
+
+a="y"
+while(a="y" and )
+
+        
+
+
+        
 
 
 
