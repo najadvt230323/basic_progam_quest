@@ -224,8 +224,18 @@ najad.dispaly()
 najad.withdrowal(60000)
 
 a="y"
-while(a="y" and )
+acno=2001
+while a=="y" or a=="Y" :  
+    name=input("enter the name : ")
 
+    age=int(input("enter the age : "))
+    bal=int(input("enter the bang balans : "))
+    name=Bang(name,acno,bal)
+    name.dispaly()
+    acno+=1
+    a=input("continue (\"y\" on \"n\") :")
+
+# ----------------------------------------------------------------------------------
         
 
 
