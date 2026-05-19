@@ -201,10 +201,7 @@ class Bang :
         self.ifse=ifse
         self.balns=c
     def dispaly(self):
-        print(self.name)
-        print(self.ifse)
-        print(self.acc_no)
-        print(self.balns)
+        print(f"name :{self.name}\nifsc : {self.ifse}\nacc no :{self.acc_no}\nbalnce : {self.balns}")
     def deposiet(self,a):
         self.balns+=a
         print(f"{a} rs deposite.\nbalns :{self.balns}")
@@ -223,17 +220,30 @@ najad.withdrowal(50000)
 najad.dispaly()
 najad.withdrowal(60000)
 
-a="y"
-acno=2001
-while a=="y" or a=="Y" :  
-    name=input("enter the name : ")
+# a="y"
+# b={}
+# acno=2001
+# print("-----------------canara bang-----------------")
 
-    age=int(input("enter the age : "))
-    bal=int(input("enter the bang balans : "))
-    name=Bang(name,acno,bal)
-    name.dispaly()
-    acno+=1
-    a=input("continue (\"y\" on \"n\") :")
+# while a=="y" or a=="Y" : 
+#     c=int(input("1.new accond create \n2.deposit \n3.withdrowal \n4.details \nenter you opthion : "))
+#     if c==1: 
+#         name=input("enter the name : ")
+#         b[name]=name
+#         age=int(input("enter the age : "))
+#         bal=int(input("enter the bang balans : "))
+#         name=Bang(name,acno,bal)
+#         name.dispaly()
+#         acno+=1
+#         print(b)
+#     elif c==2:
+#         d=input("enter your name : ")
+#         if d in b.keys:
+#             e=int(input("enter deposit ammond :"))
+#             b[d].deposiet(e)
+#     a=input("continue (\"y\" on \"n\") :")
+
+
 
 # ----------------------------------------------------------------------------------
         
