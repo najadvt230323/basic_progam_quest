@@ -1,5 +1,7 @@
 # Inheritance
 # ----------------------
+# 1. single Inheritance
+# ------------------------------
 class Animal:
 
     def eat(self):
@@ -66,11 +68,31 @@ class person:
         print(f"name : {self.name} \nage : {self.age}")
 
 class student(person):
-    def __init__(self, name, age):
+    def __init__(self, name, age, st_id, course, trainer):
         super().__init__(name, age)
         print("calling chide constructor.....")
-        # self.st_id=st_id
-        # self.course=course
-        # self.trainer=trainer
+        self.st_id=st_id
+        self.course=course
+        self.trainer=trainer
+    # def details(self):
+    #     print(f"name : {self.name} \nage : {self.age} \nst_id : {self.st_id} \ncourse : {self.course} \ntrainer : {self.trainer}")
+    def details(self):
+        super().details()
+        print(f"name : {self.name} \nage : {self.age} \nst_id : {self.st_id} \ncourse : {self.course} \ntrainer : {self.trainer}")
 
-richu=student("richu","pyton")
+richu=student("richu",23,102,"python","sreeraj")
+# richu.details()                        # output : name : richu 
+#                                                 # age : 23 
+#                                                 # st_id : 102 
+#                                                 # course : python 
+#                                                 # trainer : sreeraj
+
+richu.details()                        # output : name : richu 
+                                                # age : 23 
+                                                # name : richu 
+                                                # age : 23
+                                                # st_id : 102 
+                                                # course : python 
+                                                # trainer : sreeraj
+
+# -----------------------------------------------------------------------------------------
