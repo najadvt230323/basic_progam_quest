@@ -96,3 +96,49 @@ richu.details()                        # output : name : richu
                                                 # trainer : sreeraj
 
 # -----------------------------------------------------------------------------------------
+
+# 2.multpil Inheritance
+# ----------------------------
+
+print()
+class Vehicle:
+    def start(self):
+        print("vehicle can start")
+
+class car(Vehicle):
+    def horn(self):
+        print("horn......")
+    
+class Ev(car):
+   def brik(self):
+        print("brik......")
+
+nexa =Ev()
+nexa.horn()
+nexa.start
+# ------------------------------------------------------------------
+
+print()
+class Vehicle:
+    def brik(self):
+        print("vehicle can start")
+
+class car(Vehicle):
+    def brik(self):
+        super().brik()
+        print("horn......")
+    
+class Ev(car):
+    def brik(self):
+        super().brik()
+        print("brik......")
+
+nexa =Ev()
+nexa.brik()
+# --------------------------------------------------------------
+
+
+
+
+
+
