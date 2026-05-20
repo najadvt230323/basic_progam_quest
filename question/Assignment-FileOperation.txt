@@ -1,0 +1,261 @@
+Create a Python Contact Management System using File Handling (.txt file) instead of storing data permanently in a dictionary.
+
+The program must be completely menu-driven and should allow the user to manage contact records through a text file.
+
+Each contact must contain:
+- Name
+- Multiple Phone Numbers
+- Multiple Email IDs
+
+All records must be stored inside a .txt file and all operations should be performed using the data from the file.
+
+--------------------------------------------------
+Functional Requirements
+--------------------------------------------------
+
+1. Main Menu
+
+Display the following menu continuously until the user chooses Exit.
+
+<---------------- Menu ------------------->
+1. List all records
+2. Add Record
+3. Edit Record
+4. Delete Record
+5. Exit
+
+--------------------------------------------------
+2. Add Record
+--------------------------------------------------
+
+The user must be able to:
+- Enter a person's name
+- Add one or more phone numbers
+- Add one or more email IDs
+
+Validations:
+
+Name Validation:
+- Name cannot be empty
+- Duplicate names are not allowed
+
+Phone Validation:
+- Phone number must:
+  - Start with +91
+  - Contain exactly 10 digits after +91
+
+Example:
++919876543210
+
+Email Validation:
+- Email must end with @gmail.com
+
+Duplicate Validation:
+- Duplicate phone numbers are not allowed
+- Duplicate email IDs are not allowed
+
+After successful insertion, save the data into a .txt file.
+
+--------------------------------------------------
+3. List All Records
+--------------------------------------------------
+
+Display all records stored inside the text file in a readable format.
+
+Example:
+
+Name : Rahul
+Phones : +919876543210, +919812345678
+Emails : rahul@gmail.com, rahul123@gmail.com
+
+If no records exist:
+
+Oops! No records available
+
+--------------------------------------------------
+4. Edit Record
+--------------------------------------------------
+
+The user must enter the name of the record to edit.
+
+If the record exists, provide the following submenu:
+
+1. Edit Name
+2. Add Phone
+3. Add Email
+4. Edit Phone
+5. Edit Email
+0. Back
+
+--------------------------------------------------
+Edit Operations
+--------------------------------------------------
+
+Edit Name:
+- Change existing name
+- Prevent duplicate names
+
+Add Phone:
+- Add a new phone number
+- Validate format
+- Prevent duplicates
+
+Add Email:
+- Add a new email
+- Validate format
+- Prevent duplicates
+
+Edit Phone:
+- Replace an existing phone number with a new valid number
+
+Edit Email:
+- Replace an existing email with a new valid email
+
+All updates must be reflected in the .txt file immediately.
+
+--------------------------------------------------
+5. Delete Record
+--------------------------------------------------
+
+The user must be able to:
+
+1. Delete Entire Record
+2. Delete Phone
+3. Delete Email
+0. Exit
+
+Delete Entire Record:
+- Remove the complete contact from the file
+- Ask confirmation before deleting
+
+Delete Phone:
+- Remove a selected phone number from a contact
+
+Delete Email:
+- Remove a selected email ID from a contact
+
+--------------------------------------------------
+6. File Handling Requirements
+--------------------------------------------------
+
+- Use a .txt file to store all records
+- Data must remain available even after restarting the program
+- Read data from file before operations
+- Write updated data back into the file after every modification
+
+--------------------------------------------------
+7. Technical Constraints
+--------------------------------------------------
+
+Use:
+- Loops
+- Conditional statements
+- Functions
+- File handling
+- String manipulation
+- List operations
+- Exception handling
+
+Do NOT use:
+- Database
+- External libraries
+
+--------------------------------------------------
+Sample File Format
+--------------------------------------------------
+
+Example content inside records.txt
+
+Rahul|+919876543210,+919812345678|rahul@gmail.com,rahul123@gmail.com
+Anu|+919811112222|anu@gmail.com
+
+Where:
+Name | Phones separated by comma | Emails separated by comma
+
+--------------------------------------------------
+Sample Input / Output
+--------------------------------------------------
+
+Sample Run 1 — Add Record
+
+<---------------- Menu ------------------->
+1. List all records
+2. Add Record
+3. Edit Record
+4. Delete Record
+5. Exit
+
+Enter your choice: 2
+
+Enter name: Rahul
+
+Enter Phone number (+91XXXXXXXXXX): +919876543210
+Add more phone? 1-Yes / 0-No: 1
+
+Enter Phone number (+91XXXXXXXXXX): +919812345678
+Add more phone? 1-Yes / 0-No: 0
+
+Enter email id: rahul@gmail.com
+Add more email? 1-Yes / 0-No: 1
+
+Enter email id: rahul123@gmail.com
+Add more email? 1-Yes / 0-No: 0
+
+Record added successfully 👍
+
+--------------------------------------------------
+Sample Run 2 — List Records
+--------------------------------------------------
+
+----- All Records -----
+
+Name : Rahul
+Phones : +919876543210, +919812345678
+Emails : rahul@gmail.com, rahul123@gmail.com
+
+--------------------------------------------------
+Sample Run 3 — Edit Phone
+--------------------------------------------------
+
+Enter name to edit: Rahul
+
+Phones: ['+919876543210', '+919812345678']
+
+Enter old phone to replace: +919812345678
+
+Enter new phone: +919999999999
+
+Phone updated successfully 👍
+
+--------------------------------------------------
+Sample Run 4 — Delete Email
+--------------------------------------------------
+
+Enter name to delete: Rahul
+
+Emails: ['rahul@gmail.com', 'rahul123@gmail.com']
+
+Enter email to delete: rahul123@gmail.com
+
+Type 'delete' to confirm: delete
+
+Email deleted successfully 👍
+
+--------------------------------------------------
+Sample Run 5 — Exit
+--------------------------------------------------
+
+Exiting... Thank You 😊
+
+--------------------------------------------------
+Bonus Features
+--------------------------------------------------
+
+Implement the following extra features for better practice:
+
+- Search record by name
+- Sort contacts alphabetically
+- Count total records
+- Backup records into another .txt file
+- Restore deleted records
+- Use modular functions for cleaner code
