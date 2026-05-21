@@ -57,24 +57,34 @@ while a :
             # Enter email id
             # ===============
             email=[]
-            b=input("Enter email id : ")
-            if b.endswith("@gmail.com") and :
-                email.append(b)
-            else:
-                print("Invalid email id.")
-
-            c=input("Add more email? 1-Yes / 0-No: 0")
-            if c.isdigit() :
-                c=int(c)
-                if c==1:
-                    b=input("Enter email id : ")
+            d=True
+            while d:
+                b=input("Enter email id : ")
+                if b.endswith("@gmail.com") and len(b)>13 and b.isascii():
                     email.append(b)
-                elif c==2:
-                    print()
+                    c=input("Add more email? 1-Yes / 0-No: 0")
+                    e=True
+                    while e:
+                        if c.isdigit() :
+                            c=int(c)
+                            if c==1:
+                                b=input("Enter email id : ")
+                                if b.endswith("@gmail.com") and len(b)>13 and b.isascii():
+                                    email.append(b)
+                                    d=False
+                                    e=False
+                                else:
+                                    print("Enter validen email")
+                            elif c==2:
+                                print()
+                                d=False
+                                e=False
+                            else:
+                                print("Enter validen opstion")
+                        else:
+                            print("Enter validen opstion")
                 else:
-                    print("Enter validen opstion")
-            else:
-                print("Enter validen opstion")
+                    print("Enter validen email")
 
             print("Record added successfully 👍")
 
