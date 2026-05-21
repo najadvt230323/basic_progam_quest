@@ -12,3 +12,26 @@ print(a1.multi(10,20))
 # print(a1.multi("naj","ad")) #TypeError: can't multiply sequence by non-int of type 'str'
 print(a1.multi("naj",4))
 
+# ----------------------------------------------------------------------------------------------
+# constcater over loding
+# ========================
+class A:
+    def __init__(self):
+        pass
+    def __init__(self, name, bases, dict, /, **kwds):
+        pass
+
+# a=A()      #TypeError: A.__init__() missing 3 required positional arguments: 'name', 'bases', and 'dict
+
+class A:
+    def __init__(self, name, bases, dict, /, **kwds):
+        pass
+    def __init__(self):
+        print("---------------------")
+
+a=A()            #output : ---------------------
+
+
+# -------------------------------------------------------------------------------
+# meterd ovrrriding in python
+# =============================
