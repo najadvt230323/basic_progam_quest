@@ -272,7 +272,20 @@ richu.location()                          # output : kunnamagalam
 richu.food()                              # output : order food
 
 # ---------------------------------------------------------------------------------------------------
+print()
+class A:
+    def aa(self):
+        print("class A")
+    class B:
+        def bb(self):
+            print("class B")
 
+a=A()
+# b=b()               # nNameError: name 'b' is not defined. Did you mean: 'B'?
+a.aa()                # output : class A
+a.B().bb()            # output : class B
+d=A().B()
+e=d.bb()              # output : class B
 
 
 
