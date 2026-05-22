@@ -176,7 +176,8 @@ email : {v[1]}
         
             # '''
         elif op == 3 :
-            pass
+            print("<---------------3. Edit Record-------------->")
+
 
         elif op == 4 :
             pass
