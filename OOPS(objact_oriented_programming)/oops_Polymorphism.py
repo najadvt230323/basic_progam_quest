@@ -35,9 +35,5 @@
 # -------------------------------------------------------------------------------
 # meterd ovrrriding in python
 # =============================
-print()
-from oops_inheritance import Animal
 
-a=Animal()
-a.eat()
-a.sleep()
+# from  import Animal
