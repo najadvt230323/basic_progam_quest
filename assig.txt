@@ -1,7 +1,1 @@
-{'najad': [['+919562020207'], ['najad@gmail.com']]}
-{'richu': [['+919562020208'], ['najad@gmail.com']]}
-{'sreeraj': [['+912020207956', '+919562020207'], ['sre@gmail.com', 'sddfd@gmail.com']]}
-{'sreeraj': [['+919562020209', '+919562020206'], ['shrr@gmail.com']]}
-{'ajmal': [['+919562020205', '+919562020203'], ['najadvt@gmail.com', 'najadv@gmail.com', 'najadv@gmail.com', 'najadv@gmail.com']]}
-{'najad': [['+919562020202'], ['najadsads@gmail.com', 'adsdscdsc@gmail.com']]}
-{'shonni': [['+919562020207', '+919562020207'], ['asdfgh@gmail.com']]}
+{'shahal': [['+918943783531'], ['shahal5238@gmail.com']]}
