@@ -1,4 +1,2 @@
 {'shahal': [['+918943783531'], ['shahal5238@gmail.com']]}
-{'najad': [['+919562020207'], ['najad@gmail.com', 'najad123@gmail.com']]}
-{'najadvt': [['+919562020209', '+919562020204'], ['najadvt@gmail.com']]}
-{'abin': [['+919562020309', '+919562020308'], ['abin@gmail.com']]}
+{'najadvt': [['+919562020209', '+919562020204'], ['najadvt123@gmail.com']]}
