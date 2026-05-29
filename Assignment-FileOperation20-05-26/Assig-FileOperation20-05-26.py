@@ -20,11 +20,14 @@ while a :
     import ast
     with open("assig.txt")as new:
         read_file=new.readlines()
-        for i in read_file:
-            # print(f"{i[:-1]}")
-            # result.update(ast.literal_eval(item))           
-            a1.update(ast.literal_eval(i))
-        # print(a1)
+        try :
+            for i in read_file:
+                # print(f"{i[:-1]}")
+                # result.update(ast.literal_eval(item))           
+                a1.update(ast.literal_eval(i))
+            # print(a1)
+        except :
+            print("file was empty.")
     if op.isdigit() :
         op=int(op)
 
