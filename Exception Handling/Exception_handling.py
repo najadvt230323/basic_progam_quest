@@ -160,4 +160,34 @@ try:
     if mark > 500:
         raise ValueError("message")
 except ValueError as a:
-    print(a)                       #output : <class 'ValueError'>
+    print(a)                       #output : message
+
+try:
+    mark = 550
+    if mark > 500:
+        raise ValueError("message")
+except ValueError as a:
+    print(a)                       #output : message
+
+
+try:
+    mark = "550"
+    if int(mark) < 300:
+        raise ValueError("message")
+    elif isinstance(mark,str):
+        raise TypeError("mark can't bee string")
+except Exception as a:
+    print(a)                       #output : mark can't bee string
+
+# ----------------------------------------------------------------------------
+
+class ageerror(Exception):
+    pass
+
+class voteerror(Exception):
+    pass
+
+age=-5
+
+if age<0:
+    raise ageerror("age can't negative")

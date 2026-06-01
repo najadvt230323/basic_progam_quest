@@ -386,13 +386,13 @@
 
 # Use exception handling in each function.
 
-
+'''
 e=True
 while e:
     try:
         a=int(input("enter 1st number : "))
         b=int(input("enter 2nd number : "))
-        print('''
+        print("""
             
 1 - Addition
 2 - Subtraction
@@ -400,7 +400,7 @@ while e:
 4 - Division
 5 - exit
 Enter your choice : 
-''')
+""")
         c=input()
         if c=="1":
             print("Addition : ",a+b)
@@ -455,7 +455,7 @@ Enter your choice :
                 print("enter a valid option")
     finally:
         print("\ntha code as must ren\n")
-
+'''
 
 
 # 27. SAFE FILE COPY PROGRAM
