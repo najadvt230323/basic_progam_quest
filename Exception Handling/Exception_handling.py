@@ -107,5 +107,57 @@ except ModuleNotFoundError as e:
 
 
 print("---------------------------------")
-,                                                                                                                                                 
 
+# -------------------------------------------------------------------------------------------
+
+# assertion
+# ============
+
+# marks=110
+# assert marks<=100         #output : AssertionError
+# print("mark : ",marks)
+
+
+# marks=110
+# assert marks<=100 , "invaled marks"         #output : AssertionError: invaled marks
+# print("mark : ",marks)
+
+
+# def validte(age):
+#     assert 120>age>0 ,"enter valied age"      #output : AssertionError: enter valied age
+#     print("valied age") 
+# a=int(input("enter age :"))
+# validte(a)
+
+# ------------------------------------------------------------------------------------------
+
+# RAISE keyword
+# ===============
+
+# age=-5
+# if age<0:
+#     # raise ValueError                          #output : ValueError
+#     raise ValueError("age can't be negateev")   #output : ValueError: age can't be negateev
+
+try:
+    mark = 550
+    if mark > 500:
+        raise
+except:
+    print("error")                       #output : error
+# -----------------------------------------------
+
+try:
+    mark = 550
+    if mark > 500:
+        raise ValueError("message")
+except ValueError:
+    print(ValueError)                       #output : <class 'ValueError'>
+
+
+try:
+    mark = 550
+    if mark > 500:
+        raise ValueError("message")
+except ValueError as a:
+    print(a)                       #output : <class 'ValueError'>
