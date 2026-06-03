@@ -124,17 +124,24 @@ print(result5)                                             #output : None
 # ---------------------------------------------------------------------------------
 
 a="call me on +91-95620-20207 or +91-94004-541130"
-p = r"\+91-\d\d\d\d\d-\d\d\d\d\d"
-p1 = r"\+91-\d{5}-\d{5}" 
+p = r"\+91-\d\d\d\d\d-\d\d\d\d\d"                          #output : ['+91-95620-20207', '+91-94004-54113']
+p1 = r"\+91-\d{5}-\d{5}"                                   #output : ['+91-95620-20207', '+91-94004-54113']
 b=re.findall(p,a)
 c=re.findall(p1,a)
 print(b)
 print(c)
 
+# --------------------------------------------------------------------------------------------------------------
 
+print()
+data1="my phone number is 956202020207 \n *^@ 😍👌😁"
 
-
-
+print(re.search(r"phon",data1))                            #output : <re.Match object; span=(3, 7), match='phon'>
+print((re.search(r"phon",data1)).group)                    #output : <built-in method group of re.Match object at 0x00000211BD4E9840>
+print((re.search(r"phon",data1)).group())                  #output : phon
+print((re.search(r"phon",data1)).start())                  #output : 3
+print((re.search(r"phon",data1)).end())                    #output : 7
+print((re.search(r"phon",data1)).span())                   #output : (3, 7)
 
 
 
