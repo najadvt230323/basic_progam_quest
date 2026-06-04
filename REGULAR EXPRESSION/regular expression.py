@@ -228,7 +228,7 @@ c=r"[a-zA-Z]{3}"
 d=r"[0-9]{3}"
 e=r"[a-zA-Z0-9]{3}"
 f=r"[^a-zA-Z]{3}"
-g=r"[^0-9]"
+g=r"[^0-9]{3}"
 h=r"[^a-zA-Z0-9]{3}"
 
 
@@ -237,16 +237,60 @@ print(re.findall(b,data1))  #output : []
 print(re.findall(c,data1))  #output : ['pHo', 'Num', 'ber']
 print(re.findall(d,data1))  #output : ['354', '956', '202', '020', '207']
 print(re.findall(e,data1))  #output : ['pHo', 'Num', 'ber', '354', '956', '202', '020', '207']
-print(re.findall(f,data1))  #output : 
-print(re.findall(g,data1))  #output : 
-print(re.findall(h,data1))  #output :
+print(re.findall(f,data1))  #output : [' -2', '   ', ' 35', '42 ', ' 95', '620', '202', '020', '7 \n', ' *^', '@ 😍']
+print(re.findall(g,data1))  #output : ['MY ', 'pHo', 'ne ', '   ', 'Num', 'ber', ' is', ' \n ', '*^@', ' 😍👌']
+print(re.findall(h,data1))  #output : ['   ', ' \n ', '*^@', ' 😍👌']
+
+# ----------------------------------------------------------------------------------------------------------
+print()
+data1="MY pHone -2   Number 3542 is 956202020207 \n *^@ 😍👌😁"
+
+pattern=r"\d+"
+pattern1=r"\w{3}"
+pattern2=r"\w{3,}"
+
+data_pattern=re.compile(pattern)
+data_pattern1=re.compile(pattern1)
+data_pattern2=re.compile(pattern2)
+
+print(data_pattern.findall(data1))            #output : ['2', '3542', '956202020207']
+print(data_pattern1.findall(data1))           #output : ['pHo', 'Num', 'ber', '354', '956', '202', '020', '207']
+print(data_pattern2.findall(data1))           #output : ['pHone', 'Number', '3542', '956202020207']
+
+print(data_pattern.search(data1))             #output : <re.Match object; span=(10, 11), match='2'>
+print(data_pattern1.search(data1))            #output : <re.Match object; span=(3, 6), match='pHo'>
+print(data_pattern2.search(data1))            #output : <re.Match object; span=(3, 8), match='pHone'>
+
+print(data_pattern.search(data1).group())     #output : 2
+print(data_pattern1.search(data1).group())    #output : pHo
+print(data_pattern2.search(data1).group())    #output : pHone 
+
+# ------------------------------------------------------------------------------------------------------------
+
+print()
+data1="MY pHone -2   Number 3542 is 956202020207  *^@ 😍👌😁"
+
+data2=re.sub(r" " , r"_" ,data1)
+data3=re.sub(r" " , r"_" ,data1,count=3)
+data4=re.subn(r" " , r"_" ,data1)
+data5=re.subn(r" " , r"_" ,data1,count=3)
+data6=re.split(r" " ,data1)
+data7=re.split(r" " ,data1,maxsplit=5)
+ 
+print(data2)                                 #output : MY_pHone_-2___Number_3542_is_956202020207__*^@_😍👌😁
+print(data3)                                 #output : MY_pHone_-2_  Number 3542 is 956202020207  *^@ 😍👌😁
+print(data4)                                 #output : ('MY_pHone_-2___Number_3542_is_956202020207__*^@_😍👌😁', 11)
+print(data5)                                 #output : ('MY_pHone_-2_  Number 3542 is 956202020207  *^@ 😍👌😁', 3)
+print(data6)                                 #output : Y', 'pHone', '-2', '', '', 'Number', '3542', 'is', '956202020207', '', '*^@', '😍👌😁']
+print(data7)                                 #output : ['MY', 'pHone', '-2', '', '', 'Number 3542 is 956202020207  *^@ 😍👌😁']
 
 
 
 
 
 
-[' -2', '   ', ' 35', '42 ', ' 95', '620', '202', '020', '7 \n', ' *^', '@ 😍']
-['M', 'Y', ' ', 'p', 'H', 'o', 'n', 'e', ' ', '-', ' ', ' ', ' ', 'N', 'u', 'm', 'b', 'e', 'r', ' ', ' ', 'i', 's', ' ', ' ', '\n', ' ', '*', '^', '@', ' ', '😍', '👌', '😁']
-['   ', ' \n ', '*^@', ' 😍👌']
+
+
+
+
 
