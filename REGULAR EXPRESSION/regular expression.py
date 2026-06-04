@@ -188,3 +188,65 @@ print(re.findall(r"\w?4",data1))                             #output : ['54']
 print(re.findall(r"\w?e",data1))                             #output : ['ne', 'be']
 
 # -----------------------------------------------------------------------------------------------------
+print()
+data1="MY pHone -2   Number 3542 is 956202020207 \n *^@ 😍👌😁"
+
+a=r"[a-z]"
+b=r"[A-Z]"
+c=r"[a-zA-Z]"
+d=r"[0-9]"
+e=r"[a-zA-Z0-9]"
+f=r"[^a-zA-Z]"
+g=r"[^0-9]"
+h=r"[^a-zA-Z0-9]"
+i=r"^MY"
+j=r"^my"
+k=r"😁$"
+l=r"😍&"
+
+print(re.findall(a,data1))  #output : ['p', 'o', 'n', 'e', 'u', 'm', 'b', 'e', 'r', 'i', 's']
+print(re.findall(b,data1))  #output : ['M', 'Y', 'H', 'N']
+print(re.findall(c,data1))  #output : ['M', 'Y', 'p', 'H', 'o', 'n', 'e', 'N', 'u', 'm', 'b', 'e', 'r', 'i', 's']
+print(re.findall(d,data1))  #output : ['2', '3', '5', '4', '2', '9', '5', '6', '2', '0', '2', '0', '2', '0', '2', '0', '7']
+print(re.findall(e,data1))  #output : ['M', 'Y', 'p', 'H', 'o', 'n', 'e', '2', 'N', 'u', 'm', 'b', 'e', 'r', '3', '5', '4', '2', 'i', 's', '9', '5', '6', '2', '0', '2', '0', '2', '0', '2', '0', '7']
+print(re.findall(f,data1))  #output : [' ', ' ', '-', '2', ' ', ' ', ' ', ' ', '3', '5', '4', '2', ' ', ' ', '9', '5', '6', '2', '0', '2', '0', '2', '0', '2', '0', '7', ' ', '\n', ' ', '*', '^', '@', ' ', '😍', '👌', '😁']
+print(re.findall(g,data1))  #output : ['M', 'Y', ' ', 'p', 'H', 'o', 'n', 'e', ' ', '-', ' ', ' ', ' ', 'N', 'u', 'm', 'b', 'e', 'r', ' ', ' ', 'i', 's', ' ', ' ', '\n', ' ', '*', '^', '@', ' ', '😍', '👌', '😁']
+print(re.findall(h,data1))  #output : [' ', ' ', '-', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '\n', ' ', '*', '^', '@', ' ', '😍', '👌', '😁']
+print(re.findall(i,data1))  #output : ['MY']
+print(re.findall(j,data1))  #output : []
+print(re.findall(k,data1))  #output : ['😁']
+print(re.findall(l,data1))  #output : []
+
+# -------------------------------------------------------------------------------------------------------------------------
+
+print()
+data1="MY pHone -2   Number 3542 is 956202020207 \n *^@ 😍👌😁"
+
+a=r"[a-z]{3}"
+b=r"[A-Z]{3}"
+c=r"[a-zA-Z]{3}"
+d=r"[0-9]{3}"
+e=r"[a-zA-Z0-9]{3}"
+f=r"[^a-zA-Z]{3}"
+g=r"[^0-9]"
+h=r"[^a-zA-Z0-9]{3}"
+
+
+print(re.findall(a,data1))  #output : ['one', 'umb']
+print(re.findall(b,data1))  #output : []
+print(re.findall(c,data1))  #output : ['pHo', 'Num', 'ber']
+print(re.findall(d,data1))  #output : ['354', '956', '202', '020', '207']
+print(re.findall(e,data1))  #output : ['pHo', 'Num', 'ber', '354', '956', '202', '020', '207']
+print(re.findall(f,data1))  #output : 
+print(re.findall(g,data1))  #output : 
+print(re.findall(h,data1))  #output :
+
+
+
+
+
+
+[' -2', '   ', ' 35', '42 ', ' 95', '620', '202', '020', '7 \n', ' *^', '@ 😍']
+['M', 'Y', ' ', 'p', 'H', 'o', 'n', 'e', ' ', '-', ' ', ' ', ' ', 'N', 'u', 'm', 'b', 'e', 'r', ' ', ' ', 'i', 's', ' ', ' ', '\n', ' ', '*', '^', '@', ' ', '😍', '👌', '😁']
+['   ', ' \n ', '*^@', ' 😍👌']
+
