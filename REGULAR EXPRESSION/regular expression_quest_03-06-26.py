@@ -27,3 +27,7 @@ print("Credit Card Numbers : ",re.findall(r"\d{4}-\d{4,6}-\d{4,5}",a))
 b=str(re.findall(r"\w{5}\d{4}\w",a))
 print("PAN Numbers : ",re.findall(r"\D{5}\d{4}\D",b))
 
+c=r"[A-Z]{5}[0-9]{4}[A-Z]"
+print("PAN Numbers : ",re.findall(c,a))
+
+
