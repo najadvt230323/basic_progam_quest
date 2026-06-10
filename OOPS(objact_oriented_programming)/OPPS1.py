@@ -1395,8 +1395,6 @@ xseries = Iphone(562352)
 # sbi = NewGenATM()
 
 
-
-
 # class Animal:
 
 #     def make_sound(self):
