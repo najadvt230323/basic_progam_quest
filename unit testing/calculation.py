@@ -18,4 +18,5 @@ def revnevint(a):
         a=str(a)
         return int(a[::-1])    
 
-    
+def div (a,b):
+    return(a/b)

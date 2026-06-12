@@ -16,7 +16,7 @@ class Test(unittest.TestCase):
 # unittest.main()
 
 # ------------------------------------------------
-from calculation import rev,revint,revnevint
+from calculation import rev,revint,revnevint,div
 
 class Test1(unittest.TestCase):
     
@@ -28,5 +28,12 @@ class Test1(unittest.TestCase):
     def test_revarsenevint(self):
         self.assertEqual(revnevint(-123),-321)
         self.assertEqual(revnevint(123),321)
+    def test_divi(self):
+        self.assertEqual(div(10,5),2)
+        self.assertEqual(div(-10,2),-5)
+        with self.assertRaises(ZeroDivisionError):
+            div(10,0)
+
+
 
 unittest.main()
