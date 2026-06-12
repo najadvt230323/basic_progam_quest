@@ -20,3 +20,6 @@ def revnevint(a):
 
 def div (a,b):
     return(a/b)
+
+def get_data():
+    return None
