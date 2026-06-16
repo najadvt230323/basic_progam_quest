@@ -89,9 +89,6 @@ class Test1(unittest.TestCase):
         self.assertIsInstance(1.255,float)
 
 
-
-
-
 unittest.main()
 
 
