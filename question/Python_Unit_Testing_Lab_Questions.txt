@@ -1,0 +1,73 @@
+
+PYTHON UNIT TESTING - PRACTICAL LAB QUESTIONS
+BEGINNER TO ADVANCED LEVEL
+
+1. Write a function add(a, b) that returns the sum of two numbers.
+   Create unit test cases for positive, negative, and zero values.
+
+2. Write a function subtract(a, b).
+   Create test cases for correct subtraction, negative result, and zero result.
+
+3. Write a function multiply(a, b).
+4. Write a function divide(a, b) and test division by zero exception.
+5. Write a function is_even(num).
+6. Write a function square(num).
+7. Write a function reverse_string(text).
+8. Write a function count_characters(text).
+9. Write a function find_max(a, b).
+10. Write a function find_min(a, b).
+
+INTERMEDIATE LEVEL
+
+11. Write a palindrome checker and test multiple scenarios.
+12. Write a factorial function and test invalid input.
+13. Write a grade calculator and test all grade ranges.
+14. Write an age validator and test boundary values.
+15. Write a vowel counter.
+16. Write a search_element() function.
+17. Write a remove_duplicates() function.
+18. Write a discount calculator.
+19. Write a prime number checker.
+20. Write a sorting function.
+
+CLASS TESTING
+
+21. Calculator class with add, subtract, multiply, divide.
+22. Student class with is_pass().
+23. BankAccount class with deposit, withdraw, get_balance.
+24. Rectangle class with area and perimeter.
+25. Employee class with calculate_salary().
+
+ADVANCED UNIT TESTING
+
+26. Demonstrate setUp().
+27. Demonstrate tearDown().
+28. Demonstrate setUpClass() and tearDownClass().
+29. Use assertEqual(), assertNotEqual(), assertTrue(), assertFalse().
+30. Use assertIn(), assertNotIn().
+31. Use assertIs(), assertIsNot().
+32. Use assertIsNone(), assertIsNotNone().
+33. Use assertRaises().
+34. Password validation testing.
+35. Email validation testing.
+
+REAL-WORLD LABS
+
+36. Login Validation System.
+37. ATM System.
+38. Shopping Cart.
+39. Library Management System.
+40. Expense Tracker.
+
+CHALLENGE QUESTIONS
+
+41. Test file reading.
+42. Test file writing.
+43. Student Result Management System.
+44. Inventory Management System.
+45. Employee Management System with high test coverage.
+46. Create a test suite.
+47. Execute selected tests using TestLoader.
+48. Generate a custom test report.
+49. Use unittest discovery.
+50. Build a Mini E-Commerce Application and test major modules.
