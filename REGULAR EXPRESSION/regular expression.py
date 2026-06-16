@@ -231,7 +231,6 @@ f=r"[^a-zA-Z]{3}"
 g=r"[^0-9]{3}"
 h=r"[^a-zA-Z0-9]{3}"
 
-
 print(re.findall(a,data1))  #output : ['one', 'umb']
 print(re.findall(b,data1))  #output : []
 print(re.findall(c,data1))  #output : ['pHo', 'Num', 'ber']
