@@ -70,8 +70,11 @@ message["To"] = recever_email
 body = "hello,\nthis email with attachment."
 message.attach(MIMEText(body,"plain"))
 
-file_path = r"C:\Users\NAJAD V T\Desktop\python full stak\python\loki-unexpected-moment-rh.jpg"
-file_name = "loki"
+# file_path = r"C:\Users\NAJAD V T\Desktop\python full stak\python\thor-heroic-stance-tc.jpg"
+file_path = r"C:\Users\NAJAD V T\Desktop\python full stak\python\img35.jpg"
+# file_path = r"C:\Users\NAJAD V T\Desktop\python full stak\python\Exception Handling\Exception_handling_quest_01-06-26.py"
+file_name = "img.jpj" 
+# file_name = "Exception_handling"
 
 try:
     with open(file_path,"rb") as s:
