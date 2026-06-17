@@ -16,7 +16,7 @@ s.quit
 
 '''
 
-# ----------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------
 
 '''
 # HTML CONTENT
@@ -45,7 +45,7 @@ print("email sent successfully")
 
 '''
 
-# --------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------
 
 # ''' 
 
@@ -60,7 +60,7 @@ from email import encoders
 sender_email = "najadvt230323@gmail.com"
 app_password = "shbz lfty qywu pbao"
 recever_email = "sreerajmathiyath6785@gmail.com"
-
+# recever_email = "yaseensachu188@gmail.com"
 
 message = MIMEMultipart()
 message["Subject"] = "Test email with attachment"
@@ -71,9 +71,9 @@ body = "hello,\nthis email with attachment."
 message.attach(MIMEText(body,"plain"))
 
 # file_path = r"C:\Users\NAJAD V T\Desktop\python full stak\python\thor-heroic-stance-tc.jpg"
-file_path = r"C:\Users\NAJAD V T\Desktop\python full stak\python\img35.jpg"
+file_path = r"C:\Users\NAJAD V T\Desktop\python full stak\python\email\loki-unexpected-moment-rh.jpg"
 # file_path = r"C:\Users\NAJAD V T\Desktop\python full stak\python\Exception Handling\Exception_handling_quest_01-06-26.py"
-file_name = "img.jpj" 
+file_name = "img.jpg" 
 # file_name = "Exception_handling"
 
 try:
@@ -100,4 +100,4 @@ except Exception as e:
 
 #'''
 
-
+# --------------------------------------------------------------------------------------------------------------------------
