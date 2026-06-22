@@ -44,7 +44,7 @@ result5=re.match(pattern1,data1)
 
 print(result3)                                             #output : <re.Match object; span=(3, 6), match='pho'>
 print(result3.group())                                     #output : pho
-print(result4)                                             #output : ['my', ' p', 'ho', 'ne', ' n', 'um', 'be', 'r ', 'is', ' \n', ' *', '^@', ' 😍', '👌😁']
+print(result4)                                             #output : ['pho', 'num', 'ber', '956', '202', '020', '207']
 print(result5)                                             #output : None
 # print(result5.group())                                    
 

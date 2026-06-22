@@ -9,9 +9,8 @@ class Mail :
             else:
                 print("Enter validen email")
             
-    def __send_mail(self):
+    def __send_mail(self,mail):
         import smtplib
-
         s = smtplib.SMTP("smtp.gmail.com",587)
         s.starttls()
         send_mail="najadvt230323@gmail.com"

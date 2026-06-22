@@ -31,4 +31,4 @@ print("PAN Numbers : ",re.findall(r"\D{5}\d{4}\D",b))
 c=r"[A-Z]{5}[0-9]{4}[A-Z]"
 print("PAN Numbers : ",re.findall(c,a))
 
-
+print("EMAIL : ",re.findall(r"\w{3,}@gmail.com",a))
