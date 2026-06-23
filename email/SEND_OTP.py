@@ -1,3 +1,4 @@
+from random import *
 class Mail :
     def check_mail (self, mail : chr) :
         self.mail=mail
@@ -10,6 +11,7 @@ class Mail :
                 print("Enter validen email")
             
     def __send_mail(self,mail):
+        
         import smtplib
         s = smtplib.SMTP("smtp.gmail.com",587)
         s.starttls()
@@ -18,13 +20,23 @@ class Mail :
         otp_send_mail=self.mail
         s.login(send_mail,mail_passwored)
 
-        msg = "this is a testing mail"
-        s.sendmail(send_mail,otp_send_mail,msg)
+        self.msg = str(randint(1000,9999))
+        s.sendmail(send_mail,otp_send_mail,self.msg)
         s.quit
+
+
+    def check_otp(self,otp):
+        if self.msg == otp :
+            print("otp check is successfully completed")
+        else :
+            print("otp check is not successfull")
+
 
 
 a=Mail()
 a.check_mail("vtknajad@gmail.com")
+b=input("enter otp : ")
+a.check_otp(b)
 
 
 

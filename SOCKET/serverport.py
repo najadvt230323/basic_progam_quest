@@ -11,8 +11,8 @@ server.listen()
 
 conn , addr = server.accept()
 
-print(conn)
-print(addr)
+# print(conn)
+# print(addr)
 
 print("connection from : ",str (addr))
 
