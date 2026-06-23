@@ -43,26 +43,59 @@
 
 # ---------------------------------------------------------------------------
 
+# import threading
+# import time
+
+# def dispay():
+#     for i in range(5):
+#         print("hello")
+#         time.sleep(1)
+
+# def dispay1():
+#     for i in range(5):
+#         print("najad")
+#         time.sleep(1)
+
+# start_time = time.time()
+
+# t1 = threading.Thread(target = dispay)
+# t2 = threading.Thread(target = dispay1)
+
+# t1.start()
+# t2.start()
+
+# t1.join()
+# t2.join()
+
+# end_time = time.time()
+
+# print("Execution Time : ",end_time - start_time ," Seconds")
+
+# -------------------------------------------------------------------------------
+
 import threading
-import time
 
-def dispay1():
-    for i in range(5):
-        print("najad")
-        time.sleep(1)
+counter = 0
 
-start_time = time.time()
-
-t1 = threading.Thread(target = dispay1)
-t2 = threading.Thread(target = dispay1)
+def dispay():
+    global counter
+    for i in range(1000000):
+        counter +=1
+    
+t1 = threading.Thread(target = dispay)
+# t2 = threading.Thread(target = dispay)
 
 t1.start()
-t2.start()
+# t2.start()
 
 t1.join()
-t2.join()
+# t2.join()
 
-end_time = time.time()
+print(counter)
 
-print("Execution Time : ",end_time - start_time ," Seconds")
+
+
+
+
+
 
