@@ -33,10 +33,11 @@ class Mail :
 
 
 
-a=Mail()
-a.check_mail("vtknajad@gmail.com")
+mail=Mail()
+input_mail=input("Enter Your Mail : ")
+mail.check_mail(input_mail)
 b=input("enter otp : ")
-a.check_otp(b)
+mail.check_otp(b)
 
 
 
