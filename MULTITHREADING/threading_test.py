@@ -73,29 +73,53 @@
 
 # -------------------------------------------------------------------------------
 
+# import threading
+
+# counter = 0
+
+# def dispay():
+#     global counter
+#     for i in range(1000000):
+#         counter +=1
+    
+# t1 = threading.Thread(target = dispay)
+# t2 = threading.Thread(target = dispay)
+
+# t1.start()
+# t2.start()
+
+# t1.join()
+# t2.join()
+
+# print(counter)
+
+# -----------------------------------------------------------------------------------
+
 import threading
 
 counter = 0
+lock =threading.Lock()
 
 def dispay():
     global counter
+
     for i in range(1000000):
+        lock.acquire()
+
         counter +=1
+
+        lock.release()
     
 t1 = threading.Thread(target = dispay)
-# t2 = threading.Thread(target = dispay)
+t2 = threading.Thread(target = dispay)
 
 t1.start()
-# t2.start()
+t2.start()
 
 t1.join()
-# t2.join()
+t2.join()
 
-print(counter)
-
-
+print(counter) 
 
 
-
-
-
+# --------------------------------------------------------------------------
