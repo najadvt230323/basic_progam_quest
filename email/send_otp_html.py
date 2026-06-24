@@ -82,7 +82,7 @@ class Mail :
 
 
 mail=Mail()
-input_mail=input("Enter Your Mail : ")
+input_mail=input("Enter Your Mail : ") 
 mail.check_mail(input_mail)
 b=input("enter otp : ")
 mail.check_otp(b)
