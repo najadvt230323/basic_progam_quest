@@ -1,4 +1,4 @@
-# from math import * 
+from math import * 
 
 # print(dir())                                        # Lists all names in the current local scope, including imported ones
 # print("Square Root of 16 :", sqrt(16))              # Using sqrt from math module
