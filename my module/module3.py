@@ -11,7 +11,7 @@ from math import *
 # print("cosine of 60 degrees :", cos(radians(60)))   # Using cos and radians from math module
 # print("tangent of 45 degrees :", tan(radians(45)))  # Using tan and radians from math module
 
-from datetime import *
+# from datetime import *
 
 # print("Current Date and Time :", datetime.now())            # Current date and time
 # print("Current Year :", datetime.now().year)                # Current year
