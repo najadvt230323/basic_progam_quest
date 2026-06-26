@@ -190,9 +190,11 @@ class rectangle(shape):
         print(f"circle area : {b*l}")
     
 c=circle()
+c.color()                    # output : all shapes have a color.
 c.area(5)                    # output : circle area : 31.4
 
 d=rectangle()
+d.color()                    # output : all shapes have a color.
 d.area(5,6)                  # output : circle area : 30
 
 # ---------------------------------------------------------------------------------------

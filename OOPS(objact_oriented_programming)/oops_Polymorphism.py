@@ -13,7 +13,7 @@
 # print(a1.multi("naj",4))
 
 # # ----------------------------------------------------------------------------------------------
-# # constcater over loding
+# # constcater over lodi ng
 # # ========================
 # class A:
 #     def __init__(self):
