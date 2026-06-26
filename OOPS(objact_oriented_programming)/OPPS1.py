@@ -730,22 +730,24 @@
 # em.battery()
 
 # #====================polymorphism==============================
-# # class Dog:
-# #     def sound(self):
-# #         return "Bark"
+# class Dog:
+#     def sound(self):
+#         return "Bark"
 
-# # class Cat:
-# #     def sound(self):
-# #         return "Meow"
+# class Cat:
+#     def sound(self):
+#         return "Meow"
 
-# # class Cow:
-# #     def sound(self):
-# #         return "Moo"
+# class Cow:
+#     def sound(self):
+#         return "Moo"
 
 
-# # animals = [Dog(), Cat(), Cow()]
-# # for animal in animals:
-# #     print(animal.sound())
+# animals = [Dog(), Cat(), Cow()]
+# for animal in animals:
+#     print(animal.sound())              #output : Bark
+#                                                # Meow
+#                                                # Moo
 
 
 
@@ -842,7 +844,8 @@
 #         super().start()
 #         print("Self Start")
 # b = Bike()
-# print(b.start())
+# b.start()                          #output : Vehicle is starting
+# #                                          # Self Start
 
 
 # class Vehicle:
@@ -853,6 +856,10 @@
 #     def start(self):
 #         super().start()     # parent method
 #         print("Car is ready to drive")
+
+# c=Car()
+# c.start()                               #output : Vehicle engine started
+# # #                                             # Car is ready to drive
 
 
 #------------constructor overloading------------------------
@@ -917,17 +924,13 @@ class BankAccount:
 
 acc = BankAccount(101, 5000)
 
+print(acc._account_no)
+
 print(acc.balance)
 
 acc.balance = 9000
 
 print(acc.balance)
-
-
-
-
-
-
 
 
 
