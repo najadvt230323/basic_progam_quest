@@ -362,7 +362,7 @@ print(str4.startswith("Py"))  # True
 # ===========================================================
 # Example 1
 str1 = "Hello Python"
-print(str1.endsswith("Python"))  # True
+print(str1.endswith("Python"))  # True
 
 # Example 2
 str2 = "Python Programming"
