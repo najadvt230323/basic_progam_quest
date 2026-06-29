@@ -875,62 +875,63 @@
 
 
 #==================encapsulation===================================
-class BankAccount:
-    bank_name = "Safe Bank"       # Public: accessible everywhere
+# class BankAccount:
+#     bank_name = "Safe Bank"       # Public: accessible everywhere
 
-    def __init__(self, account_no, balance):
-        self._account_no = account_no   # Protected: accessible in class and subclasses
-        self.__balance = balance        # Private: accessible only inside class
+#     def __init__(self, account_no, balance):
+#         self._account_no = account_no   # Protected: accessible in class and subclasses
+#         self.__balance = balance        # Private: accessible only inside class
 
-    # Public method
-    def deposit(self, amount):
-        if amount > 0:
-            self.__balance += amount
-            print(f"Deposited ₹{amount}. New balance: ₹{self.__balance}")
-        else:
-            print("Deposit amount must be positive.")
+#     # Public method
+#     def deposit(self, amount):
+#         if amount > 0:
+#             self.__balance += amount
+#             print(f"Deposited ₹{amount}. New balance: ₹{self.__balance}")
+#         else:
+#             print("Deposit amount must be positive.")
 
-    # Public method
-    def withdraw(self, amount):
-        if amount <= self.__balance:
-            self.__balance -= amount
-            print(f"Withdrawn ₹{amount}. New balance: ₹{self.__balance}")
-        else:
-            print("Insufficient balance.")
+#     # Public method
+#     def withdraw(self, amount):
+#         if amount <= self.__balance:
+#             self.__balance -= amount
+#             print(f"Withdrawn ₹{amount}. New balance: ₹{self.__balance}")
+#         else:
+#             print("Insufficient balance.")
 
-    # Public method to access private variable
-    def get_balance(self):
-        return self.__balance
+#     # Public method to access private variable
     
-    def set_balance(self, amount):
-        if amount< 0:
-            return "invalid value"
-        else:
-            self.__balance = amount
-            return f"New balance : {self.__balance}"
+#     def get_balance(self):
+#         return self.__balance
+    
+#     def set_balance(self, amount):
+#         if amount< 0:
+#             return "invalid value"
+#         else:
+#             self.__balance = amount
+#             return f"New balance : {self.__balance}"
         
-    @property
-    def balance(self):
-        return self.__balance
+#     @property
+#     def balance(self):
+#         return self.__balance
     
-    @balance.setter
-    def balance(self, amount):
-        if amount< 0:
-            return "invalid value"
-        else:
-            self.__balance = amount
-            return f"New balance : {self.__balance}"
+#     @balance.setter
+#     def balance(self, amount):
+#         if amount< 0:
+#             return "invalid value"
+#         else:
+#             self.__balance = amount
+#             return f"New balance : {self.__balance}"
 
 
-acc = BankAccount(101, 5000)
+# acc = BankAccount(101, 5000)
 
-print(acc._account_no)
+# print(acc._account_no)
 
-print(acc.balance)
+# print(acc.balance)
 
-acc.balance = 9000
+# acc.balance = 9000
 
-print(acc.balance)
+# print(acc.balance)
 
 
 
@@ -960,10 +961,6 @@ print(acc.balance)
 
 # t = Test(101, 5000)
 # print(t.balance())
-
-
-
-
 
 
 
@@ -1103,6 +1100,7 @@ xseries = Iphone(562352)
 # c = Car()
 # c.start()
 # c.stop()
+
 
 
 #------------------real life example---------------------------------
