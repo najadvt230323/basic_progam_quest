@@ -10,7 +10,6 @@ server.bind((host,port))
 server.listen()
 
 conn , addr = server.accept()
-
 # print(conn)
 # print(addr)
 
