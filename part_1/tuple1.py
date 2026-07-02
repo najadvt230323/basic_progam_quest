@@ -84,6 +84,8 @@ print(dir(t))
 '__sizeof__', '__str__', '__subclasshook__', 'count', 'index']
 
 '''
+print()
+print(t)
 print(t.count(40))
 print(t.index(50))
 # print(t.index(10)) #error
