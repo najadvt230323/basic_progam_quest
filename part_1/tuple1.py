@@ -93,5 +93,6 @@ print(t)
 print(t1)
 print(t1*3)
 
+
 print(40 in t)
 print(40 not in t)
