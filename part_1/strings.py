@@ -232,6 +232,7 @@ print(abc.rjust(25,"😍"))
 print(abc.zfill(25))
 
 
+
 print("my name is {} and i am {} years old".format("Alice", 25))
 print("my name is {} and i am {} years old".format(25,"Alice"))
 print("my name is {1} and i am {0} years old".format(25,"Alice"))
