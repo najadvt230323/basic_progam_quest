@@ -30,6 +30,8 @@ print(y)
 print(z)
 
 print()
+
+
 l=(10,20,30,40,50)
 x,y,*z=l
 print(x)
