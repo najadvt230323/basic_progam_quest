@@ -87,4 +87,5 @@ if "1" in x :
     a=a+1*b
     x=x.replace("1","a")
 print(x)
+
 print(a)
