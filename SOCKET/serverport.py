@@ -6,7 +6,6 @@ host = "127.0.0.1"
 port = 5001
 
 server.bind((host,port))
-
 server.listen()
 
 conn , addr = server.accept()
