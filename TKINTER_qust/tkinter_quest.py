@@ -83,7 +83,6 @@ a.grid(row=2,column=0)
 box1=Entry()
 box1.grid(row=2,column=1)
 
-
 # d=
 a.mainloop()
 
