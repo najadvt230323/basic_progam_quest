@@ -247,6 +247,7 @@
 # a.mainloop()
 
 # ===================================================================
+'''
 def onclick1():
     f=box1.get()
 
@@ -261,6 +262,7 @@ def onclick1():
         box=Entry()
         box.grid(row=0 , column=3)
         box.insert(0,"enter a number ")
+
         # m=Label()
         # m.grid(row=0,column=3)
         # m.config(text="enter a number ") 
@@ -312,14 +314,100 @@ box2.grid(row=1,column=1)
 btn=Button(text="convert to farenheit" , command=onclick2)
 btn.grid(row=1,column=2)
 
-# z= 
+# z=  
 a.mainloop()
 
+'''
+# ===============================================================================
+'''
+def click() :
+    messagebox.showinfo("infomation" , "are u sure")
+    messagebox.showwarning("warning" , "this is a warning")
+    messagebox.showerror("error" , " an error")
+    messagebox.askokcancel()
+    messagebox.askquestion()
+    messagebox.askretrycancel()
+    messagebox.askyesno()
+    messagebox.askyesnocancel()
 
 
+from tkinter import *
+from tkinter import messagebox
 
+a=Tk()
+a.geometry("600x300")
+a.maxsize(600,300)
+a.minsize(600,300)
 
+btn=Button(text="click" , command=click)
+btn.grid()
 
+a.mainloop()
+'''
+# ============================================================================
+
+'''
+def click() :
+    btn=c.get()
+
+    Text=Label()
+    Text.grid(row=0 ,column=2)
+    Text.config(text=btn)
+
+    box=Entry()
+    box.grid(row=0 , column=3)
+    box.insert(0,btn)
+
+from tkinter import *
+from tkinter.ttk import *
+
+a=Tk()
+a.geometry("600x300")
+a.maxsize(600,300)
+a.minsize(600,300)
+
+c=Combobox()
+c.grid(row=0 , column=0)
+c["value"] = ["select" , "uk" , "usa" ,"india" , "russia"]
+c.current(0)
+
+b=Button(text="click" , command=click)
+b.grid(row=0 ,column=1)
+
+a.mainloop()
+'''
+# ==============================================================================
+def show():
+    s=[]
+    for i,j in enumerate(c) :
+        if j.get()==1 :
+            s.append(lag[i])
+    print(lag)   
+
+from tkinter import *
+
+a=Tk()
+a.title("check button")
+a.geometry("600x300")
+a.maxsize(600,300)
+a.minsize(600,300)
+
+b=Label(text="languages")
+b.grid()
+
+lag=["python","java","c","javascript","ruby","c++"]
+c=[]
+
+for i in lag :
+    var=IntVar()
+    chk=Checkbutton(text=i , variable=var)
+    chk.grid(sticky=W)
+    c.append(var)
+
+btn=Button(text="show select" ,command=show)
+btn.grid(pady=10)
+
+a.mainloop()
 
 
 
