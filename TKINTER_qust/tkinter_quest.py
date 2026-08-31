@@ -377,12 +377,13 @@ b.grid(row=0 ,column=1)
 a.mainloop()
 '''
 # ==============================================================================
+'''
 def show():
     s=[]
     for i,j in enumerate(c) :
         if j.get()==1 :
             s.append(lag[i])
-    print(lag)   
+    print(s)   
 
 from tkinter import *
 
@@ -408,6 +409,40 @@ btn=Button(text="show select" ,command=show)
 btn.grid(pady=10)
 
 a.mainloop()
+# '''
+# ===========================================================================================
+'''
+
+def addi():
+    d=b.get()
+    b.delete(0,END)
+    b.insert(0,int(d)+1)
+
+def subt():
+    d=b.get()
+    b.delete(0,END)
+    b.insert(0,int(d)-1)
+
+from tkinter import *
+a=Tk()
+a.title("check button")
+a.geometry("600x300")
+a.maxsize(600,300)
+a.minsize(600,300)
+
+b=Entry(a , font=("times new roman" , 20) , justify="right" ,  bg="black" , fg="white" , relief="sunken" , bd=10)
+b.grid(row=0 , column=1 , pady=15 )
+b.insert(0,0)
+
+btn1=Button(text="+" , command=addi)
+btn1.grid(row=1 , column=0 ,pady=10)
+
+btn1=Button(text="-" , command=subt)
+btn1.grid(row=1 , column=2 ,pady=10)
+
+a.mainloop()
+'''
+# ================================================================================================
 
 
 
