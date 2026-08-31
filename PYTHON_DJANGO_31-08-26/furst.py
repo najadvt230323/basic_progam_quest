@@ -8,3 +8,6 @@
 # django-admin startproject myproject
 
 # django-admin --version
+
+# cd myproject
+# py manage.py startapp myapp
