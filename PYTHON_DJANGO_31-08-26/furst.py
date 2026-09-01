@@ -1,20 +1,20 @@
 
 # cd .\PYTHON_DJANGO_31-08-26\
 # cmd
-# py -m venv env
-# env\Scripts\activate
-# pip install django
+# 1.env creaction--------------- py -m venv env
+# 2.activate -env -------------- env\Scripts\activate
+# 3.install django-------------- pip install django
 
-# django-admin startproject myproject
+# 4.project folder creation----- django-admin startproject myproject
 
 # django-admin --version
 
-# cd myproject
-# py manage.py startapp myapp
+# 5.cd project folder----------- cd myproject
+# 6.app creation---------------- py manage.py startapp myapp
 
-# py manage.py runserver
+# 7.run------------------------- py manage.py runserver
 
-
+# 2,5,7
 '''
 
 Watching for file changes with StatReloader
