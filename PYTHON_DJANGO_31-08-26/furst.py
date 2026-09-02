@@ -33,3 +33,68 @@ WARNING: This is a development server. Do not use it in a production setting. Us
 For more information on production servers see: https://docs.djangoproject.com/en/6.1/howto/deployment/
 
 '''
+
+# ---------------------------------------------------------------------------------------------------------------------------
+
+
+# from django.shortcuts import render , HttpResponse
+
+
+# def display(request):
+#     return HttpResponse("hello , world !")
+
+# ---------------------------
+
+# def show(request):
+#     return render(request,"show.html")
+
+# ---------------------------
+
+# def show1(request):
+#     return render(request,"show1.html",{"data" : "najad"})
+
+
+# def show2(request):
+#     abc={
+#         "name" : "najad" ,
+#         "age"  : 25 ,
+#         "place": "kozhikode" 
+#     }
+
+#     return render(request,"show2.html",{"data" : abc})
+
+# -------------------------------------------
+
+# def show3(request):
+#     return render(request,"home.html")
+
+
+# -------------------------------------------------------------------------------------
+
+'''
+<body>
+    <header style="align-items: center; background-color: aqua; text-align: center;"> navigation bar </header>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <footer style="align-items: center; background-color: aqua; text-align: center;">quest</footer>
+
+</body>
+
+'''
+
+'''
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>home page</h1>
+<h2>my first html page</h2>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illum, necessitatibus quis neque facere ea
+    reiciendis perferendis sequi vero modi animi aliquid laborum, reprehenderit laboriosam voluptatibus qui quo!
+    Reiciendis, distinctio.</p>
+
+{% endblock %}
+'''
