@@ -29,4 +29,8 @@ urlpatterns = [
 
     path( 'show1/',views.show1),
 
+    path( 'show2/',views.show2),
+
+    path( 'home/',views.show3),
+
 ]

@@ -15,9 +15,17 @@ def show1(request):
     return render(request,"show1.html",{"data" : "najad"})
 
 
+def show2(request):
+    abc={
+        "name" : "najad" ,
+        "age"  : 25 ,
+        "place": "kozhikode" 
+    }
 
+    return render(request,"show2.html",{"data" : abc})
 
-
+def show3(request):
+    return render(request,"home.html")
 
 
 
