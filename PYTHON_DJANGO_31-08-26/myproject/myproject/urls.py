@@ -25,4 +25,8 @@ urlpatterns = [
 
     path( 'secnt/',views.display1),
 
+    path( 'show/',views.show),
+
+    path( 'show1/',views.show1),
+
 ]
