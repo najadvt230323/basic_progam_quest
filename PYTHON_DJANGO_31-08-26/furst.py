@@ -15,6 +15,14 @@
 # 7.run------------------------- py manage.py runserver
 
 # 2,5,7
+
+# 8.admin folder creation------  python manage.py makemigrations
+
+# 8.admin folder creation------  python manage.py migrate
+# 8.admin folder creation------  python manage.py createsuperuser
+
+
+
 '''
 
 Watching for file changes with StatReloader
