@@ -33,4 +33,8 @@ urlpatterns = [
 
     path( 'home/',views.show3),
 
+    path( 'show4/',views.show4),
+
+    path( 'show5/<str:name>/<int:age>',views.show5),
+
 ]

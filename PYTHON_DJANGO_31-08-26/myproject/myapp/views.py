@@ -27,6 +27,14 @@ def show2(request):
 def show3(request):
     return render(request,"home.html")
 
+def show4(request):
+    time=int(input("enter a time :"))
+    return render(request,"show4.html",{"data" : time})
+
+def show5(request,name,age):
+    time=int(input("enter a time :"))
+    return render(request,"show4.html",{"name" : name , "age" :age})
+
 
 
 
