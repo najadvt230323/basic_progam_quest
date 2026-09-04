@@ -19,6 +19,7 @@
 # 8.admin folder creation------  python manage.py makemigrations
 
 # 8.admin folder creation------  python manage.py migrate
+
 # 8.admin folder creation------  python manage.py createsuperuser
 
 
