@@ -32,8 +32,7 @@ def show4(request):
     return render(request,"show4.html",{"data" : time})
 
 def show5(request,name,age):
-    time=int(input("enter a time :"))
-    return render(request,"show4.html",{"name" : name , "age" :age})
+    return render(request,"show5.html",{"name" : name , "age" :age})
 
 
 
