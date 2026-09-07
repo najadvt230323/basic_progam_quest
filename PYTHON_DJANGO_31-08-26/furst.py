@@ -16,11 +16,11 @@
 
 # 2,5,7
 
-# 8.admin folder creation------  python manage.py makemigrations
+# 8.admin folder makemigrations------  python manage.py makemigrations
 
-# 8.admin folder creation------  python manage.py migrate
+# 9.admin folder migrate------  python manage.py migrate
 
-# 8.admin folder creation------  python manage.py createsuperuser
+# 10.admin folder creation-----  python manage.py createsuperuser
 
 
 
