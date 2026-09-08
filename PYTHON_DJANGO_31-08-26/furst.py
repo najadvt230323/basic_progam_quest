@@ -107,5 +107,22 @@ For more information on production servers see: https://docs.djangoproject.com/e
 
 {% endblock %}
 '''
+# -------------------------------------------------------------------------
+# crate table
+# -------------
 
+# class Student(models.Model) :
+#     name = models.CharField(max_length=100)
+#     age = models.IntegerField()
+#     age = models.IntegerField()
+#     email = models.EmailField()
+#     course = models.CharField(max_length=100)
+#     password = models.CharField(max_length=100)
 
+#     class Meta :
+#         db_table = "student"
+
+# ------------------------------------
+
+# from .models import Student
+# admin.site.register(Student)

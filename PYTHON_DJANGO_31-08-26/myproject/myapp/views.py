@@ -35,5 +35,23 @@ def show5(request,name,age):
     return render(request,"show5.html",{"name" : name , "age" :age})
 
 
+# -------------------------------------------------------------------
 
+from .models import Student
+
+def insert_data(request) :
+    Student.objects.create(
+        name = "najad" , 
+        age = 25 ,
+        email = "najad@gmail.com" ,
+        course = "java",
+        password = "najad"
+    )
+    return HttpResponse("student added successfully")
+
+
+
+def fetch_data(request) :
+    s=Student.objects.all()
+    return render(request , "fetch.html" , {"data": s})
 

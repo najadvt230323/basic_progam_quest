@@ -12,3 +12,6 @@ class Student(models.Model) :
 
     class Meta :
         db_table = "student"
+
+    def __str__(self):
+        return self.name

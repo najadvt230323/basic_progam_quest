@@ -37,4 +37,8 @@ urlpatterns = [
 
     path( 'show5/<str:name>/<int:age>',views.show5),
 
+    path( 'insert_data',views.insert_data),
+
+    path( 'fetch_data',views.fetch_data),
+
 ]
