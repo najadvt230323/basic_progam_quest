@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>complete details</h1>
+    {% for i in data %}
 
-    <h2>name : {{data.name}}</h2>
-    <h2>age : {{data.age}}</h2>
-    <h2>email : {{data.email}}</h2>
-    <h2>cousse : {{data.course}}</h2>
-    <h2>password : {{data.password}}</h2>
+    <h2>name : {{i.name}}</h2>
+    <h2>age : {{i.age}}</h2>
+    <h2>email : {{i.email}}</h2>
+    <h2>cousse : {{i.course}}</h2>
+    <h2>password : {{i.password}}</h2>
+
+    {% endfor %}
+
 </body>
+
 </html>

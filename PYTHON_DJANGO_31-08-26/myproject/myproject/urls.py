@@ -41,4 +41,9 @@ urlpatterns = [
 
     path( 'fetch_data',views.fetch_data),
 
+    path( 'delete_data/<int:id_no>',views.delete_data ),
+
+    path( 'update_data/<int:id_no>',views.update_data ),
+
+    path( 'update_data/<int:id_no>/<int:age>',views.update_data ),
 ]

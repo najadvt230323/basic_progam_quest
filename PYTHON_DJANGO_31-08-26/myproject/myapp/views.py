@@ -55,3 +55,26 @@ def fetch_data(request) :
     s=Student.objects.all()
     return render(request , "fetch.html" , {"data": s})
 
+
+def delete_data(request,id_no) :
+    s=Student.objects.get(id = id_no)
+    s.delete()
+    return HttpResponse("student deleted successfully")
+
+def update_data(request,id_no) :
+    s=Student.objects.get(id = id_no)
+    s.age = 30
+    s.save()
+    return HttpResponse("student update successfully")
+
+def update_data(request,id_no,age) :
+    s=Student.objects.get(id = id_no)
+    s.age = age
+    s.save()
+    return HttpResponse(f"student {s.name} update successfully")
+
+
+# ------------------------------------------------------------------------------------
+
+# --------------------DATA INSERTION USING DJANGO FORMS-----------------------------
+
