@@ -78,3 +78,18 @@ def update_data(request,id_no,age) :
 
 # --------------------DATA INSERTION USING DJANGO FORMS-----------------------------
 
+from .forms import Stu_form
+
+def insert_data1(request) :
+    if request.method == "POST" :
+        f=Stu_form(request.POST)
+        if f.is_valid():
+            f.save()
+            return HttpResponse(f"student added successfully")
+        else:
+            return HttpResponse(f"forms are not valid")
+            # return render(request , "insert_data1.html" , {"data": f})
+
+    else:
+        f=Stu_form()
+        return render(request , "insert_data1.html" , {"data": f})
