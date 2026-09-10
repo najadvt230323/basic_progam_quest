@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="color: brown; text-align: center;">
+    <h1>complete details</h1>
+
+    <table border="3" align="center" >
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>Course</th>
+        <th>Password</th>
+        <th>Delete</th>
+
+        {% for i in data %}
+
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.age}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.course}}</td>
+            <td>{{i.password}}</td>
+            <td><a href="">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+<!--     
+
+    {% for i in data %}
+
+    <h2>name : {{i.name}}</h2>
+    <h2>age : {{i.age}}</h2>
+    <h2>email : {{i.email}}</h2>
+    <h2>cousse : {{i.course}}</h2>
+    <h2>password : {{i.password}}</h2>
+
+    {% endfor %}
+ -->
+
+</body>
+
+</html>

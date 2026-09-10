@@ -8,12 +8,16 @@
 </head>
 
 <body>
-    <form action="" method="post">
+    <form action="" method="post" style="color: brown; text-align: center;">
     {% csrf_token %}
     <h1>STUDENT RAGISTRATION</h1>
-        {{ data.as_p }}
+        {{ data.as_p}}
+        <!-- {{ data.as_table}} -->
+        <br>
+        <br>
     <input type="submit" value="register">
     </form>
+<table></table>
 </body>
 
 </html>

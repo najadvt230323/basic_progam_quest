@@ -48,4 +48,8 @@ urlpatterns = [
     path( 'update_data/<int:id_no>/<int:age>',views.update_data ),
 
     path( 'add_data/',views.insert_data1 ),
+
+    path( 'fetch_data1/',views.fetch_data1),
+
+    
 ]

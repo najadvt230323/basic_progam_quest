@@ -93,3 +93,22 @@ def insert_data1(request) :
     else:
         f=Stu_form()
         return render(request , "insert_data1.html" , {"data": f})
+
+# --------------------DATA FATCH USING DJANGO FORMS-----------------------------
+
+
+def fetch_data1(request) :
+    s=Student.objects.all()
+    return render(request , "fetch_data1.html" , {"data": s})
+
+# --------------------DATA DELETE USING DJANGO FORMS-----------------------------
+
+
+def delete_data1(request,id_no) :
+    s=Student.objects.get(id = id_no)
+    s.delete()
+    return HttpResponse("student deleted successfully")
+
+
+
+
