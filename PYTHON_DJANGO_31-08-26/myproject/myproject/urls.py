@@ -51,5 +51,5 @@ urlpatterns = [
 
     path( 'fetch_data1/',views.fetch_data1),
 
-    
+    path( 'delete_data1/<int:id_no>',views.delete_data1 ),
 ]
