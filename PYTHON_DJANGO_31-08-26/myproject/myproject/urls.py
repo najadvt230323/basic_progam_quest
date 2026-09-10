@@ -46,4 +46,6 @@ urlpatterns = [
     path( 'update_data/<int:id_no>',views.update_data ),
 
     path( 'update_data/<int:id_no>/<int:age>',views.update_data ),
+
+    path( 'add_data/',views.insert_data1 ),
 ]
