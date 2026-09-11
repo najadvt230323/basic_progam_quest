@@ -49,7 +49,10 @@ urlpatterns = [
 
     path( 'add_data/',views.insert_data1 ),
 
-    path( 'fetch_data1/',views.fetch_data1),
+    path( 'fetch_data1/',views.fetch_data1 , name="fetch"),
 
     path( 'delete_data1/<int:id_no>',views.delete_data1 ),
+
+    path( 'update_data1/<int:id_no>',views.update_data1 , name="update"),
+    
 ]

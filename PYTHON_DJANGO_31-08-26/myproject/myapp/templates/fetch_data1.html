@@ -16,7 +16,12 @@
         <th>Email</th>
         <th>Course</th>
         <th>Password</th>
+        <th colspan="2">Actions</th>
+<!-- 
         <th>Delete</th>
+        <th>Update</th>
+          -->
+
 
         {% for i in data %}
 
@@ -27,6 +32,7 @@
             <td>{{i.course}}</td>
             <td>{{i.password}}</td>
             <td><a href="/delete_data1/{{i.id}}">Delete</a></td>
+            <td><a href="/update_data1/{{i.id}}">Update</a></td>
         </tr>
         {% endfor %}
     </table>
