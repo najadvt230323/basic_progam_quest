@@ -108,7 +108,9 @@ def fetch_data1(request) :
 def delete_data1(request,id_no) :
     s=Student.objects.get(id = id_no)
     s.delete()
-    return redirect("fetch")
+    return redirect("/fetch_data1/")
+    # return redirect("fetch")
+
     # return HttpResponse("student deleted successfully")
 
 
