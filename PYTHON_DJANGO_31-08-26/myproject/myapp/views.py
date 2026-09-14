@@ -85,9 +85,10 @@ def insert_data1(request) :
         f=Stu_form(request.POST)
         if f.is_valid():
             f.save()
-            return HttpResponse(f"student added successfully")
+            return redirect("add")
+            # return HttpResponse(f"student added successfully")
         else:
-            return HttpResponse(f"forms are not valid")
+            return HttpResponse(f"forms are not valid")    
             # return render(request , "insert_data1.html" , {"data": f})
 
     else:
@@ -107,7 +108,7 @@ def fetch_data1(request) :
 def delete_data1(request,id_no) :
     s=Student.objects.get(id = id_no)
     s.delete()
-    return redirect("fetch_data1.html")
+    return redirect("fetch")
     # return HttpResponse("student deleted successfully")
 
 
