@@ -53,6 +53,6 @@ urlpatterns = [
 
     path( 'delete_data1/<int:id_no>',views.delete_data1 ),
 
-    path( 'update_data1/<int:id_no>',views.update_data1 , name="update"),
+    path( 'update_data1/<int:id_no>',views.update_data1 , name="update1"),
     
 ]

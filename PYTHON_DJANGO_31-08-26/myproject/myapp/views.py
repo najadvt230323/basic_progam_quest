@@ -1,4 +1,4 @@
-from django.shortcuts import render , HttpResponse
+from django.shortcuts import render , HttpResponse ,redirect
 
 # Create your views here.
 
@@ -107,7 +107,9 @@ def fetch_data1(request) :
 def delete_data1(request,id_no) :
     s=Student.objects.get(id = id_no)
     s.delete()
-    return HttpResponse("student deleted successfully")
+    return redirect("fetch_data1.html")
+    # return HttpResponse("student deleted successfully")
+
 
 # --------------------DATA update USING DJANGO FORMS-----------------------------
 

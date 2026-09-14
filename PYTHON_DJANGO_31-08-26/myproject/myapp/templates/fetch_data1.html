@@ -32,7 +32,8 @@
             <td>{{i.course}}</td>
             <td>{{i.password}}</td>
             <td><a href="/delete_data1/{{i.id}}">Delete</a></td>
-            <td><a href="/update_data1/{{i.id}}">Update</a></td>
+            <!-- <td><a href="/update_data1/{{i.id}}">Update</a></td> -->
+            <td><a href="{% url 'update1' i.id %}">Update</a></td>
         </tr>
         {% endfor %}
     </table>
