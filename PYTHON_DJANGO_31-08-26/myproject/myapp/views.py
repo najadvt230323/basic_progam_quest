@@ -88,8 +88,8 @@ def insert_data1(request) :
             return redirect("add")
             # return HttpResponse(f"student added successfully")
         else:
-            return HttpResponse(f"forms are not valid")    
-            # return render(request , "insert_data1.html" , {"data": f})
+            # return HttpResponse(f"forms are not valid")    
+            return render(request , "insert_data1.html" , {"data": f})
 
     else:
         f=Stu_form()
