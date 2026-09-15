@@ -7,6 +7,8 @@ class Stu_form(forms.ModelForm) :
         model = Student
         fields = "__all__"
 
+# ----------------------------------------------------
+
     def clean_age(self):
         age_1 = self.cleaned_data["age"]
 
