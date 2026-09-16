@@ -32,3 +32,16 @@ class Stu_form(forms.ModelForm) :
                     "enter a valid gmail address."
                 )
             return email_1
+
+
+# ----------------------------------- USING FORM CLASS --------------------------------
+
+
+class Stu_form_2(forms.Model) :
+    name = forms.CharField(max_length=100)
+    age = forms.IntegerField()
+    age = forms.IntegerField()
+    email = forms.EmailField()
+    course = forms.CharField(max_length=100)
+    password = forms.CharField(max_length=100)
+    

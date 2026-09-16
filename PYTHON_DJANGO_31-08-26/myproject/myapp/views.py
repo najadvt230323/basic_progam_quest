@@ -135,5 +135,17 @@ def update_data1(request,id_no) :
         return render(request , "insert_data1.html" , {"data": f})
 
 
+# --------------------- DATA INSERT USING FORM CLASS --------------------------
+
+from .forms import Stu_form_2
+
+def insert_data_2(request) :
+    if request.method == "POST" :
+        f=Stu_form_2(request.POST)
+        if f.is_valid():
+            name = 
+            age
+            email
+            course
 
     
