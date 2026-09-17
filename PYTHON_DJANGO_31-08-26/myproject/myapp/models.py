@@ -15,3 +15,8 @@ class Student(models.Model) :
 
     def __str__(self):
         return self.name
+
+from django.contrib.auth.models import AbstractUser
+
+class Myuser(AbstractUser) :
+    phone = models.BigIntegerField(max_length=10)
