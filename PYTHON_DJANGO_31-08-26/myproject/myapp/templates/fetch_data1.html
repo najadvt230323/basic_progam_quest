@@ -10,14 +10,14 @@
 <body style="color: brown; text-align: center;">
     <h1>complete details</h1>
 
-    <table border="3" align="center" >
+    <table border="3" align="center">
         <th>Name</th>
         <th>Age</th>
         <th>Email</th>
         <th>Course</th>
         <th>Password</th>
         <th colspan="2">Actions</th>
-<!-- 
+        <!-- 
         <th>Delete</th>
         <th>Update</th>
           -->
@@ -36,8 +36,11 @@
             <td><a href="{% url 'update1' i.id %}">Update</a></td>
         </tr>
         {% endfor %}
+        <tr>
+            <td colspan="7"><a href="/add_data/">add</a></td>
+        </tr>
     </table>
-<!--     
+    <!--     
 
     {% for i in data %}
 

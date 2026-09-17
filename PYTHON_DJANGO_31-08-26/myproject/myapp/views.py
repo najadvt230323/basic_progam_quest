@@ -143,9 +143,28 @@ def insert_data_2(request) :
     if request.method == "POST" :
         f=Stu_form_2(request.POST)
         if f.is_valid():
-            name = 
-            age
-            email
-            course
+            name = f.cleaned_data["name"]
+            age = f.cleaned_data["age"]
+            email = f.cleaned_data["email"]
+            course = f.cleaned_data["course"]
+            password = f.cleaned_data["password"]
 
-    
+            Student.objects.create(
+                name = name ,
+                age = age ,
+                email = email ,
+                course = course ,
+                password = password    
+            )
+
+            return HttpResponse ("student added successfully")
+        else :
+            # return HttpResponse ("form is not valid")
+            return render(request , "insert_data_2.html" , {"data": f})
+
+    else :
+        form_1 = Stu_form_2()
+        return render(request , "insert_data_2.html" , {"data": form_1})
+
+
+

@@ -37,11 +37,25 @@ class Stu_form(forms.ModelForm) :
 # ----------------------------------- USING FORM CLASS --------------------------------
 
 
-class Stu_form_2(forms.Model) :
-    name = forms.CharField(max_length=100)
-    age = forms.IntegerField()
-    age = forms.IntegerField()
-    email = forms.EmailField()
-    course = forms.CharField(max_length=100)
+class Stu_form_2(forms.Form) :
+    name     = forms.CharField(max_length=100)
+    age      = forms.IntegerField()
+    age      = forms.IntegerField()
+    email    = forms.EmailField()
+    course   = forms.CharField(max_length=100)
     password = forms.CharField(max_length=100)
+
+    def clean_email(self):
+            email_1 = self.cleaned_data["email"]
     
+            pattern_1 = r'^[a-z][a-z0-9]*@gmail\.com$'
+    
+            if not re.match(pattern_1,email_1) :
+                raise forms.ValidationError(
+                    "enter a valid gmail address."
+                )
+            return email_1
+
+
+
+ 
