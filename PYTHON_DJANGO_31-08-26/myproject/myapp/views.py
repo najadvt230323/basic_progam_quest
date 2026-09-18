@@ -167,4 +167,32 @@ def insert_data_2(request) :
         return render(request , "insert_data_2.html" , {"data": form_1})
 
 
+# -----------------------------------STUDENT -------------------------------------------------
 
+from .models import Myuser
+
+def stu_new(request) :
+    if request.method == "POST" :
+        a = request.POST.get('fname')
+        b = request.POST.get('lname')
+        c = request.POST.get('email')
+        d = request.POST.get('uname')
+        e = request.POST.get('pwd')
+        f = request.POST.get('ph')
+
+        Myuser.objects.create_user(
+            username   = d ,
+            password   = e ,
+            email      = c ,
+            first_name = a ,
+            last_name = b ,
+            phone = f ,
+            is_staff = False ,
+            is_superuser = False ,
+            is_active = True
+        )
+        return HttpResponse("Register Successfully")
+    return render(request , "stu_new_reg.html")
+
+
+        

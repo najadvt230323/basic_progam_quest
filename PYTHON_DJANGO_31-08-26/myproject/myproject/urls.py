@@ -57,5 +57,7 @@ urlpatterns = [
 
     path( 'insert_data_2',views.insert_data_2),
 
+    path( 'student_add_new',views.stu_new),
+
     
 ]
