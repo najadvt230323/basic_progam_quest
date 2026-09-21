@@ -167,7 +167,7 @@ def insert_data_2(request) :
         return render(request , "insert_data_2.html" , {"data": form_1})
 
 
-# -----------------------------------STUDENT -------------------------------------------------
+# -----------------------------------CRATE AUTH TABEL STUDENT -------------------------------------------------
 
 from .models import Myuser
 
@@ -194,5 +194,32 @@ def stu_new(request) :
         return HttpResponse("Register Successfully")
     return render(request , "stu_new_reg.html")
 
-
+# --------------------------------------------------------------------------------------------------
         
+from .forms import loginform
+from django.contrib.auth import authenticate , login
+
+def login_form(request) :
+    if request.method == "POST" :
+        unamae = request.POST.get("username")
+        pwd = request.POST.get("password")
+        user = authenticate(username=unamae , password=pwd)
+        # print(user)
+
+        if user is not None :
+
+            if user.is_superuser == False and user.is_staff == False :
+                login(request,user)
+                return HttpResponse("WELCOME STUDENT USER")
+            elif user.is_superuser == False and user.is_staff == True :
+                login(request,user)
+                return HttpResponse("WELCOME STAFF USER")
+            else :
+                login(request,user)
+                return HttpResponse("WELCOME ADMIN USER")
+        else :
+            return HttpResponse("INVALID CREDENTIAL , TRY AGAIN")
+       
+    else :
+        form = loginform()
+        return render(request , "login.html" , {"data": form})

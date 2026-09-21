@@ -57,5 +57,11 @@ class Stu_form_2(forms.Form) :
             return email_1
 
 
+# --------------------------------- USING FORM CLASS - LOGIN ------------------------------
+
+
+class loginform(forms.Form) :
+    username     = forms.CharField(max_length=100)
+    password      = forms.CharField(widget=forms.PasswordInput)
 
  

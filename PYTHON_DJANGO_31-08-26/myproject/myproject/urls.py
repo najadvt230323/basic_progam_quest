@@ -59,5 +59,6 @@ urlpatterns = [
 
     path( 'student_add_new',views.stu_new),
 
+    path( 'login/',views.login_form),
     
 ]

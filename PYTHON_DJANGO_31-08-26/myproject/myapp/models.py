@@ -19,4 +19,5 @@ class Student(models.Model) :
 from django.contrib.auth.models import AbstractUser
 
 class Myuser(AbstractUser) :
-    phone = models.BigIntegerField(max_length=10)
+    phone = models.CharField(max_length=15, blank=True, null=True)
+    REQUIRED_FIELDS = ['email' ,'password']
