@@ -126,3 +126,16 @@ For more information on production servers see: https://docs.djangoproject.com/e
 
 # from .models import Student
 # admin.site.register(Student)
+
+# -------------------------------------
+
+#1. settings.py  -->  
+# AUTH_USER_MODEL="myapp.Myuser"
+
+# 2.models  -->
+
+# from django.contrib.auth.models import AbstractUser
+# class Myuser(AbstractUser) :
+#     phone = models.CharField(max_length=15, blank=True, null=True)
+#     REQUIRED_FIELDS = ['email' ,'password']
+

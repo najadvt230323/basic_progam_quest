@@ -223,3 +223,19 @@ def login_form(request) :
     else :
         form = loginform()
         return render(request , "login.html" , {"data": form})
+    
+# -------------------------------------------------------------------------------------
+
+from .forms import loginform
+from django.contrib.auth import logout
+from django.contrib.auth.decorators import login_required
+
+@login_required
+def logout_form(request) :
+    logout(request)
+
+    return redirect("/login")
+    # return HttpResponse("Logout Successful")
+
+    # form = loginform()
+    # return render(request , "login.html" , {"data": form})
