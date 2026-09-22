@@ -129,13 +129,18 @@ For more information on production servers see: https://docs.djangoproject.com/e
 
 # -------------------------------------
 
-#1. settings.py  -->  
-# AUTH_USER_MODEL="myapp.Myuser"
 
-# 2.models  -->
+# 1.models  -->
 
 # from django.contrib.auth.models import AbstractUser
 # class Myuser(AbstractUser) :
 #     phone = models.CharField(max_length=15, blank=True, null=True)
 #     REQUIRED_FIELDS = ['email' ,'password']
+
+#2. settings.py  -->  
+# AUTH_USER_MODEL="myapp.Myuser"
+
+# ---------------------------------------------------------------------------------------
+
+
 

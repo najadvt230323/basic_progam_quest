@@ -239,3 +239,34 @@ def logout_form(request) :
 
     # form = loginform()
     # return render(request , "login.html" , {"data": form})  ----------------> erorr
+
+
+# -------------------------SESSION AND COOKIE-------------------------------------------
+
+# -----------------------SESSION-----------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
