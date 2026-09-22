@@ -273,6 +273,10 @@ def delete_session(request) :
         del request.session["password"]
         return HttpResponse ("session is deleted")
 
+# ------------------------------------------------------------------------------------------------------
+
+
+
 
 
 
