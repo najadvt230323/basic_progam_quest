@@ -245,8 +245,33 @@ def logout_form(request) :
 
 # -----------------------SESSION-----------------------
 
+def set_session(request):
+    if request.method == "POST" :
+        request.session["username"] = request.POST.get("username")
+        request.session["password"] = request.POST.get("password")
+        return HttpResponse ("session is set")
+    form = loginform()
+    return render(request , "login.html" , {"data": form})
 
+# ---------------------------
 
+def get_session(request):
+    username = request.session.get("username")
+    password = request.session.get("password")
+    if username and password :
+        return HttpResponse (f"username = {username} , password = {password}")
+    else :
+        return HttpResponse("sessison is not exists")
+
+# -----------------------------
+
+def delete_session(request) :
+    if request.session.exists("username") and request.session.exists("password") :
+        return HttpResponse ("session is exists")
+    else :
+        del request.session["username"]
+        del request.session["password"]
+        return HttpResponse ("session is deleted")
 
 
 

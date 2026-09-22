@@ -62,5 +62,11 @@ urlpatterns = [
     path( 'login/', views.login_form ),
 
     path( 'logout/', views.logout_form ),
+
+    path( 'set_session/', views.set_session),
+
+    path( 'get_session/', views.get_session),
+    
+    path( 'delete_session/', views.delete_session),
     
 ]
