@@ -238,4 +238,4 @@ def logout_form(request) :
     # return HttpResponse("Logout Successful")
 
     # form = loginform()
-    # return render(request , "login.html" , {"data": form})
+    # return render(request , "login.html" , {"data": form})  ----------------> erorr
