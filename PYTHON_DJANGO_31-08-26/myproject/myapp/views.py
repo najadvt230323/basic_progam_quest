@@ -277,7 +277,31 @@ def delete_session(request) :
 # ------------------------------------------------------------------------------------------------------
 
 
+# -----------------------COOKIES MANAGEMENT----------------------
 
+def set_cookie(request):
+    response = HttpResponse("Cookie created")
+    response.set_cookie('name', 'sree')
+    return response
+
+
+def get_cookie(request):
+    name = request.COOKIES.get('name')
+    return HttpResponse(f"Name: {name}")
+
+
+def update_cookie(request):
+    response = HttpResponse("Cookie updated")
+    response.set_cookie('name', 'Aswathi')
+    return response
+
+
+def delete_cookie(request):
+    response = HttpResponse("Cookie deleted")
+    response.delete_cookie('name')
+    return response
+
+# ============================================================================================
 
 
 

@@ -64,9 +64,12 @@ urlpatterns = [
     path( 'logout/', views.logout_form ),
 
     path( 'set_session/', views.set_session),
-
-    path( 'get_session/', views.get_session),
-    
+    path( 'get_session/', views.get_session), 
     path( 'delete_session/', views.delete_session),
+
+    path('set_cookie/', views.set_cookie),
+    path('get_cookie/', views.get_cookie),
+    path('update_cookie/', views.update_cookie),
+    path('delete_cookie/', views.delete_cookie),
     
 ]
