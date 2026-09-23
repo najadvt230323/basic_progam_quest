@@ -129,7 +129,9 @@ For more information on production servers see: https://docs.djangoproject.com/e
 
 # -------------------------------------
 
+# ================================= AUTH THABEL CRATION ================================
 
+# DELET -->  db.sqlite3
 
 # 1.models  -->
 
@@ -138,8 +140,14 @@ For more information on production servers see: https://docs.djangoproject.com/e
 #     phone = models.CharField(max_length=15, blank=True, null=True)
 #     REQUIRED_FIELDS = ['email' ,'password']
 
-#2. settings.py  -->  
+#2. DELET -->  db.sqlite3
+
+#3. settings.py  -->  
 # AUTH_USER_MODEL="myapp.Myuser"
+
+# 4.admin folder makemigrations------  python manage.py makemigrations
+
+# 5.admin folder migratem------  python manage.py migrate
 
 # ---------------------------------------------------------------------------------------
 
