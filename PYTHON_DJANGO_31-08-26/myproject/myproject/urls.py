@@ -73,11 +73,8 @@ urlpatterns = [
     path('delete_cookie/', views.delete_cookie),
 
     path( "create/", views.Student_create_views.as_view()),
-
     path( "student_views/", views.Student_list_views.as_view()  , name = "student_views"),
-
     path( "delete_views/<int:pk>", views.Student_delete_views.as_view()),
-
     path( "update_views/<int:pk>", views.Student_update_views.as_view()),
 
     
