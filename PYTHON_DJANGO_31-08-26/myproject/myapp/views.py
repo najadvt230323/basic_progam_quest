@@ -305,7 +305,7 @@ def delete_cookie(request):
 
 # =========================== GENRIC CLASS BASED VIEWS ======================================
 
-from django.views.generic import ListView , CreateView , UpdateView , DateDetailView
+from django.views.generic import ListView , CreateView , UpdateView ,DeleteView , DateDetailView 
 from django.urls import reverse_lazy
 
 class Student_create_views(CreateView) :
@@ -320,13 +320,18 @@ class Student_list_views(ListView) :
     template_name = "fetch_data1.html"
     context_object_name = "data"
 
-class Student_delete_views(ListView) :
+class Student_delete_views(DeleteView) :
     model = Student
     template_name = "delete_data.html"
-    success_url=
+    # success_url =  reverse_lazy("student_views")
+    success_url="/student_views/"
 
+class Student_update_views(UpdateView) :
+    model = Student
+    fields = ["name" , 'age' , 'email' , 'course' , 'password']
+    template_name =  "insert_data1.html"
 
-
+    success_url = "/student_views/"
 
 
 
