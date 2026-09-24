@@ -342,3 +342,4 @@ class Student_delete_views(ListView) :
 
 
 
+
