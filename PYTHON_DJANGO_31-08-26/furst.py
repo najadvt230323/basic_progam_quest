@@ -131,7 +131,6 @@ For more information on production servers see: https://docs.djangoproject.com/e
 
 # ================================= AUTH THABEL CRATION ================================
 
-# DELET -->  db.sqlite3
 
 # 1.models  -->
 

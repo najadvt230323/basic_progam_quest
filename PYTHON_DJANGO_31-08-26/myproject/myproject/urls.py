@@ -71,5 +71,10 @@ urlpatterns = [
     path('get_cookie/', views.get_cookie),
     path('update_cookie/', views.update_cookie),
     path('delete_cookie/', views.delete_cookie),
+
+    path( "create/", views.Student_create_views.as_view()),
+
+    path( "student_views/", views.Student_list_views.as_view()),
+
     
 ]

@@ -93,7 +93,7 @@ def insert_data1(request) :
 
     else:
         f=Stu_form()
-        return render(request , "insert_data1.html" , {"data": f})
+        return render(request , "insert_data1.html" , {"form": f})
 
 # --------------------DATA FATCH USING DJANGO FORMS-----------------------------
 
@@ -132,7 +132,7 @@ def update_data1(request,id_no) :
 
     else:
         f=Stu_form(instance=s)
-        return render(request , "insert_data1.html" , {"data": f})
+        return render(request , "insert_data1.html" , {"form": f})
 
 
 # --------------------- DATA INSERT USING FORM CLASS --------------------------
@@ -303,9 +303,27 @@ def delete_cookie(request):
 
 # ============================================================================================
 
+# =========================== GENRIC CLASS BASED VIEWS ======================================
 
+from django.views.generic import ListView , CreateView , UpdateView , DateDetailView
+from django.urls import reverse_lazy
 
+class Student_create_views(CreateView) :
+    model = Student
+    fields = ["name" , 'age' , 'email' , 'course' , 'password']
+    template_name = "insert_data1.html"
 
+    success_url = "/create/"
+
+class Student_list_views(ListView) :
+    model = Student
+    template_name = "fetch_data1.html"
+    context_object_name = "data"
+
+class Student_delete_views(ListView) :
+    model = Student
+    template_name = "delete_data.html"
+    success_url=
 
 
 
