@@ -129,3 +129,14 @@ MAILERS = {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
 }
+
+# -------------------------------------------------------------------------------------
+
+# ------------------------------------------EMAIL CONFIGURATION--------------------------
+
+EMAIL_HOST = "smtp.gmail.com"
+
+
+EMAIL_HOST_USER = "aswathygoewreeshamveetil"
+
+
