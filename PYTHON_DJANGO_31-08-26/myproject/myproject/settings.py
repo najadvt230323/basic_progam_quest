@@ -134,9 +134,11 @@ MAILERS = {
 
 # ------------------------------------------EMAIL CONFIGURATION--------------------------
 
-EMAIL_HOST = "smtp.gmail.com"
+# EMAIL_HOST = "smtp.gmail.com"
 
 
-EMAIL_HOST_USER = "aswathygoewreeshamveetil"
+# EMAIL_HOST_USER = "aswathygoewreeshamveetil"
+
+
 
 

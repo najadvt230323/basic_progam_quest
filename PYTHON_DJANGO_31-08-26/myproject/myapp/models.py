@@ -21,3 +21,9 @@ from django.contrib.auth.models import AbstractUser
 class Myuser(AbstractUser) :
     phone = models.CharField(max_length=15, blank=True, null=True)
     REQUIRED_FIELDS = ['email' ,'password']
+
+
+
+
+    # --------------------------------- FILE UPLOAD -------------------------------------
+

@@ -333,6 +333,7 @@ class Student_update_views(UpdateView) :
 
     success_url = "/student_views/"
 
+# ----------------------------------------------------------------------------
 
 # from django.core.mail import send_mail
 # from django.conf import settings
@@ -343,6 +344,8 @@ class Student_update_views(UpdateView) :
 #     )
 
 
+
+# --------------------------------- FILE UPLOAD -------------------------------------
 
 
 
