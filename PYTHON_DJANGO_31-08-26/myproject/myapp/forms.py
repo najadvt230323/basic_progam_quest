@@ -65,4 +65,10 @@ class loginform(forms.Form) :
 
 # --------------------------------- FILE UPLOAD -------------------------------------
 
- 
+from .models import Docment
+
+class Document_fome(forms.ModelForm) :
+     
+    class Meta :
+        model = Student
+        fields = "__all__" 

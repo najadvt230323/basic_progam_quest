@@ -152,3 +152,4 @@ For more information on production servers see: https://docs.djangoproject.com/e
 
 
 
+# pip install pillo

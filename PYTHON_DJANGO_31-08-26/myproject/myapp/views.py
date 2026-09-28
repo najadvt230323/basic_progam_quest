@@ -344,14 +344,27 @@ class Student_update_views(UpdateView) :
 #     )
 
 
+#==================================================================
+#---------------------------FILE UPLOAD VIEWS----------------------
 
+from .forms import DocumentForm
+from .models import Document
 
-def file_uplode (request):
-    if  :
-    
-    else :
-    form = loginform()
-    return render(request , "login.html" , {"data": form})
+def file_upload(request):
+    if request.method == 'POST':
+        form = DocumentForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('file_upload')
+    else:
+        form = DocumentForm()
+    return render(request, 'file_upload.html', {'form': form})
+
+#===============================================================
+#---------------------------LIST FILES--------------------------
+# def list_files(request):
+#     files=Document.objects.all()
+#     return render(request,'listfiles.html',{'data':files})
 
 
 

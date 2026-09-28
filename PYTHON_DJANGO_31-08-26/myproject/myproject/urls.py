@@ -78,7 +78,7 @@ urlpatterns = [
     path( "update_views/<int:pk>", views.Student_update_views.as_view()),
 
 
-    path( "uplod/", views.Student_file_uplode() , name= "file_uplode"),
+    path( "uplod/", views.file_upload , name= "file_uplode"),
 
     
 ]
