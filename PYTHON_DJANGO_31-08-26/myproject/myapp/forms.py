@@ -58,10 +58,11 @@ class Stu_form_2(forms.Form) :
 
 
 # --------------------------------- USING FORM CLASS - LOGIN ------------------------------
-
-
 class loginform(forms.Form) :
     username     = forms.CharField(max_length=100)
     password      = forms.CharField(widget=forms.PasswordInput)
+
+
+# --------------------------------- FILE UPLOAD -------------------------------------
 
  

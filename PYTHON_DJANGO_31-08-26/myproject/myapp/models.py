@@ -25,5 +25,9 @@ class Myuser(AbstractUser) :
 
 
 
-    # --------------------------------- FILE UPLOAD -------------------------------------
+# --------------------------------- FILE UPLOAD -------------------------------------
 
+class Docment(models.Model) :
+    title = models.CharField(max_length=100)
+    image = models.ImageField(upload_to= 'image/'  , null=True , blank = True)
+    pdf = models.FileField(upload_to= 'pdfs/'  , null=True , blank = True)

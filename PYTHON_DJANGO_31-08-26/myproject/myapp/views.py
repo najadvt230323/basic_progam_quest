@@ -345,8 +345,13 @@ class Student_update_views(UpdateView) :
 
 
 
-# --------------------------------- FILE UPLOAD -------------------------------------
 
+def file_uplode (request):
+    if  :
+    
+    else :
+    form = loginform()
+    return render(request , "login.html" , {"data": form})
 
 
 
