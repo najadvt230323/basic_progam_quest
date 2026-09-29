@@ -78,7 +78,17 @@ urlpatterns = [
     path( "update_views/<int:pk>", views.Student_update_views.as_view()),
 
 
-    path( "uplod/", views.file_upload , name= "file_uplode"),
+    path( "uplod/", views.file_upload , name="file_uplode"),
+    path('list_files/', views.list_files),
 
+#-----------------------DEMO PROJECT-------------------------------
+    path('', views.demo_home,name="home"),
+    path('demo_about/', views.demo_about,name="about"),
     
 ]
+
+from django.conf import settings
+from django.conf.urls.static import static
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+

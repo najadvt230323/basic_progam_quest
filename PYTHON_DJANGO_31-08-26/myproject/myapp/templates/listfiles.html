@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>LIST Document</h1>
+    <table border="5">
+        <tr>
+            <th>TITLE</th>
+            <th>IMAGE</th>
+             <th>PDF</th>
+        </tr>
+        {% for f in data %}
+        <tr>
+            <td>{{ f.title }}</td>
+            <td>
+                {% if f.image %}
+                    <img src="{{ f.image.url }}" alt="" width="50px" height="50px">
+                {% else %}
+                    <p>No Image</p>
+                    {% endif %}
+                </td>
+            <td> 
+                {% if f.pdf %}
+                <a href="{{ f.pdf.url }}" target="_blank">pdf</a>
+                {% else %}
+                    <p>No pdf</p>
+                {% endif %}
+            </td>
+            
+        </tr>    
+        {% endfor %}    
+
+    </table>
+</body>
+</html>

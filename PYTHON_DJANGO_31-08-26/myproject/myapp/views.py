@@ -355,16 +355,25 @@ def file_upload(request):
         form = DocumentForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('file_upload')
+            return redirect('file_uplode')
     else:
         form = DocumentForm()
     return render(request, 'file_upload.html', {'form': form})
 
 #===============================================================
 #---------------------------LIST FILES--------------------------
-# def list_files(request):
-#     files=Document.objects.all()
-#     return render(request,'listfiles.html',{'data':files})
+
+def list_files(request):
+    files=Document.objects.all()
+    return render(request,'listfiles.html',{'data':files})
+
+
+#-----------------------------DEMO PROJECT-----------------------------
+
+def demo_home(request):
+    return render(request,'demo_home.html')
+def demo_about(request):
+    return render(request,'about.html')
 
 
 
