@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Portal</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #222;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+        }
+
+        .menu a:hover {
+            color: #00bcd4;
+        }
+
+        /* Home Section */
+        .home {
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .home-content h1 {
+            font-size: 45px;
+            color: #222;
+            margin-bottom: 15px;
+        }
+
+        .home-content p {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            background-color: #00bcd4;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #0097a7;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav>
+
+        <div class="logo">
+            Student Portal
+        </div>
+
+        <div class="menu">
+
+            <a href="{% url 'home' %}">Home</a>
+
+            <a href="{% url 'about' %}">About</a>
+
+            <a href="{% url 'fetch' %}">Viwe</a>
+
+            <a href="/login/">Login</a>
+
+            <a href="{% url 'add' %}">Register</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Home Section -->
+
+    <section class="home">
+
+        <div class="home-content">
+
+            <h1>Welcome to Student Portal</h1>
+
+            <p>
+                Manage your student information easily with Django.
+            </p>
+
+            <a href="/register/" class="btn">
+                Get Started
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>© 2026 Student Portal | Django Demo</p>
+
+    </footer>
+
+</body>
+
+</html>
+```
