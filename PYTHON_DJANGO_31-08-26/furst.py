@@ -153,3 +153,25 @@ For more information on production servers see: https://docs.djangoproject.com/e
 
 
 # pip install pillow
+
+
+
+# ------------------------------------------------------------------------------------------\
+
+# =========================== django rest framework ====================
+
+# cd .\PYTHON_DJANGO_31-08-26\
+# cmd
+# 1.env creaction--------------- py -m venv env
+# 2.activate -env -------------- env\Scripts\activate
+# 3.install django-------------- pip install django
+# 4.pip install djangorestframework
+# 5.project folder creation----- django-admin startproject DRF_project
+
+# 6.cd project folder----------- cd DRF_project
+# 7.app creation---------------- py manage.py startapp student
+
+# 8.run------------------------- py manage.py runserver
+
+# 2,6,8
+
