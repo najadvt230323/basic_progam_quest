@@ -149,6 +149,7 @@ print(a)
 
 '''
 
+
 # 6 :
 # Update the 'price' of the laptop to a new value.
 
