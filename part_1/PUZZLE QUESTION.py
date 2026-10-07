@@ -9,15 +9,15 @@
 # list1 = [5, 4, 3, 7, 2, 9]
 # Create two lists: first list should contain the sorted first half and second list should contain the sorted second
 # half.
-# Expected: [3, 4, 5] and [9, 2, 7]
+# Expected: [3, 4, 5] and [2, 7 ,9]
 list1 = [5, 4, 3, 7, 2, 9]
 a=[]
 b=[]
 
 
-for i in range(int(len(list1)/2)-1,-1,-1) :
-    a.append(list1[i])
-    b.append(list1[i+int(len(list1)/2)])
+# for i in range(int(len(list1)/2)-1,-1,-1) :
+#     a.append(list1[i])
+#     b.append(list1[i+int(len(list1)/2)])
 
 print(a)
 print(b)
