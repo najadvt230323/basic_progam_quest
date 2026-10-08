@@ -165,6 +165,7 @@ For more information on production servers see: https://docs.djangoproject.com/e
 # 1.env creaction--------------- py -m venv env
 # 2.activate -env -------------- env\Scripts\activate
 # 3.install django-------------- pip install django
+
 # 4.pip install djangorestframework
 # 5.project folder creation----- django-admin startproject DRF_project
 
