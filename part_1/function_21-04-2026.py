@@ -108,7 +108,6 @@ def even(*args : tuple):
     return a
 print(even(1,2,3,4,5,6,7,8,9,10,11,12,13,14))
 
-
 def details1(*args,**kwargs):
     print(kwargs)
     print(args)
