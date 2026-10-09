@@ -176,3 +176,9 @@ For more information on production servers see: https://docs.djangoproject.com/e
 
 # 2,6,8
 
+# {
+# "name":"achu",
+# "age":29,
+# "email":"achu@gmail.com",
+# "course":"python"
+# }
