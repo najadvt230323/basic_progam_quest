@@ -26,9 +26,7 @@ def student_list(request) :
 
 def student_insert(request) :
 
-    seri = Student_serializer(
-        data = request.data     
-    )
+    seri = Student_serializer(data = request.data)
 
     if seri.is_valid() :
         seri.save()
@@ -45,5 +43,74 @@ def student_insert(request) :
 
 
 
+@api_view(['get'])
+
+def student_list_1(request , pk) :
+
+    try :
+        stud = Student.objects.get(id=pk)
+
+    except Student.DoesNotExist :
+        return Response(
+            {"error" : "student not found"} ,
+            status = status.HTTP_400_BAD_REQUEST
+        )
+    seri = Student_serializer(stud)
+
+    return Response(seri.data)
 
 
+    
+@api_view(['put'])
+
+def student_update(request , pk) :
+
+    try :
+        stud = Student.objects.get(id=pk)
+
+    except Student.DoesNotExist :
+        return Response(
+            {"error" : "student not found"} ,
+            status = status.HTTP_400_BAD_REQUEST
+        )
+    seri = Student_serializer(stud , data = request.data)
+
+    if seri.is_valid() :
+        seri.save()
+    
+        return Response(
+            seri.data ,
+            status = status.HTTP_201_CREATED
+        )
+        
+    return Response(
+        seri.errors ,
+        status = status.HTTP_400_BAD_REQUEST
+        )
+
+@api_view(['patch'])
+
+def student_update_1(request , pk) :
+
+    try :
+        stud = Student.objects.get(id=pk)
+
+    except Student.DoesNotExist :
+        return Response(
+            {"error" : "student not found"} ,
+            status = status.HTTP_400_BAD_REQUEST
+        )
+    seri = Student_serializer(stud , data = request.data  , partial = True)
+
+    if seri.is_valid() :
+        seri.save()
+    
+        return Response(
+            seri.data ,
+            status = status.HTTP_201_CREATED
+        )
+        
+    return Response(
+        seri.errors ,
+        status = status.HTTP_400_BAD_REQUEST
+        )
