@@ -114,3 +114,48 @@ def student_update_1(request , pk) :
         seri.errors ,
         status = status.HTTP_400_BAD_REQUEST
         )
+
+
+
+@api_view(['DELETE'])
+
+def student_delete(request , pk) :
+
+    try :
+        stud = Student.objects.get(id=pk)
+
+    except Student.DoesNotExist :
+        return Response(
+            {"error" : "student not found"} ,
+            status = status.HTTP_400_BAD_REQUEST
+        )
+
+    stud.delete()
+
+    return Response (
+        {"message" : "student delete successfully"} ,
+        status = status.HTTP_201_CREATED
+    )
+# ------------------------------------------------------------------------------------
+
+from .serializers import Register_serializer
+
+@api_view(['post'])
+
+def student_insert(request) :
+
+    seri = Register_serializer(data = request.data)
+
+    if seri.is_valid() :
+        seri.save()
+
+        return Response(
+            {"message" : "student delete successfully"} ,
+        )
+    
+    return Response(
+        seri.errors ,
+        status = status.HTTP_400_BAD_REQUEST
+    )
+
+
