@@ -10,7 +10,7 @@ class Student_serializer(serializers.ModelSerializer) :
 from django.contrib.auth.models import User 
 
 class Register_serializer(serializers.ModelSerializer) :
-    password = serializers.charField(write_only = True)
+    password = serializers.CharField(write_only = True)
 
     class Meta:
         model=User

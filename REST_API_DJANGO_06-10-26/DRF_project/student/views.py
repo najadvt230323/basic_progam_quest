@@ -142,7 +142,7 @@ from .serializers import Register_serializer
 
 @api_view(['post'])
 
-def student_insert(request) :
+def student_register(request) :
 
     seri = Register_serializer(data = request.data)
 
@@ -150,7 +150,7 @@ def student_insert(request) :
         seri.save()
 
         return Response(
-            {"message" : "student delete successfully"} ,
+            {"message" : "user registered successfully"} ,
         )
     
     return Response(

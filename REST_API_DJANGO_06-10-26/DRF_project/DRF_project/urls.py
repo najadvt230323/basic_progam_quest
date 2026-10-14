@@ -33,4 +33,6 @@ urlpatterns = [
     path('student_insert_1/<int:pk>', views.student_update_1),
 
     path('student_delete/<int:pk>', views.student_delete),
+
+    path('register', views.student_register)
 ]

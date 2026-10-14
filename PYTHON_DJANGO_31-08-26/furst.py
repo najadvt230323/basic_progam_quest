@@ -182,3 +182,9 @@ For more information on production servers see: https://docs.djangoproject.com/e
 "email":"achu@gmail.com",
 "course":"python"
 }
+
+{
+"username":"ammu" ,
+"email":"ammu@gmail.com",
+"password":"ammu"
+}
