@@ -188,3 +188,5 @@ For more information on production servers see: https://docs.djangoproject.com/e
 "email":"ammu@gmail.com",
 "password":"ammu"
 }
+
+pip install djangorestframework-simplejwt
