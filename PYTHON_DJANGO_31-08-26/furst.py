@@ -189,4 +189,4 @@ For more information on production servers see: https://docs.djangoproject.com/e
 "password":"ammu"
 }
 
-pip install djangorestframework-simplejwt
+# pip install djangorestframework-simplejwt

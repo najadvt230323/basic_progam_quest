@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path
 
 from student import views
+from rest_framework_simplejwt.views import (TokenObtainPairView , TokenRefreshView)
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -34,5 +36,11 @@ urlpatterns = [
 
     path('student_delete/<int:pk>', views.student_delete),
 
-    path('register', views.student_register)
+    path('register', views.student_register),
+# ---------------------------------------------------------------------------
+
+    path('login/' , TokenObtainPairView.as_view() , name= 'token') , 
+
+    path('refresh/' , TokenRefreshView.as_view() , name= 'token_refresh') , 
+    
 ]
