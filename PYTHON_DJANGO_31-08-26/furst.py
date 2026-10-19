@@ -190,3 +190,16 @@ For more information on production servers see: https://docs.djangoproject.com/e
 }
 
 # pip install djangorestframework-simplejwt
+
+# ----------------------------------------------------------------
+
+# POST /login/
+# HTTP 200 OK
+# Allow: POST, OPTIONS
+# Content-Type: application/json
+# Vary: Accept
+
+# {
+#     "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc5MjQ3ODAzNiwiaWF0IjoxNzkyMzkxNjM2LCJqdGkiOiIwYzYyYzIwYmIxM2Y0NzMyYTRjNjM4M2NiOTZlMWVjMiIsInVzZXJfaWQiOiIyIn0.duAQNTJghkN8eloUKQ9I3xczN9sSsB9QVH77HlLJeHQ",
+#     "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzkyMzkxOTM2LCJpYXQiOjE3OTIzOTE2MzYsImp0aSI6ImJiMmZjMWYyODc3ZjQ2MjFhNjE2OTE2ODU0NTZhODNhIiwidXNlcl9pZCI6IjIifQ.gvZZkaRQJkYgRDS_YMPe3DyQDJh4BvMerr_AamTAdh0"
+# }

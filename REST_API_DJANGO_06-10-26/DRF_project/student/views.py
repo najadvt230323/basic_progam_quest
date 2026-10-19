@@ -10,13 +10,15 @@ from  .serializers import Student_serializer
 from .models import Student
 from rest_framework import status
 
+from rest_framework.decorators import permission_classes
+from rest_framework.permissions import IsAuthenticated
 
 
 
 # Create your views here.
 
 @api_view(['get'])
-
+@permission_classes([IsAuthenticated])
 def student_list(request) :
     stud = Student.objects.all()
 
@@ -162,4 +164,30 @@ def student_register(request) :
         status = status.HTTP_400_BAD_REQUEST
     )
 
+# --------------------------------------------------------------------
+# olgout
+# ----------
+
+from rest_framework_simplejwt.tokens import RefreshToken
+
+
+@api_view(['post'])
+def logout(request):
+    try:
+        refresh_token_1 = request.data['refresh']
+
+        tocen_1 = RefreshToken(refresh_token_1)
+
+        tocen_1.blacklist()
+
+        return Response (
+            {"message" : "Logout successfully"} ,
+            status = status.HTTP_205_RESET_CONTENT
+        )
+
+    except Exception :
+        return Response (
+            {"message" : "Invalid refresh token"} ,
+            status = status.HTTP_400_BAD_REQUEST
+        )
 
