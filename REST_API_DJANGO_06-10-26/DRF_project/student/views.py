@@ -29,6 +29,7 @@ def student_list(request) :
     return Response(outputdata.data)
 
 @api_view(['post'])
+@permission_classes([IsAuthenticated])
 
 def student_insert(request) :
 
