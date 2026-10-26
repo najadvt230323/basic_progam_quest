@@ -4,7 +4,7 @@
 # 2.activate -env -------------- env\Scripts\activate
 # 3.install flask-------------- pip install flask
 
-
+# 4.project folder creation----- mkdir my_proj_flask
 
 
 
