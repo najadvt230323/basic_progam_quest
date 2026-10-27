@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask , render_template
 
 app = Flask(__name__)
 
@@ -36,7 +36,9 @@ def show() :
 def show_1(b) :
     return "<h1> welcome to quest %s </h1>" %b
 # ------------------------------------------------------------------
-
+@app.route("/name_3/<b>")
+def show_3(b) :
+    return render_template('hello.html' , n=b)
 
 
 
