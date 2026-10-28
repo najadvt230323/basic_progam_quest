@@ -1,4 +1,4 @@
-from flask import Flask , render_template
+from flask import Flask , render_template ,redirect ,url_for
 
 app = Flask(__name__)
 
@@ -40,10 +40,51 @@ def show_1(b) :
 def show_3(b) :
     return render_template('hello.html' , n=b)
 
-@app.route("/show_4")
+@app.route("/show_4/<b>")
 def show_4(b) :
     return render_template('hello_1.html' , n=b)
 
+# -------------------------------------------------------------------
+
+# ===================== ADDING REDIRECT PAGE ========================
+@app.route("/admin/",endpoint="hello_admin")
+def show_5() :
+    return "<h1> welcome to admin </h1>"
+
+@app.route("/staf/<a>", endpoint="staf")
+def show_5(a) :
+    return "<h1> welcome to %s </h1>" %a
+
+@app.route("/user/<b>")
+def show_5(b) :
+    if b == "admin" :
+        return redirect(url_for("hello_admin"))
+    else :
+        return redirect(url_for("staf" , a=b))
+# -----------------------------------------------------------------
+
+# =======================SENDING DATA FROM HTML PAGE==============================
+
+@app.route("/data" , methods=['GET' , 'POST'])
+def data():
+    if req
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 # ------------------------------------------------------------------
 if __name__ == "__main__" :
     app.run(debug = True)
