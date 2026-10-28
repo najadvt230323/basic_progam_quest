@@ -40,7 +40,9 @@ def show_1(b) :
 def show_3(b) :
     return render_template('hello.html' , n=b)
 
-
+@app.route("/show_4")
+def show_4(b) :
+    return render_template('hello_1.html' , n=b)
 
 # ------------------------------------------------------------------
 if __name__ == "__main__" :
