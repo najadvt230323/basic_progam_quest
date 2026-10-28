@@ -1,4 +1,4 @@
-from flask import Flask , render_template ,redirect ,url_for
+from flask import Flask , render_template ,redirect ,url_for ,request
 
 app = Flask(__name__)
 
@@ -67,7 +67,12 @@ def show_5(b) :
 
 @app.route("/data" , methods=['GET' , 'POST'])
 def data():
-    if req
+    if request.method == 'POST' :
+        name = request.form['name']
+        age = request.form['age']
+        place = request.form['place']
+        return f'Name : {name} \n Age : {age} \n place : {place}'
+    return render_template("data.html")
 
 
 
