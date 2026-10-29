@@ -84,13 +84,18 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///student.db'
 
 db = SQLAlchemy(app)
 
-class Student(db.model) :
+class Student(db.Model) :
     id = db.Column(db.Integer , primary_key = True)
     name = db.Column(db.String(100))
     age = db.Column(db.Integer)
     course = db.Column(db.String(100))
 with app.app_context() :
     db.create_all()    
+# -------------------------------------------------------
+
+@app.route("/reg")
+
+
 
 
 
