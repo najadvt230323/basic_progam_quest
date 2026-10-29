@@ -111,10 +111,32 @@ def add_stud():
 
     return "saved"
 
+#------------------SHOWING DATA FROM DATABASE---------------------
+@app.route('/show')
+def show_stud():
+    students = Student.query.all()
+    return render_template('show.html', students=students)
 
 
+#------------------UPDATING DATA FROM DATABASE---------------------
+@app.route('/update/<int:id>', methods=['GET', 'POST'])
+def update_stud(id):
+    student = Student.query.get(id)
+    if request.method == 'POST':
+        student.name = request.form['name']
+        student.age = request.form['age']
+        student.course = request.form['course']
+        db.session.commit()
+        return redirect(url_for('show_stud'))
+    return render_template('update.html', students=student)
 
-
+#------------------DELETING DATA FROM DATABASE---------------------
+@app.route('/delete/<int:id>', methods=['GET', 'POST'])
+def delete_stud(id):
+    student = Student.query.get(id)
+    db.session.delete(student)
+    db.session.commit()
+    return redirect(url_for('show_stud'))
 
 
 

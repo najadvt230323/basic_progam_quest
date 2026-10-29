@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Student</title>
+</head>
+<body>
+
+<form action="" method="post">
+
+    <label>Id:</label>
+    <input type="text" value="{{ students.id }}" >
+
+    <br><br>
+
+    <label>Name:</label>
+    <input type="text" name="name" value="{{ students.name }}">
+
+    <br><br>
+
+    <label>Age:</label>
+    <input type="text" name="age" value="{{ students.age }}">
+
+    <br><br>
+
+    <label>Course:</label>
+    <input type="text" name="course" value="{{ students.course }}">
+
+    <br><br>
+
+    <input type="submit" value="Update">
+
+</form>
+
+</body>
+</html>
