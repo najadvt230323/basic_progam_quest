@@ -6,6 +6,7 @@
 
 # 4.project folder creation----- mkdir my_proj_flask
 
+# pip install flask-sqlalchemy
 
 
 
