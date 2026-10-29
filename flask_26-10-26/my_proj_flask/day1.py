@@ -93,8 +93,23 @@ with app.app_context() :
     db.create_all()    
 # -------------------------------------------------------
 
-@app.route("/reg")
+@app.route('/reg')
+def new_stud():
+    return render_template('student1.html')
 
+@app.route('/add', methods=['POST'])
+def add_stud():
+    id1 = request.form['id']
+    nm = request.form['name']
+    a = request.form['age']
+    co= request.form['course']
+
+    student = Student(id=id1, name=nm, age=a , course=co)
+
+    db.session.add(student)
+    db.session.commit()
+
+    return "saved"
 
 
 
