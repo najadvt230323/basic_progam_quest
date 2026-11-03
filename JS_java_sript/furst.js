@@ -1,9 +1,9 @@
-console.log("Hello welcome to externnal js file") ;
+console.log("Hello welcome to externnal js file");
 
-a = 10 ; 
-var b = 11 ;
+a = 10;
+var b = 11;
 
-let n = 'najad' ;
+let n = 'najad';
 const pi = 3.14
 
 
@@ -21,38 +21,39 @@ console.log(typeof c)
 
 // ====================== DATA TYPES =========================
 
-let age = 25 ;
-console.log(typeof age) ;
+let age = 25;
+console.log(typeof age);
 
-let weight = 35.8 ;
-console.log(typeof weight) ;
+let weight = 35.8;
+console.log(typeof weight);
 
-let company = 'quest' ;
-console.log(typeof company) ;
+let company = 'quest';
+console.log(typeof company);
 
-let stack ;
-console.log(typeof stack) ;
+let stack;
+console.log(typeof stack);
 
-let skills = null ;
-console.log(typeof skills) ;
+let skills = null;
+console.log(typeof skills);
 
-let isActive = true ;
-console.log(typeof isActive) ;
+let isActive = true;
+console.log(typeof isActive);
 
-let stud= ['najad' , 25 , true ,37.5] ;
+let stud = ['najad', 25, true, 37.5];
 console.log(stud);
-console.log(typeof stud) ;
+console.log(typeof stud);
 
-let stud1={name :'najad' , age : 25 , skills :['python' , 'JS'] ,weight :37.5 , Active : true} ;
+let stud1 = { name: 'najad', age: 25, skills: ['python', 'JS'], weight: 37.5, Active: true };
 console.log(stud1);
-console.log(typeof stud1) ;
+console.log(typeof stud1);
 
 // ------------------------------------------------------------------------------------------------
-
+// arithamatics
+// ================
 num1 = 5
 num2 = 6
-num3 ='6'
-num4 ='5'
+num3 = '6'
+num4 = '5'
 num5 = 'najad'
 
 reslt_1 = num1 + num2
@@ -122,15 +123,57 @@ num7 = 10
 reslt_13 = num6++
 reslt_14 = ++num7
 
-console.log(reslt_13) ;
-console.log(reslt_14) ;
+console.log(reslt_13);
+console.log(reslt_14);
 
 num6 = 10
 num7 = 10
 reslt_13 = num6--
 reslt_14 = --num7
-console.log(reslt_13) ;
-console.log(reslt_14) ;
+console.log(reslt_13);
+console.log(reslt_14);
+
+// opreters
+// ================
+
+console.log()
+console.log(5 < 10 && 6 > 4)
+console.log(5 < 10 && 6 > 10)
+
+console.log(5 < 10 || 6 > 4)
+console.log(5 < 10 || 6 > 10)
+console.log(5 < 4 || 6 > 10)
+
+console.log()
+console.log(!true)
+console.log(!false)
+console.log(!5)
+console.log(!0)
+console.log(!"")
+console.log(!" ")
+console.log(!null)
+console.log(!undefined)
+console.log(!NaN)
+
+// ===================== CONTROL STATEMENTS OR CONDITION ==========================
+
+
+age1 = 25
+
+if (age1 > 25) { console.log("age > 25") }
+else if (age1 < 25) { console.log("age < 25") }
+else { console.log("age = 25") };
+
+age2 = prompt( 'enter your age :' )
+
+if (age2 > 25) {console.log(typeof age2) , console.log("age > 25") }
+else if (age2 < 25) { console.log(typeof age2, " age < 25") }
+else { console.log("age = 25") };
+
+
+
+
+
 
 
 
