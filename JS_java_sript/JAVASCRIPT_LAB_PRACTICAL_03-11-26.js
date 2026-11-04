@@ -170,3 +170,235 @@ and deliveryDistance. Reject the order if stock is unavailable, the customer is 
 valid, calculate delivery fee using the distance slabs from Question 4 and apply free delivery for cart totals of at least
 n999. Print a clear order summary.
 */
+
+
+// for i  in range(1,31):
+//     print(f"// {i} : ")
+//     print()
+//     print(r"/* ")
+//     print()
+//     print()
+//     print(r"*/ ")
+//     print()
+
+
+// 1 : E-commerce free-shipping eligibility
+// An online store offers free delivery when the cart total is at least 999. Otherwise, delivery costs 60. Read a cart total
+// stored in a variable and print the payable amount and whether delivery is free.
+// Challenge / test cases: Test 0, 998, 999 and 1,500. Use if...else and arithmetic operators.
+
+// /* 
+
+total = 0
+
+if (total >= 999) { console.log(" total payable amount : ", total ," (free delivery)") } 
+else if (total < 999) { console.log(" total payable amount : ", total + 60 ," ( delivery costs 60)")  }
+else { console.log("wrong choice") };
+
+// */ 
+
+// 2 : Subscription access checker
+// A SaaS platform grants access only when the subscription is active AND the account is not blocked. Store
+// subscriptionStatus and isBlocked as variables and print “Access granted” or “Access denied”.
+// Challenge / test cases: Use Boolean values and && / !. Test all meaningful combinations.
+
+/* 
+
+
+*/ 
+
+// 3 : 
+
+/* 
+
+
+*/ 
+
+// 4 : 
+
+/* 
+
+
+*/ 
+
+// 5 : 
+
+/* 
+
+
+*/ 
+
+// 6 : 
+
+/* 
+
+
+*/ 
+
+// 7 : 
+
+/* 
+
+
+*/ 
+
+// 8 : 
+
+/* 
+
+
+*/ 
+
+// 9 : 
+
+/* 
+
+
+*/ 
+
+// 10 : 
+
+/* 
+
+
+*/ 
+
+// 11 : 
+
+/* 
+
+
+*/ 
+
+// 12 : 
+
+/* 
+
+
+*/ 
+
+// 13 : 
+
+/* 
+
+
+*/ 
+
+// 14 : 
+
+/* 
+
+
+*/ 
+
+// 15 : 
+
+/* 
+
+
+*/ 
+
+// 16 : 
+
+/* 
+
+
+*/ 
+
+// 17 : 
+
+/* 
+
+
+*/ 
+
+// 18 : 
+
+/* 
+
+
+*/ 
+
+// 19 : 
+
+/* 
+
+
+*/ 
+
+// 20 : 
+
+/* 
+
+
+*/ 
+
+// 21 : 
+
+/* 
+
+
+*/ 
+
+// 22 : 
+
+/* 
+
+
+*/ 
+
+// 23 : 
+
+/* 
+
+
+*/ 
+
+// 24 : 
+
+/* 
+
+
+*/ 
+
+// 25 : 
+
+/* 
+
+
+*/ 
+
+// 26 : 
+
+/* 
+
+
+*/ 
+
+// 27 : 
+
+/* 
+
+
+*/ 
+
+// 28 : 
+
+/* 
+
+
+*/ 
+
+// 29 : 
+
+/* 
+
+
+*/ 
+
+// 30 : 
+
+/* 
+
+
+*/ 

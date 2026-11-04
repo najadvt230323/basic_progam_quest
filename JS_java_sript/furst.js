@@ -1,3 +1,5 @@
+// node furst.js
+
 console.log("Hello welcome to externnal js file");
 
 a = 10;
@@ -157,18 +159,109 @@ console.log(!NaN)
 
 // ===================== CONTROL STATEMENTS OR CONDITION ==========================
 
-
+// =====================~=== IF , ELSE IF , ELSE ===================================
 age1 = 25
 
 if (age1 > 25) { console.log("age > 25") }
 else if (age1 < 25) { console.log("age < 25") }
 else { console.log("age = 25") };
 
-age2 = prompt( 'enter your age :' )
+// age2 = prompt( 'enter your age :' )
 
-if (age2 > 25) {console.log(typeof age2) , console.log("age > 25") }
-else if (age2 < 25) { console.log(typeof age2, " age < 25") }
-else { console.log("age = 25") };
+// if (age2 > 25) {console.log(typeof age2) , console.log("age > 25") }
+// else if (age2 < 25) { console.log(typeof age2, " age < 25") }
+// else { console.log("age = 25") };
+
+// -------------------------------------------------------------------------
+
+// ========================== SWITCH ======================
+
+// day = Number(prompt('Enter a valu b/w 1 - 7 :'))
+
+// switch(day)
+// {
+//     case 1 : console.log('mon') ; break ;
+//     case 2 : console.log('tue') ; break ;
+//     case 3 : console.log('wed') ; break ;
+//     case 4 : console.log('thu') ; break ;
+//     case 5 : console.log('fri') ; break ;
+//     case 6 : console.log('sat') ; break ;
+//     case 7 : console.log('sun') ; break ;
+//     default : console.log('invalid input') ; 
+
+// }
+
+// -----------------------------------------------------------------------------
+
+// =============================== LOOPS ========================================
+
+// --------------- FOR LOOP---------------
+for (let i = 1; i <= 10; i++) {
+    console.log(i)
+}
+
+for (let i = 10; i >= 0; i--) {
+    console.log(i)
+}
+
+for (let i = 1; i <= 10; i = i + 2) {
+    console.log(i)
+}
+
+// --------------- WHILE LOOP ---------------
+console.log()
+i = 0
+
+while (i <= 10) {
+console.log(i)
+i++
+}
+
+// --------------- DO WHILE LOOP ---------------
+
+// pin = Number(prompt('Enter a pin :'))
+
+// do{
+//     if (pin == 123)
+//     {
+//         console.log('Login successful')
+//         break;
+//     }    
+//     else
+//     {
+//         console.log('Incorrect pin')
+//     }
+//     pin = Number(prompt('Enter a pin :'))
+
+// }while(true);
+
+// -------------------- FOR OF ------------------------------
+console.log()
+
+stu = ['najad' , 'shahal' , 'richu' , 'yaseen']
+
+for (s of stu)
+{
+    console.log(s)
+}
+
+// -------------------- FOR in ------------------------------
+console.log()
+
+let stu_1 = { name: 'najad', age: 25, skills: ['python', 'JS'], weight: 37.5, Active: true };
+
+
+for (s in stu_1)
+{
+    console.log(s , ' : ', stu_1[s])
+}
+
+// =========================================================================================================
+
+
+
+
+
 
 
 
