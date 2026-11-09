@@ -188,6 +188,8 @@ n999. Print a clear order summary.
 // Challenge / test cases: Test 0, 998, 999 and 1,500. Use if...else and arithmetic operators.
 
 // /* 
+console.log()
+console.log("NO : 1")
 
 total = 0
 
@@ -202,45 +204,111 @@ else { console.log("wrong choice") };
 // subscriptionStatus and isBlocked as variables and print “Access granted” or “Access denied”.
 // Challenge / test cases: Use Boolean values and && / !. Test all meaningful combinations.
 
-/* 
+// /* 
+console.log()
+console.log("NO : 2")
+
+active = true
+blocked = false
+
+if (active && blocked == false) { console.log(" Access granted ") } 
+else if (active && blocked) { console.log(" Access denied" ," ( account is blocked )")  }
+else if (active == false && blocked == false) { console.log(" Access denied" ," ( subscription is not active )")  }
+else { console.log("subscription is not active and account is blocked ") };
+
+// */ 
+
+// 3 :Payment method validation
+// A checkout accepts payment if the customer has selected either UPI or a card. Store hasUPI and hasCard as Boolean
+// values. Print a suitable result.
+// Challenge / test cases: Use ||. Then modify the rule: payment is allowed only if the account is verified AND at least one payment
+// method is available. 
+
+// /* 
+console.log()
+console.log("NO : 3")
+
+upi = true
+card = true
+if (upi || card) { console.log(" Payment accepted ") } 
+else { console.log("Payment denied") };
+
+// */ 
+
+// 4 : Delivery fee by distance
+// A delivery application charges n30 for distances up to 3 km, n50 for distances above 3 km and up to 7 km, and n80
+// above 7 km. Print the delivery fee for a given distance.
+// Challenge / test cases: Use an else-if ladder. Check exactly 3, 3.1, 7 and 7.1 km. Reject negative distance.
+
+// /* 
+console.log()
+console.log("NO : 4")
+
+km = 10
+if (km <=3) { console.log(" delivery application charges : 30 ") } 
+if (km >=3 && km <=7) { console.log(" delivery application charges : 50 ") } 
+else { console.log(" delivery application charges : 80 ") };
+
+// */ 
+
+// 5 :Employee attendance status
+// A company marks attendance as “Present” for 8 or more working hours, “Half Day” for at least 4 but less than 8 hours,
+// and “Absent” for less than 4 hours.
+// Challenge / test cases: Use else-if. Treat negative hours and hours above 24 as invalid input. 
+
+// /* 
+
+console.log()
+console.log("NO : 5")
+
+hr =8
+if (hr <4) { console.log(" Attendance : Absent ") } 
+else if (hr >=4 && hr <8) { console.log(" Attendance : Half Day ") } 
+else { console.log(" Attendance : Present ") };
+
+// */ 
+
+// 6 : Secure login decision (nested if)
+// Given a username, password, and accountLocked Boolean, decide whether login is successful. First check whether the
+// username exists; then check whether the account is locked; finally validate the password.
+// Challenge / test cases: Use nested if statements. Print a distinct message for unknown user, locked account, wrong password and
+// successful login.
+
+// /* 
+
+console.log()
+console.log("NO : 6")
+
+Username ='najad' 
+Password = 'najad' 
+AccountLocked = false
+if (Username =='najad')
+{
+    if(!AccountLocked) { 
+        if (Password == 'najad' ){console.log('login is successful')}
+        else {console.log('login is not successful (Password is not mach)')};
+     }
+    else {console.log('login is not successful (AccountLocked)')};
+
+} 
+else {console.log('login is not successful (Username is not mach)')}
 
 
-*/ 
+// */ 
 
-// 3 : 
+// 7 :Student result and scholarship eligibility
+// A student passes when marks are at least 40. A scholarship is awarded only when the student passes, scores at least 90,
+// AND family income is below n2,00,000.
+// Challenge / test cases: Use nested/combined conditions. Test marks 39, 40, 89, 90 and income exactly n2,00,000. 
 
-/* 
+// /* 
+console.log()
+console.log("NO : 6")
 
+marks=95
+income = 100000
 
-*/ 
-
-// 4 : 
-
-/* 
-
-
-*/ 
-
-// 5 : 
-
-/* 
-
-
-*/ 
-
-// 6 : 
-
-/* 
-
-
-*/ 
-
-// 7 : 
-
-/* 
-
-
-*/ 
+// */ 
 
 // 8 : 
 

@@ -1,5 +1,5 @@
 // node furst.js
-
+// node JAVASCRIPT_LAB_PRACTICAL_03-11-26.js
 console.log("Hello welcome to externnal js file");
 
 a = 10;
@@ -257,22 +257,76 @@ for (s in stu_1)
 }
 
 // =========================================================================================================
+// ======================================== function =====================================
+
+console.log()
+
+function greet() {
+    console.log('Welcom to js function')
+}
+
+function greet_1() {
+    return 'Welcom to js quest'
+}
+
+greet()
+console.log(greet_1())
+// ---------------------------------------------------
+
+function add_1(a,b)
+{
+    return a+b
+}
+
+console.log(add_1(6,11))
+
+// ---------------------------------------------------
+
+function name_1(name_2 ,age)
+{
+    console.log ('NAME : ' ,name_2,'\nAGE : ' ,age)
+}
+
+name_1('najad',25)
+name_1(25,'najad')
+name_1(age=25,name_2='najad')
+
+// ------------------------------------------------------
+console.log()
+
+greet_2 = () => 'Welcome'
+greet_3 = () =>{ 'Welcome_3'}
+greet_4 = () =>{ return'Welcome_4'}
+
+console.log(greet_2())
+console.log(greet_3())
+console.log(greet_4())
+
+add_2 = (a,b) => a+b
+console.log(add_2(20,30))
+
+// -----------------------------------------------------
+
+ function calc(a,b,fun)
+{
+    return fun(a,b)
+}
+
+add = (a,b) => a+b
+mul = (a,b) => a*b
 
 
+console.log(calc(6,11,add))
+console.log(calc(6,11,mul))
+// =======================================================
 
+a= confirm("do you w")
+console.log(a)
 
+name_3 = prompt("enter your namae :")
+console.log(name_3)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function get_value() {
+    is_delete = confirm('Do you wand delete')
+    console.log(is_delete)
+}
