@@ -342,18 +342,21 @@ console.log(typeof name_4)
 console.log(name_4.length)
 
 console.log(name_4[0])
-console.log(name_4.language(0))
+console.log(name_4.charAt(0))
 console.log(name_4[-1])             //not using negateve indaxing
 console.log(name_4[20])
+console.log(name_4.charAt(20))
 
+console.log()
 console.log(name_4[0, 5])
 console.log(name_4.substring(0,5))
 console.log(name_4.slice(5, 9))
 console.log(name_4.slice(4))
 
 console.log(name_4.slice(0, 3))
-console.log(name_4.slice(-6, -1))
-console.log(name_4.slice(-6))
+console.log(name_4.slice(-6, -1))    // output : 
+console.log(name_4.slice(-1, -6))    // output : not working
+console.log(name_4.slice(-6))        // output : Script
 
 console.log('hi', name_4)
 console.log('hi' + name_4)
@@ -385,5 +388,17 @@ var name_6 ="*******najad vt*********"
 console.log(name_6.trim("*"))   // not working
 
 
+var name_7 ="najad vt"
+console.log(name_7.charAt(0))
+console.log(name_7.charAt(20)) // not working
+console.log(name_7.charAt(-2)) // not working
 
+console.log(name_7.at(0))
+console.log(name_7.at(20)) // output : undefined
+console.log(name_7.at(-2))
 
+console.log(name_7.substring(0,5))    // output : najad
+console.log(name_7.substring(5,0))    // output : najad
+console.log(name_7.substring(-3))     // output : najad vt
+console.log(name_4.substring(-4,-1))  // not working
+console.log(name_7.substring(-3,5))   // output : najad
