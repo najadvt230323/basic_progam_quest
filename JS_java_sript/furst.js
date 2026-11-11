@@ -213,8 +213,8 @@ console.log()
 i = 0
 
 while (i <= 10) {
-console.log(i)
-i++
+    console.log(i)
+    i++
 }
 
 // --------------- DO WHILE LOOP ---------------
@@ -238,10 +238,9 @@ i++
 // -------------------- FOR OF ------------------------------
 console.log()
 
-stu = ['najad' , 'shahal' , 'richu' , 'yaseen']
+stu = ['najad', 'shahal', 'richu', 'yaseen']
 
-for (s of stu)
-{
+for (s of stu) {
     console.log(s)
 }
 
@@ -251,9 +250,8 @@ console.log()
 let stu_1 = { name: 'najad', age: 25, skills: ['python', 'JS'], weight: 37.5, Active: true };
 
 
-for (s in stu_1)
-{
-    console.log(s , ' : ', stu_1[s])
+for (s in stu_1) {
+    console.log(s, ' : ', stu_1[s])
 }
 
 // =========================================================================================================
@@ -273,60 +271,119 @@ greet()
 console.log(greet_1())
 // ---------------------------------------------------
 
-function add_1(a,b)
-{
-    return a+b
+function add_1(a, b) {
+    return a + b
 }
 
-console.log(add_1(6,11))
+console.log(add_1(6, 11))
 
 // ---------------------------------------------------
 
-function name_1(name_2 ,age)
-{
-    console.log ('NAME : ' ,name_2,'\nAGE : ' ,age)
+function name_1(name_2, age) {
+    console.log('NAME : ', name_2, '\nAGE : ', age)
 }
 
-name_1('najad',25)
-name_1(25,'najad')
-name_1(age=25,name_2='najad')
+name_1('najad', 25)
+name_1(25, 'najad')
+name_1(age = 25, name_2 = 'najad')
 
 // ------------------------------------------------------
 console.log()
 
 greet_2 = () => 'Welcome'
-greet_3 = () =>{ 'Welcome_3'}
-greet_4 = () =>{ return'Welcome_4'}
+greet_3 = () => { 'Welcome_3' }
+greet_4 = () => { return 'Welcome_4' }
 
 console.log(greet_2())
 console.log(greet_3())
 console.log(greet_4())
 
-add_2 = (a,b) => a+b
-console.log(add_2(20,30))
+add_2 = (a, b) => a + b
+console.log(add_2(20, 30))
 
 // -----------------------------------------------------
 
- function calc(a,b,fun)
-{
-    return fun(a,b)
+function calc(a, b, fun) {
+    return fun(a, b)
 }
 
-add = (a,b) => a+b
-mul = (a,b) => a*b
+add = (a, b) => a + b
+mul = (a, b) => a * b
 
 
-console.log(calc(6,11,add))
-console.log(calc(6,11,mul))
+console.log(calc(6, 11, add))
+console.log(calc(6, 11, mul))
 // =======================================================
 
-a= confirm("do you w")
-console.log(a)
+// a= confirm("do you w")
+// console.log(a)
 
-name_3 = prompt("enter your namae :")
-console.log(name_3)
+// name_3 = prompt("enter your namae :")
+// console.log(name_3)
 
-function get_value() {
-    is_delete = confirm('Do you wand delete')
-    console.log(is_delete)
+// function get_value() {
+//     is_delete = confirm('Do you wand delete')
+//     console.log(is_delete)
+// }
+
+// ===========================================================
+
+// ============= String Basics =============
+
+
+console.log()
+console.log('String Basics')
+console.log('===============')
+
+var name_4 = 'JavaScript'
+
+console.log(name_4)
+console.log(typeof name_4)
+console.log(name_4.length)
+
+console.log(name_4[0])
+console.log(name_4.language(0))
+console.log(name_4[-1])             //not using negateve indaxing
+console.log(name_4[20])
+
+console.log(name_4[0, 5])
+console.log(name_4.substring(0,5))
+console.log(name_4.slice(5, 9))
+console.log(name_4.slice(4))
+
+console.log(name_4.slice(0, 3))
+console.log(name_4.slice(-6, -1))
+console.log(name_4.slice(-6))
+
+console.log('hi', name_4)
+console.log('hi' + name_4)
+console.log(`hi ${name_4}`)
+
+// -----------------------------------------
+
+for (i = 0; i < name_4.length; i++) {
+    console.log(name_4[i])
 }
+
+console.log()
+
+for (i of name_4) {
+    console.log(i)
+}
+// -------------------------------------------
+
+console.log()
+console.log(name_4.toUpperCase())
+console.log(name_4.toLowerCase())
+
+var name_5 ="    najad     "
+console.log(name_5.trim())
+console.log(name_5.trimStart())
+console.log(name_5.trimEnd())
+
+var name_6 ="*******najad vt*********"
+console.log(name_6.trim("*"))   // not working
+
+
+
+
