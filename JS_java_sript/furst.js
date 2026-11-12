@@ -402,3 +402,136 @@ console.log(name_7.substring(5,0))    // output : najad
 console.log(name_7.substring(-3))     // output : najad vt
 console.log(name_4.substring(-4,-1))  // not working
 console.log(name_7.substring(-3,5))   // output : najad
+
+console.log(name_7.includes('naj'))    // output : true
+console.log(name_7.includes('NAJ'))    // output : false
+console.log(name_7.includes('vt'))     // output : true
+
+console.log(name_7.startsWith('naj'))    // output : true
+console.log(name_7.startsWith('NAJ'))    // output : false
+console.log(name_7.startsWith('vt'))     // output : false
+
+console.log(name_7.endsWith('naj'))    // output : false
+console.log(name_7.endsWith('NAJ'))    // output : false
+console.log(name_7.endsWith('vt'))     // output : true
+
+
+console.log(name_7.indexOf('naj'))    // output : 0
+console.log(name_7.indexOf('a'))    // output : 0
+console.log(name_7.indexOf('NAJ'))    // output : -1
+console.log(name_7.indexOf('vt'))     // output : 6
+
+console.log(name_7.lastIndexOf('a'))    // output : 0
+console.log(name_7.lastIndexOf('vt'))     // output : 6
+
+// -------------------------------------------------------------
+
+console.log()
+var text = "I love Python"
+console.log(text.replace("Python", "JavaScript"))   // output : I love JavaScript
+
+var text_1 = "apple apple apple";
+console.log(text_1.replace("apple", "mango"))   // output : mango apple apple
+console.log(text_1.replaceAll("apple", "mango"));   // output : mango mango mango
+
+console.log(text.split(""))   // output : ['I', ' ', 'l', 'o','v', 'e', ' ', 'P','y', 't', 'h', 'o','n']
+console.log(text.split(" "))   // output : [ 'I', 'love', 'Python' ]
+console.log(text.split("o"))   // output : [ 'I l', 've Pyth', 'n' ]
+
+
+var firstName = "Sreeraj";
+var lastName = "M R";
+console.log(firstName.concat(" ", lastName)) // output : Sreeraj M R
+console.log(`Welcome ${firstName}`);  // output : Welcome Sreeraj
+ 
+var text_2 = "Hello ";
+console.log(text_2.repeat(3)); // output :  Hello Hello Hello 
+console.log(text_2*3); // output :  NaN
+
+var number = "5";
+console.log(number.padStart(3, "0"));  // output : 005
+console.log(number.padEnd(3, "0"));  // output : 500
+
+let text_3 = "ABC";
+console.log(text_3.charCodeAt()); // output : 65
+console.log(text_3.charCodeAt(0)); // output : 65
+console.log(text_3.charCodeAt(1)); // output :66
+
+
+// ============= ARRY Basics =============
+
+var fruits = ['apple','orange','mango']
+
+console.log(fruits[1])      // output : orange
+console.log(fruits.at(0))   // output : apple
+console.log(fruits.at(-1))  // output : mango
+
+fruits.push("bannana")
+console.log(fruits)      // output : [ 'apple', 'orange', 'mango', 'bannana' ]
+fruits.push("bannana",'kivi')
+console.log(fruits)      // output : [ 'apple', 'orange', 'mango', 'bannana', 'bannana', 'kivi' ]
+
+fruits.pop()
+console.log(fruits)      // output : [ 'apple', 'orange', 'mango', 'bannana', 'bannana' ]
+fruits.pop()
+console.log(fruits)      // output : [ 'apple', 'orange', 'mango', 'bannana' ]
+
+fruits.unshift("bannana")
+console.log(fruits)      // output : [ 'bannana', 'apple', 'orange', 'mango', 'bannana' ]
+fruits.unshift("bannana",'kivi')
+console.log(fruits)      // output : ["bannana",'kivi', 'bannana', 'apple', 'orange', 'mango', 'bannana' ]
+
+fruits.shift()
+console.log(fruits)      // output : ['kivi', 'bannana', 'apple', 'orange', 'mango', 'bannana' ]
+fruits.shift()
+console.log(fruits)      // output : ['bannana', 'apple', 'orange', 'mango', 'bannana' ]
+
+console.log(fruits.includes('apple'))     // output : true
+console.log(fruits.includes('kivi'))      // output : false
+console.log(fruits.indexOf('apple'))      // output : 1
+console.log(fruits.indexOf('kivi'))       // output : -1
+
+console.log(fruits.lastIndexOf('bannana'))      // output : 4
+console.log(fruits.lastIndexOf('kivi'))       // output : -1
+
+console.log(fruits.find(a => a=='bannana'))    // output : bannana
+console.log(fruits.find(a => a.length<=5))     // output : apple
+
+console.log(fruits.findLast(a => a=='bannana'))    // output : bannana
+console.log(fruits.findLast(a => a.length<=5))     // output : mango
+
+console.log(fruits.findIndex(a => a=='bannana'))    // output : 0
+console.log(fruits.findIndex(a => a.length<=5))     // output : 1
+
+console.log(fruits.findLastIndex(a => a=='bannana'))    // output : 4
+console.log(fruits.findLastIndex(a => a.length<=5))     // output : 3
+
+
+console.log(fruits.slice(1, 3))     // output : [ 'apple', 'orange' ]
+console.log(fruits.slice(-3, -1))    // output : [ 'orange', 'mango' ]
+console.log(fruits.slice(-1, -2))    // output : []
+console.log(fruits.slice(-2))        // output : [ 'mango', 'bannana' ]
+// -------------------------------------------------------------------------------------
+
+console.log()
+var fruits = ['apple','orange','mango','grapes']
+console.log(fruits)                 // output : [ 'apple', 'orange', 'mango', 'grapes' ]
+
+console.log(fruits.splice(1,2))   // output : [ 'orange', 'mango' ]    ==> delet elments
+console.log(fruits)               // output : [ 'apple', 'grapes' ]
+console.log(fruits.splice(1,1,'kivi'))   // output : [ 'kivi' ]  ==> replace
+console.log(fruits)   // output : [ 'apple', 'kivi' ]  
+console.log(fruits.splice(1,0,'mango','orange'))   // output : []  ==> add 
+console.log(fruits)   // output : [ 'apple', 'mango', 'orange', 'kivi' ]
+// -------------------------------------------------------------------------------------------
+
+console.log()
+var fruits = ['apple','orange','mango','grapes']
+console.log(fruits)                 // output : [ 'apple', 'orange', 'mango', 'grapes' ]
+
+console.log(fruits.toSpliced(1,2))                    // output : [ 'apple', 'grapes' ]    ==> delet elments
+console.log(fruits.toSpliced(1,1,'kivi'))             // output : [ 'apple', 'kivi', 'mango', 'grapes' ]  ==> replace
+console.log(fruits.toSpliced(1,0,'mango','orange'))   // output : [ 'apple', 'mango', 'orange', 'orange', 'mango', 'grapes' ]  ==> add 
+
+// --------------------------------------------------------------------------------------------
+
