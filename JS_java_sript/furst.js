@@ -535,9 +535,20 @@ console.log(fruits.toSpliced(1,0,'mango','orange'))   // output : [ 'apple', 'ma
 
 // --------------------------------------------------------------------------------------------
 
+var number = [1,2,3,4,5]
 
+var reslt_1 = number.map(num => num*2)
+var reslt_2 = number.map(num => num>2)
+console.log(reslt_1)  // output : [ 2, 4, 6, 8, 10 ]
+console.log(reslt_2)  // output : [ false, false, true, true, true ]
 
+var reslt_3 = number.filter(num => num>2)
+console.log(reslt_3)  // output : [ 3, 4, 5 ]
 
+var reslt_4 = number.reduce((sum , num) => { return sum + num} ,0)
+console.log(reslt_4)  // output : 15
+var reslt_4 = number.reduce((sum , num) => { return sum + num} ,5)
+console.log(reslt_4)  // output : 20
 
 
 
