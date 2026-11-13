@@ -550,6 +550,22 @@ console.log(reslt_4)  // output : 15
 var reslt_4 = number.reduce((sum , num) => { return sum + num} ,5)
 console.log(reslt_4)  // output : 20
 
+// ----------------------------------------------------------------------------------------
+
+var marks = [60,50,80,90]
+var marks_1 = [40,50,80,90]
+var marks_2 = [40,30,35]
+console.log(marks.every(a => a >= 50))  // output : true
+console.log(marks_1.every(a => a >= 50))  // output : false
+console.log(marks_2.every(a => a >= 50))  // output : false
+
+console.log(marks.some(a => a >= 50))  // output : true
+console.log(marks_1.some(a => a >= 50))  // output : true
+console.log(marks_2.some(a => a >= 50))  // output : false
+
+// ------------------------------------------------------------------------------------------
+
+
 
 
 
