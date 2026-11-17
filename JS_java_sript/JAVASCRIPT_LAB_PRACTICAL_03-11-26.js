@@ -310,33 +310,84 @@ income = 100000
 
 // */ 
 
-// 8 : 
+// 8 :ide-booking surge eligibility
+// A ride app applies a 1.5x surge when demand is high AND available drivers are fewer than 5. Otherwise, the fare remains
+// unchanged. Calculate and print the final fare.
+// Challenge / test cases: Use logical operators and arithmetic. Test demandHigh true/false and driver counts 4 and 5. 
 
-/* 
+// /* 
 
+fewer = 1000
+driver_counts = 4
+demand_high = true
 
-*/ 
+if (driver_counts<5 & demand_high) {
+    console.log("final fare = ",1.5*fewer)
+}
+else {
+    console.log("final fare = ",fewer)
+}
+// */ 
 
-// 9 : 
+// 9 :Cloud storage plan recommendation
+// A cloud service offers Basic for usage up to 5 GB, Standard for usage above 5 GB and up to 100 GB, and Premium
+// above 100 GB. Display the recommended plan.
+// Challenge / test cases: Use else-if and validate that usage is not negative. Consider exact boundaries. 
 
-/* 
+// /* 
 
+usage = -1
 
-*/ 
+if (usage <=0) {
+    console.log("invalid plan")
+}
+else if (usage <=5) {
+    console.log("Basic plan")
+}
+else if (usage <=100) {
+    console.log("Standard plan")
+}
+else {
+    console.log("Premium plan")
+}
+// */ 
 
-// 10 : 
+// 10 : Online order risk flag
+// Flag an order for manual review if the order amount exceeds n25,000 OR the billing country differs from the delivery
+// country. Otherwise mark it as “Normal”.
+// Challenge / test cases: Use || and strict comparison. Test each condition independently and both together.
+// B. Loop-Based Practical Problems (11–20)
 
-/* 
+// /* 
 
+amount = 25000
+billing_country = 'usa'
+delivery_country = 'usa'
 
-*/ 
+ if (amount<25000 & billing_country == delivery_country){
+    console.log('reslt : normal')
+ }
+ else{
+    console.log('reslt : manual review')
+ }
 
-// 11 : 
+// */ 
 
-/* 
+// 11 :  Generate invoice line numbers
+// An invoice contains a known number of items. Given itemCount, print line numbers from 1 through itemCount using a forloop.
+// Challenge / test cases: Test 0, 1 and 5. Ensure the final number is included exactly once.
 
+// /* 
 
-*/ 
+a=5
+if (a>=1){
+    for (i=1 ; i<= a ; i++){
+        console.log(i)
+
+    }
+}
+
+// */ 
 
 // 12 : 
 
@@ -464,9 +515,13 @@ income = 100000
 
 */ 
 
-// 30 : 
+// 30 :Mini project – checkout eligibility engine
+// Build a console-based checkout decision using variables for cartTotal, stockAvailable, customerVerified, accountBlocked
+// and deliveryDistance. Reject the order if stock is unavailable, the customer is not verified, or the account is blocked. If
+// valid, calculate delivery fee using the distance slabs from Question 4 and apply free delivery for cart totals of at least
+// n999. Print a clear order summary. 
 
-/* 
+// /* 
 
 
-*/ 
+// */ 

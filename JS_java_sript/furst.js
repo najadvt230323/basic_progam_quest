@@ -565,7 +565,16 @@ console.log(marks_2.some(a => a >= 50))  // output : false
 
 // ------------------------------------------------------------------------------------------
 
+var fruits = ['apple','orange','mango','grapes']
+fruits.sort()
+console.log(fruits)   // output : [ 'apple', 'grapes', 'mango', 'orange' ]
 
+var number = [10,100,101,25,20,200]
+number.sort()
+console.log(number)   // output : [ 10, 100, 101, 20, 200, 25 ]
 
-
+number.sort((a,b) => a-b)
+console.log(number)    // output : [ 10, 20, 25, 100, 101, 200 ]
+number.sort((a,b) => b-a)
+console.log(number)    // output : [ 200, 101, 100, 25, 20, 10 ]
 
