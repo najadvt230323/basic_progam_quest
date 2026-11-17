@@ -578,3 +578,61 @@ console.log(number)    // output : [ 10, 20, 25, 100, 101, 200 ]
 number.sort((a,b) => b-a)
 console.log(number)    // output : [ 200, 101, 100, 25, 20, 10 ]
 
+console.log(number.toSorted((a,b) => a-b))  // output : [ 10, 20, 25, 100, 101, 200 ]
+console.log(number.toSorted((a,b) => b-a))  // output : [ 200, 101, 100, 25, 20, 10 ]
+
+// --------------------------------------------------------------------------
+
+console.log()
+number.reverse()
+console.log(number) // output : [ 10, 20, 25, 100, 101, 200 ]
+console.log(number.toReversed())  // output : [ 200, 101, 100, 25, 20, 10 ]
+
+// ======================================================================================
+console.log()
+var boys = ['najad' , 'aju' , 'shabin']
+var girls = ['reha' , 'lala' , 'fida']
+
+console.log(boys.concat(girls)) // output : [ 'najad', 'aju', 'shabin', 'reha', 'lala', 'fida' ]
+console.log(girls.concat(boys)) // output : [ 'reha', 'lala', 'fida', 'najad', 'aju', 'shabin' ]
+console.log(boys.concat(boys)) // output : [ 'najad', 'aju', 'shabin', 'najad', 'aju', 'shabin' ]
+
+console.log(boys.join())  // output : najad,aju,shabin
+console.log(boys.join(""))  // output : najadajushabin
+console.log(boys.join(" = "))  // output : najad = aju = shabin
+// -----------------------------------------------------------------
+
+console.log()
+var a = [1,[2,3],4,[5,6]]
+var b = [1,[2,3],4,[[5,6]],[[[7,8]]]]
+var d = [1,[2,3],4,[[5,6]],[[[7,8]]],[[[[[[[[9,10,[[[[[[11,12,]]]]]]]]]]]]]]]
+console.log(a.flat())  // output : [ 1, 2, 3, 4, 5, 6 ]
+console.log(b.flat())  // output : [ 1, 2, 3, 4, [ 5, 6 ], [ [ 7, 8 ] ] ]
+console.log(b.flat(2))  // output : [ 1, 2, 3, 4, 5, 6, [ 7, 8 ] ]
+console.log(d.flat(5))  // output : [ 1, 2, 3, 4, 5, 6, 7, 8, [ [ [Array] ] ] ]
+console.log(d.flat(13))  // output : [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, [ 11, 12 ] ]
+console.log(d.flat(Infinity))  // output : [1,  2, 3, 4,  5,6,  7, 8, 9, 10,11, 12]
+
+// -------------------------------------------------------------------------------------------------
+console.log()
+var number = [1,2,3,4,5]
+
+var reslt_1 = number.map(num => num*2)
+var reslt_2 = number.map(num => num>2)
+console.log(reslt_1)  // output : [ 2, 4, 6, 8, 10 ]
+console.log(reslt_2)  // output : [ false, false, true, true, true ]
+
+var reslt_3 = number.flatMap(num => num*2)
+console.log(reslt_3)  // output : 
+
+var a = [1,2,3,4,5]
+a.fill(0)
+console.log(a)   // output : 
+
+var a = [1,2,3,4,5]
+a.fill(100,1,3)
+console.log(a)   // output : 
+
+
+
+
