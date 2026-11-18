@@ -421,7 +421,7 @@ console.log(name_7.indexOf('a'))    // output : 1
 console.log(name_7.indexOf('NAJ'))    // output : -1
 console.log(name_7.indexOf('vt'))     // output : 6
 
-console.log(name_7.lastIndexOf('a'))    // output : 0
+console.log(name_7.lastIndexOf('a'))    // output : 3
 console.log(name_7.lastIndexOf('vt'))     // output : 6
 
 // -------------------------------------------------------------
