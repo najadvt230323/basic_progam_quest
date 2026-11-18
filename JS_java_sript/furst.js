@@ -52,10 +52,10 @@ console.log(typeof stud1);
 // ------------------------------------------------------------------------------------------------
 // arithamatics
 // ================
-num1 = 5
-num2 = 6
-num3 = '6'
-num4 = '5'
+num1 = 7
+num2 = 4
+num3 = '8'
+num4 = '4'
 num5 = 'najad'
 
 reslt_1 = num1 + num2
@@ -417,7 +417,7 @@ console.log(name_7.endsWith('vt'))     // output : true
 
 
 console.log(name_7.indexOf('naj'))    // output : 0
-console.log(name_7.indexOf('a'))    // output : 0
+console.log(name_7.indexOf('a'))    // output : 1
 console.log(name_7.indexOf('NAJ'))    // output : -1
 console.log(name_7.indexOf('vt'))     // output : 6
 
