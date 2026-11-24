@@ -622,16 +622,80 @@ var reslt_2 = number.map(num => num>2)
 console.log(reslt_1)  // output : [ 2, 4, 6, 8, 10 ]
 console.log(reslt_2)  // output : [ false, false, true, true, true ]
 
-var reslt_3 = number.flatMap(num => num*2)
-console.log(reslt_3)  // output : 
+var reslt_3 = number.flatMap(num => num*2)       
+var reslt_4 = number.flatMap(num =>[num, num*2]) 
+console.log(reslt_3)  // output : [ 2, 4, 6, 8, 10 ]
+console.log(reslt_4)  // output : [1, 2, 2, 4, 3, 6, 4, 8, 5, 10]
 
 var a = [1,2,3,4,5]
-a.fill(0)
-console.log(a)   // output : 
+a.fill('aju')
+console.log(a)   // output : [ 1, 100, 100, 4, 5 ]
 
-var a = [1,2,3,4,5]
-a.fill(100,1,3)
-console.log(a)   // output : 
+var a = [1,2,3,4,5,6,7]
+a.fill(100,1,4)
+console.log(a)   // output : [   1, 100, 100, 100,  5,   6,   7]
+// --------------------------------------------------------------------------
+console.log()
+var a = [1,2,3,4,5,6,7]
+console.log(a)   // output : [ 1, 2, 3, 4, 5, 6, 7 ]
+a.copyWithin(0,5)
+
+console.log(a) // output : [ 6, 7, 3, 4, 5, 6, 7 ]
+// ----------------------
+console.log()
+var a = [1,2,3,4,5,6,7]
+console.log(a)   // output : [ 1, 2, 3, 4, 5, 6, 7 ]
+a.copyWithin(0,5,6)
+
+console.log(a)   // output : [ 6, 2, 3, 4, 5, 6, 7]
+
+// ------------------------------------------------------------------
+
+console.log()
+console.log(Array.isArray([1,2,3]))   // output : true
+console.log(Array.isArray('[1,2,3]'))   // output : true
+console.log(Array.isArray('hello'))   // output : false
+console.log(Array.isArray(10))        // output : false
+console.log(Array.isArray({name_1 : "Arun"}))   // output : false
+
+// -----------------------------------------------------------------
+console.log()
+var a = 'HELLO' 
+var b = '12345' 
+var d = 12345 
+console.log(Array.from(a))   // output : [ 'H', 'E', 'L', 'L', 'O' ]
+console.log(Array.from(b))   // output : [ '1', '2', '3', '4', '5' ]
+console.log(Array.from(b,Number))   // output : [ 'H', 'E', 'L', 'L', 'O' ]
+console.log(Array.from(d))   // output : []
+console.log(Array.from(d,String))   // output : []
+console.log(Array.from(d.toString()))   // output : [ '1', '2', '3', '4', '5' ]
+
+// ------------------------------------------------------------
+console.log()
+var fruits = ['apple' , 'orange' , 'mango' , 'kivi']
+
+var reslt_1 = fruits.with(1 , 'banana')
+var reslt_2 = fruits.with(1 , 'banana' , 3 , 'annar')
+
+console.log(reslt_1)    // output : [ 'apple', 'banana', 'mango', 'kivi' ]
+console.log(reslt_2)    // output : [ 'apple', 'banana', 'mango', 'kivi' ]   not allow multtiple valu
+
+// ================================================================================================
+
+console.log()
+var stud_1 = { name : 'arun' , age : 22 , course : 'Python full stack' , mark : 85} ;
+
+console.log(stud_1)    // output : { namae : 'arun' , age : 22 , course : 'Python full stack' , mark : 85} 
+console.log(stud_1.name)  // output : arun
+console.log(stud_1.age)   // output : 22
+
+stud_1.email = 'arun.gmail.com' 
+stud_1.age = 25 
+console.log(stud_1)    // output : { namae : 'arun' , age : 25 , course : 'Python full stack' , mark : 85 ,  email: 'arun.gmail.com'}
+
+
+
+
 
 
 
