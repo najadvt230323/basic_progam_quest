@@ -681,7 +681,7 @@ console.log(reslt_1)    // output : [ 'apple', 'banana', 'mango', 'kivi' ]
 console.log(reslt_2)    // output : [ 'apple', 'banana', 'mango', 'kivi' ]   not allow multtiple valu
 
 // ================================================================================================
-
+// ====== OBJECT=========
 console.log()
 var stud_1 = { name : 'arun' , age : 22 , course : 'Python full stack' , mark : 85} ;
 
@@ -691,9 +691,77 @@ console.log(stud_1.age)   // output : 22
 
 stud_1.email = 'arun.gmail.com' 
 stud_1.age = 25 
-console.log(stud_1)    // output : { namae : 'arun' , age : 25 , course : 'Python full stack' , mark : 85 ,  email: 'arun.gmail.com'}
+console.log(stud_1)    // output : { name : 'arun' , age : 25 , course : 'Python full stack' , mark : 85 ,  email: 'arun.gmail.com'}
 
+// -------------------------------------------------------------------------------------
 
+console.log(Object.values(stud_1))  // output : [ 'arun', 25, 'Python full stack', 85, 'arun.gmail.com' ]
+console.log(Object.keys(stud_1))    // output :[ 'name', 'age', 'course', 'mark', 'email' ]
+console.log(Object.entries(stud_1)) // output : [ [ 'name', 'arun' ], [ 'age', 25 ], [ 'course', 'Python full stack' ], [ 'mark', 85 ], [ 'email', 'arun.gmail.com' ] ]
+
+a = Object.entries(stud_1)
+
+console.log()
+console.log(a) // output : [ [ 'name', 'arun' ], [ 'age', 25 ], [ 'course', 'Python full stack' ], [ 'mark', 85 ], [ 'email', 'arun.gmail.com' ] ]
+console.log(Object.fromEntries(a))  // output : { name : 'arun' , age : 25 , course : 'Python full stack' , mark : 85 ,  email: 'arun.gmail.com'}
+ 
+// -------------------------------------------------------------------------------------
+var stud_1 = { name : 'arun' , age : 22 }
+var details = { course : 'python' , mark : 85 }
+var details_1 = { course : 'python' , mark : 85  , name : 'najad'}
+
+var adding = Object.assign(stud_1,details)
+console.log(adding)     // output : { name: 'arun', age: 22, course: 'python', mark: 85 }
+
+// -------------------------
+
+var stud_1 = { name : 'arun' , age : 22 }
+var details = { course : 'python' , mark : 85 }
+var details_1 = { course : 'python' , mark : 85  , name : 'najad'}
+
+console.log()
+var adding_1 = Object.assign({} , stud_1 , details_1)
+console.log(stud_1)       // output : { name: 'arun', age: 22 }
+console.log(details_1)    // output : { course: 'python', mark: 85, name: 'najad' }
+console.log(adding_1)     // output : { name: 'najad', age: 22, course: 'python', mark: 85 }
+
+// Object.freeze(stud_1)   // output :   TypeError: Cannot add property course, object is not extensible
+var adding_1 = Object.assign(stud_1 , details_1)
+console.log()
+console.log(stud_1)       // output : { name: 'najad', age: 22, course: 'python', mark: 85 }
+console.log(details_1)    // output : { course: 'python', mark: 85, name: 'najad' }
+console.log(adding_1)     // output : { name: 'arun', age: 22, course: 'python', mark: 85 }
+
+// --------------------------------------------------------------------------------------------------------
+console.log()
+var stud_1 = { name : 'arun' , age : 22 }
+
+Object.freeze(stud_1)
+
+stud_1.age = 25
+stud_1.name = 'najad'
+console.log(stud_1)     // output : { name: 'arun', age: 22 }   ==> no changes
+
+var stud_1 = { name : 'najad' , age : 25 }
+console.log(stud_1)    // output : { name: 'najad', age: 25 }
+
+// -----------------------------------------------------------------
+
+console.log()
+var stud_1 = { name : 'arun' , age : 22 }
+
+Object.seal(stud_1)
+
+stud_1.age = 25
+stud_1.name = 'najad'
+stud_1.course = 'Python full stack'
+delete stud_1.age
+
+console.log(stud_1)     // output : { name: 'najad', age: 25 }   ==> no adding , no deleting
+
+// -----------------------------------------------------------------------
+console.log()
+var stud_1 = { name : 'arun' , age : 22 }
 
 
 
