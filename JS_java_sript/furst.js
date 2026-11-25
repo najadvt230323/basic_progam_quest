@@ -799,3 +799,4 @@ console.log(Object.getOwnPropertyDescriptors(stud_1))
 
 
 
+
