@@ -36,14 +36,50 @@ const products = [
 
 // 1. Create an array containing five of your favourite programming languages. Display the total number of elements
 // using length and display the first and last elements.
+
+console.log()
+console.log(numbers.length)             //output : 9
+console.log(numbers[0])                 //output : 12
+console.log(numbers[numbers.length-1])  //output : 5
+
 // 2. Add two new fruits to the end of the fruits array using push(). Display the updated array.
-// 3. Remove the last element from the fruits array using pop(). Display both the removed element and the updated
-// array.
+
+console.log()
+console.log(fruits)            //output : [ 'Apple', 'Orange', 'Mango', 'Banana', 'Grapes' ]
+fruits.push("bannana",'kivi')
+console.log(fruits)            //output : [ 'Apple',  'Orange', 'Mango',  'Banana', 'Grapes', 'bannana', 'kivi' ]
+
+// 3. Remove the last element from the fruits array using pop(). Display both the removed element and the updated array.
+
+console.log()
+console.log(fruits)    //output : [ 'Apple', 'Orange', 'Mango', 'Banana', 'Grapes', 'bannana', 'kivi'  ]
+fruits.pop()
+console.log(fruits)   //output : [ 'Apple',  'Orange', 'Mango',  'Banana', 'Grapes', 'bannana' ]
+
 // 4. Add a new fruit at the beginning using unshift(), then remove the first element using shift(). Display the array
 // after each operation.
+
+console.log()
+console.log(fruits)    //output : [ 'Apple',  'Orange', 'Mango',  'Banana', 'Grapes', 'bannana' ]
+fruits.unshift('kivi')
+console.log(fruits)    //output : [ 'kivi', 'Apple',  'Orange', 'Mango',  'Banana', 'Grapes', 'bannana' ]
+fruits.shift()
+console.log(fruits)    //output : [ 'Apple',  'Orange', 'Mango',  'Banana', 'Grapes', 'bannana' ]
+
 // 5. Check whether "Mango" and "Pineapple" are present in the fruits array using includes().
+
+console.log(fruits.includes("Mango"))          // output : true
+console.log(fruits.includes("Pineapple"))      // output : false
+console.log(fruits.indexOf("Mango"))           // output : 2
+console.log(fruits.indexOf("Pineapple"))       // output : -1
+
+
 // 6. Find the index of 28 in the numbers array using indexOf(). Also find the last occurrence of 28 using
 // lastIndexOf().
+
+console.log(numbers.indexOf(28))         // output : 2
+console.log(numbers.lastIndexOf(28))     // output : 6
+
 // QIS Academy | JavaScript Lab Practical Page 2
 // 7. Extract the second, third and fourth elements from the numbers array using slice(). Verify whether the original
 // array has changed.
@@ -54,7 +90,6 @@ const products = [
 // ==================================================
 
 // 1. Use forEach() to display each fruit along with its index in the fruits array.
-
 // 2. Use map() to create a new array containing the square of every number in the numbers array.
 // 3. Use filter() to create a new array containing only the even numbers from the numbers array.
 // 4. Use find() to find the first student who scored more than 80. Display the complete student object.
