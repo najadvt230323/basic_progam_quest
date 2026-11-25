@@ -763,6 +763,37 @@ console.log(stud_1)     // output : { name: 'najad', age: 25 }   ==> no adding ,
 console.log()
 var stud_1 = { name : 'arun' , age : 22 }
 
+console.log(Object.hasOwn(stud_1 , 'name'))   // output : true
+console.log(Object.hasOwn(stud_1 , 'email'))  // output : false
+// ------------------------
+console.log(Object.getOwnPropertyNames(stud_1))   // output : [ 'name', 'age' ]
+// ------------------------
+console.log(stud_1.propertyIsEnumerable('name'))   // output : true
+console.log(stud_1.propertyIsEnumerable('email'))   // output : false
+// -----------------------
+
+console.log(Object.getOwnPropertyDescriptors(stud_1))   
+/* output : {
+  name: {
+    value: 'arun',
+    writable: true,
+    enumerable: true,
+    configurable: true
+  },
+  age: { value: 22, writable: true, enumerable: true, configurable: true }
+} */
+
+// ---------------------------
+
+
+
+
+
+
+
+
+
+
 
 
 
