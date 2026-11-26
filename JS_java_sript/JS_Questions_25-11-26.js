@@ -80,9 +80,11 @@ console.log(fruits.indexOf("Pineapple"))       // output : -1
 console.log(numbers.indexOf(28))         // output : 2
 console.log(numbers.lastIndexOf(28))     // output : 6
 
-// QIS Academy | JavaScript Lab Practical Page 2
 // 7. Extract the second, third and fourth elements from the numbers array using slice(). Verify whether the original
 // array has changed.
+
+
+
 // 8. Remove two elements starting from index 2 in a copy of the numbers array using splice(). Display the removed
 // elements and the remaining array.
 

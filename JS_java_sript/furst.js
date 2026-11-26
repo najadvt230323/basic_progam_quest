@@ -785,10 +785,19 @@ console.log(Object.getOwnPropertyDescriptors(stud_1))
 
 // ---------------------------
 
+var stud_2 = { }
 
+Object.defineProperties (stud_2 , {
+    name: {
+    value: 'najad',
+    writable: true,
+    enumerable: true,
+    configurable: true
+  },
+  age: { value: 22, writable: true, enumerable: true, configurable: true }
+})
 
-
-
+console.log(stud_2)
 
 
 
