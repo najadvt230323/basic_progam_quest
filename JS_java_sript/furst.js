@@ -797,7 +797,30 @@ Object.defineProperties (stud_2 , {
   age: { value: 22, writable: true, enumerable: true, configurable: true }
 })
 
-console.log(stud_2)
+console.log(stud_2)    // output : { name: 'najad', age: 22 }
+
+// ------------------------------------------------------------------------
+
+Object.preventExtensions(stud_2)
+
+stud_2.age =25
+stud_2.course ='python'
+
+console.log(stud_2)   // output : { name: 'najad', age: 25 }
+
+// ----------------------------------------------------------------------
+
+console.log()
+
+console.log(Object.isFrozen(stud_2))    // output : false
+console.log(Object.isSealed(stud_2))    // output : false
+console.log(Object.isExtensible(stud_2))    // output : false
+
+
+
+
+
+
 
 
 
